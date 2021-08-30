@@ -1,0 +1,39 @@
+{
+    "navbar.links.langaugeSwitcher.ar": "العربيه",
+    "navbar.links.home": "Home",
+    "navbar.links.products": "Products",
+    "navbar.links.solutions": "Solutions",
+    "navbar.links.services": "Our Services",
+    "navbar.links.liveDemos": "Live Demos",
+    "navbar.links.blog": "Blog",
+    "navbar.links.ourClients": "Our Clients",
+    "navbar.links.ourPartners": "Our Partners",
+    "navbar.links.resources": "Resources",
+    "navbar.links.contactUs": "Contact Us",
+    "navbar.links.aboutUs": "About Us",
+    "CardSectionView.Solutions.more": "More Solutions",
+    "CardSectionView.Services.more": "More Services",
+    "CardSectionView.blog.more": "More Blogs",
+    "CardSectionView.ourPartners.more": "More success stories",
+
+    "blog.searchBox.placeholder": "Search",
+    "blog.categoryBox.label": "Categories",
+    "blog.buttons.backToBlogs": "Back to blogs",
+
+    "blog.details.meta.author": "Author: {author}",
+    "blog.details.meta.translatedBy": "Translated by: {translator}",
+
+    "homeHero.kware.slogan":"Think ahead . Think openly" ,
+    "homeHero.kware.name":"Kwaretech ",
+    "homeHero.kware.description":"Foundation for Trading is a Saudi Arab institution working in the field of systems integration specialized in bilingual Information Access Technologies for government institutions and companies.",
+    "homeHero.button.demo":"Try live demo",
+    "homeHero.button.start":"Get started",
+
+    "products.label":"product",
+    "products.title":"Create library services platform or repository management system",
+    "products.description":"We offer you the services of managing libraries and electronic repositories, translation, localization, content hate and content management system through open source software, which leads to flexibility and customization in light of the continuous development and global orientation to open source software"
+    
+
+
+
+}

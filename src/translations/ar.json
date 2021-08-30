@@ -1,0 +1,41 @@
+{
+    "navbar.links.langaugeSwitcher.en": "English",
+    "navbar.links.home": "الرئيسية",
+    "navbar.links.products": "المنتجات",
+    "navbar.links.solutions": "الحلول",
+    "navbar.links.services": "خدماتنا",
+    "navbar.links.liveDemos": "العروض التجريبية",
+    "navbar.links.blog": "المدونة",
+    "navbar.links.ourClients": "عملائنا",
+    "navbar.links.resources": "المصادر",
+    "navbar.links.ourPartners": "شركاؤنا",
+    "navbar.links.aboutUs": "عن الشركة",
+    "navbar.links.contactUs": "إتصل بنا",
+    "CardSectionView.Solutions.more": "المزيد من الحلول",
+    "CardSectionView.Services.more": "المزيد من الخدمات",
+    "CardSectionView.blog.more": "المزيد من المقالات",
+    "CardSectionView.ourPartners.more": "المزيد من قصص النجاح",
+
+    "blog.searchBox.placeholder": "بحث",
+    "blog.categoryBox.label": "التصنيفات",
+    "blog.buttons.backToBlogs": "العودة للمدونات",
+
+    "blog.details.meta.author": "المؤلف: {author}",
+    "blog.details.meta.translatedBy": "ترجمت بواسطة : {translator}",
+
+
+    "homeHero.kware.slogan":"فكر مستقبلا . فكر بانفتاح",
+    "homeHero.kware.name":" تقنية المعارف ",
+    "homeHero.kware.description":" تعمل في مجال تكامل النظم المتخصصة في تقنيات الوصول إلى المعلومات ثنائية اللغة للمؤسسات والشركات الحكومية .",
+    "homeHero.button.demo":"العرض المباشر",
+    "homeHero.button.start":"هيا لنبدأ",
+
+    "products.label":"المنتجات",
+    "products.title":"إنشاء منصة خدمات المكتبة ونظام إدارة المستودعات",
+    "products.description":"نقدم لكم خدمات إدارة المكتبات والمستودعات الإلكترونية والترجمة والتعريب وكراهية المحتوى ونظام إدارة المحتوى من خلال برمجيات مفتوحة المصدر مما يؤدي إلى المرونة والتخصيص في ظل التطوير المستمر والتوجه العالمي لبرامج مفتوحة المصدر"
+    
+
+
+
+
+}

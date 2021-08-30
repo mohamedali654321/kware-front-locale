@@ -1,0 +1,24 @@
+.article_Author {
+  display: flex;
+  align-items: center;
+}
+
+.article_Author.styles_small__3qQTy .styles_image_Author {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+}
+
+.styles_image_Author {
+  position: relative;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  margin-right: 18px;
+  border-radius: 50%;
+}
+
+.styles_ratio_img {
+    position: relative;
+    width: 100%;
+  }

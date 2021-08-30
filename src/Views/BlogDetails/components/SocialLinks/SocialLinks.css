@@ -1,0 +1,55 @@
+.ShareContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.ShareContainer .share {
+  display: block;
+  position: sticky;
+  top: 100px;
+  padding-bottom: 600px;
+  flex-direction: column;
+  list-style: none;
+}
+
+.ShareContainer ul {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.share .socialMedia {
+  position: relative;
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+@media (max-width: 992px) {
+  .ShareContainer {
+    left: -90px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .ShareContainer {
+    left: -30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .ShareContainer {
+    z-index: 100000;
+    left: -53px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ShareContainer {
+    z-index: 100000;
+    left: -55px;
+  }
+}
