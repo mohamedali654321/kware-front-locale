@@ -20,7 +20,7 @@ export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("");
 
   const showMoreItems = () => {
-    setVisible((prevValue) => prevValue + 6);
+    setVisible((prevValue) => prevValue + 12);
   };
 
   useEffect(() => {
@@ -78,8 +78,8 @@ export default function Blog() {
                         }}
                       >
                         <div class='liq-content'>
-                          <h2>LibraryThings</h2>
-                          <h2>LibraryThings</h2>
+                          <h2><FormattedMessage id="blog.title.libraryThings"/></h2>
+                          <h2><FormattedMessage id="blog.title.libraryThings"/></h2>
                         </div>
                       </div>
                     </span>
@@ -147,8 +147,8 @@ export default function Blog() {
                   <div className='tagsWrapper'></div>
                   <p className='styles_blog_text results small_tags_text styles_blog_textColor'>
                     <span>
-                      Showing {visible <= card.length ? visible : card.length}
-                      of {card.length} Blog Posts
+                      <FormattedMessage id="blog.resault.showing"/> {visible <= card.length ? visible : card.length}
+                      <FormattedMessage id="blog.resault.ofBlog"/> {card.length}  <FormattedMessage id="blog.resault.blogPosts"/>
                     </span>
                   </p>
                 </div>
@@ -183,7 +183,7 @@ export default function Blog() {
                         style={{ transform: "perspective(800px)" }}
                       ></div>
                       <Link className='buttonLink ' onClick={showMoreItems}>
-                        See more
+                        <FormattedMessage id="homeHero.button.seeMore"/>
                         <svg
                           className='styles_SmallArrow SmallArrowstyles  '
                           viewBox='0 0 11 12'

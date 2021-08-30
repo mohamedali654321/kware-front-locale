@@ -253,7 +253,7 @@
       font-weight: 600;
     }
     .ListCardContent .card_title {
-      font-family: Poppins, serif;
+      font-family: Effra-ar;
       font-weight: 600;
       color: #8D1CB8;
       margin-bottom: 20px;
@@ -299,7 +299,7 @@
   
     .category_tags_styles {
       display: inline-block;
-      font-family: Poppins, serif;
+      font-family: Effra-ar;
       font-weight: 500;
       font-size: 9px;
       line-height: 10px;
@@ -312,7 +312,7 @@
   
  
     .category_label {
-      font-family: Poppins, serif;
+      font-family: Effra-ar;
       font-size: 11px;
       line-height: 1;
       text-transform: uppercase;
@@ -332,7 +332,7 @@
     }
   
     .card_titleContainer {
-      font-family: Poppins, serif;
+      font-family: Effra-ar;
       font-size: 23px;
       font-weight: 700;
       line-height: 56px;
@@ -361,7 +361,7 @@
       margin-bottom: 12px;
     }
     .ListCardContent .card_title {
-      font-family: Poppins, serif;
+      font-family: Effra-ar;
       font-weight: 600;
       color: #8D1CB8;
       margin-bottom: 20px;
@@ -385,7 +385,7 @@
       color: #8D1CB8;
     }
     .card_text {
-      font-family: Poppins, serif;
+      font-family: Effra-ar;
       font-size: 17px;
       font-weight: 400;
       line-height: 28px;
@@ -654,7 +654,7 @@ margin-bottom: 40px;
 }
 
 .SixthSectionTitle {
-  font-family: Poppins, serif;
+  font-family: Effra-ar;
   font-size: 16px;
   font-weight: 600;
   bottom: 10px;

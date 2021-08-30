@@ -3,6 +3,7 @@ import SmallCard from '../SmallCard/SmallCard';
 import './SixthSection.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { FormattedMessage } from "react-intl";
 export default function SixthSection() {
   const [visible, setVisible] = useState(6);
   const showMoreItems = () => {
@@ -227,7 +228,7 @@ useEffect(()=>{
               <button
                class="SixthSectionButton_link SixthSectionButton_font"
                onClick={showMoreItems}
-               >See more<svg
+               ><FormattedMessage id="homeHero.button.seeMore"/><svg
                   class="SixthSectionMore_SmallArrow SixthSectionMore_SmallArrow_style SixthSectionMore_SmallArrow_color "
                   viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path

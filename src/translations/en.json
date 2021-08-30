@@ -22,16 +22,33 @@
 
     "blog.details.meta.author": "Author: {author}",
     "blog.details.meta.translatedBy": "Translated by: {translator}",
+    "blog.resault.showing":"Showing",
+    "blog.resault.blogPosts":" Blog Posts",
+    "blog.resault.ofBlog":"of",
+    "blog.title.libraryThings":"Library Things",
 
     "homeHero.kware.slogan":"Think ahead . Think openly" ,
     "homeHero.kware.name":"Kwaretech ",
     "homeHero.kware.description":"Foundation for Trading is a Saudi Arab institution working in the field of systems integration specialized in bilingual Information Access Technologies for government institutions and companies.",
     "homeHero.button.demo":"Try live demo",
     "homeHero.button.start":"Get started",
+    "homeHero.button.caseStudy":"Read case study",
+    "homeHero.button.seeMore":"See more",
+    "homeHero.button.learnMore":"Learn more",
 
     "products.label":"product",
     "products.title":"Create library services platform or repository management system",
-    "products.description":"We offer you the services of managing libraries and electronic repositories, translation, localization, content hate and content management system through open source software, which leads to flexibility and customization in light of the continuous development and global orientation to open source software"
+    "products.description":"We offer you the services of managing libraries and electronic repositories, translation, localization, content hate and content management system through open source software, which leads to flexibility and customization in light of the continuous development and global orientation to open source software",
+
+    "services.label":"Folio",
+    "services.title":"The Future of Libraries is Open",
+    "services.description":"FOLIO is a collaboration of libraries, developers and vendors building an open source library services platform. It supports traditional resource management functionality and can be extended into other institutional areas.",
+    "services.text":"FOLIO, an open source project, aims to reimagine library software through a unique collaboration of libraries, developers and vendors. It moves beyond the traditional library management system to a new paradigm, where apps are built on an open platform, providing libraries more choice and delivering new services to users"
+
+    
+
+
+    
     
 
 

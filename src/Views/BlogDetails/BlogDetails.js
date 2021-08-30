@@ -82,7 +82,9 @@ function BlogDetails({ match, history }) {
                   <FormattedMessage id='blog.buttons.backToBlogs' />
                 </span>
                 <svg
-                  className='SmallArrow styles_icon fill_color'
+
+                className={intl.locale === 'ar' ? 'SmallArrow fill_color styles_icon_right':'SmallArrow styles_icon fill_color'}
+                  // className='SmallArrow styles_icon fill_color'
                   viewBox='0 0 11 12'
                   fill='none'
                   xmlns='http://www.w3.org/2000/svg'

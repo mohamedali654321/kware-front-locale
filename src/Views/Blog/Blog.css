@@ -564,7 +564,7 @@
 
 .button_showMore .SmallArrowstyles {
   width: 15px;
-  transform: rotate(90deg) translateX(2px);
+  transform: rotate(90deg) translateX(2px) !important;
   margin-left: 10px;
   margin-right: -10px;
 }

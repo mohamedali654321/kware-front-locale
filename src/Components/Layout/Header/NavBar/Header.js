@@ -45,7 +45,7 @@ class Header extends React.Component {
         <div className='HeaderGroup'>
           <a className='logo' href='/'>
             <img
-              style={{ width: "90px", height: "50px" }}
+              style={{ width: "140px", height: "50px" }}
               src={
                 this.state.hasScroll || document.location.pathname.length === 1
                   ? "/images/KwareLatest.png"

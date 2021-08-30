@@ -2,6 +2,7 @@ import React,{useEffect} from 'react'
 import './SingleProductHero.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { FormattedMessage } from "react-intl";
 function SingleProductHero() {
 
   useEffect(()=>{
@@ -40,8 +41,8 @@ function SingleProductHero() {
                 >
                   <div>
                     <div
-                      style={{position: "relative", display: "inline-block", opacity: 1, transform: "perspective(1000px) translate3d(0px, 0px, 0px)"}}
-                      class="">Folio</div>
+                      style={{position: "relative", display: "inline-block", opacity: 1, transform: "perspective(1000px) translate3d(0px, 0px, 0px)",fontSize:"21px"}}
+                      class=""><FormattedMessage id="services.label"/></div>
                    
                   </div>
                 </div>
@@ -52,7 +53,7 @@ function SingleProductHero() {
                   <div class="productHeroTitleContainer"><span>
                       <div
                         style={{position: "relative", display: "inline-block", opacity: 1, transform: "perspective(1000px) translate3d(0px, 0px, 0px)"}}
-                        class="">The Future of Libraries is Open </div>
+                        class=""><FormattedMessage id="services.title"/> </div>
                     
                     
                     </span></div>
@@ -66,8 +67,7 @@ function SingleProductHero() {
                     class=""
                     
                     
-                    >FOLIO is a collaboration of libraries, developers and vendors building an open source library services platform.
-                     It supports traditional resource management functionality and can be extended into other institutional areas.</div>
+                    ><FormattedMessage id="services.description"/></div>
                 
                 </h2>
                 <ul class="productHeroText_links"
@@ -90,7 +90,7 @@ function SingleProductHero() {
                           style={{transform: "perspective(800px)"}}>
                          
                         </div><a class="productHero_buttonLink productHero_buttonStyle" target="_blank" alt=""
-                          href="https://strapi.io/documentation/3.0.0-beta.x/getting-started/quick-start.html">Get Started</a>
+                          href="https://strapi.io/documentation/3.0.0-beta.x/getting-started/quick-start.html"><FormattedMessage id="homeHero.button.start"/></a>
                           
                       </div>
                     </div>
@@ -113,8 +113,7 @@ function SingleProductHero() {
                           style={{transform: "perspective(800px)"}}>
                           
                         </div><a class="productHero_buttonLink productHero_buttonStyle" alt=""
-                          href="https://strapi.io/user-stories/societe-generale-e-training-platform">Read case
-                          study</a>
+                          href="https://strapi.io/user-stories/societe-generale-e-training-platform"><FormattedMessage id="homeHero.button.caseStudy"/></a>
                       </div>
                     </div>
                   </li>
@@ -142,9 +141,7 @@ function SingleProductHero() {
               data-aos-delay="200"
                 class="productHeroText styles_productHeroText_rich productHero_descriptionText productHero_descriptionText_small productHero_descriptionText_color">
                 <p>
-                <strong>FOLIO</strong>, an open source project, aims to reimagine library software through a unique collaboration of libraries, developers and vendors. 
-                It moves beyond the traditional library management system to a new paradigm, 
-                where apps are built on an open platform, providing libraries more choice and delivering new services to users
+                <FormattedMessage id="services.text"/>
                 </p>
               </div>
             </div>

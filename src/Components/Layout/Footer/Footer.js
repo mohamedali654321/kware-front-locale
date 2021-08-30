@@ -56,7 +56,7 @@ function Footer() {
   return (
     <footer class="footerContainer">
       <div class="fullWidthBanner">
-      <div class="footer_img_background">
+      {/* <div class="footer_img_background">
           <div
             class="footer_imgRatio"
             style={{ paddingBottom: "100.67114093959732%" }}
@@ -67,14 +67,14 @@ function Footer() {
               style={{ opacity: 1, visibility: "inherit" }}
             />
           </div>
-        </div>
+        </div> */}
         <div class="container_maxWidth">
           <div class="wrapper">
             <div class="innerWrapper">
-              <h1 class="top_section_title top_title themes_color">
+              {/* <h1 class="top_section_title top_title themes_color">
                 Unleash content.
-              </h1>
-              <div class="actions_container">
+              </h1> */}
+              {/* <div class="actions_container">
                 <div class="actions_button">
                   <div class="actions_buttonContainer">
                     <div class="actions_buttonStyle start_button_bg">
@@ -117,7 +117,7 @@ function Footer() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

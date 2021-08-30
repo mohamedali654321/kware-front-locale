@@ -166,6 +166,14 @@ console.log(page)
           <div className="step_steps">
             <div className="step_stepsAnimatedBackground">
               <div className="step_stepsInnerWrapper">
+
+
+
+
+              <div></div>
+
+
+              
                 <div
                   className={
                     (page > 3280  && page < 4270 ) || (page > 5230  && page < 6205 )
@@ -173,11 +181,6 @@ console.log(page)
                       : "float-left step_stepsAssetsWrapper"
                   }
 
-                  // className="step_stepsAssetsWrapper "
-                  // style={{
-                  //   transform:
-                  //     "translate(0%, 0px) rotate(-4e-5deg) rotateY(15deg) rotateX(9.99994deg)",
-                  // }}
                 >
                   <div className="step_stepsBackground_Img">
                     <div
@@ -284,7 +287,7 @@ console.log(page)
                     <div
                     
 
-                      className={(page > 5210 && page < 6215) ? 'step_steps_secondary secondaryImgDisplayType1' : 'step_steps_secondary  secondaryImg-notDisplayType1'}
+                      className={(page > 5210 && page < 6215) ? 'step_steps_secondary secondaryImgDisplayType1 ' : 'step_steps_secondary  secondaryImg-notDisplayType1'}
 
                    
                       // className="step_steps_secondary"
@@ -344,6 +347,13 @@ console.log(page)
                     </div>
                   </div>
                 </div>
+
+
+
+
+
+
+
               </div>
             </div>
 

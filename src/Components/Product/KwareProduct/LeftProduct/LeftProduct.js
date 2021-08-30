@@ -1,6 +1,7 @@
 import React from "react";
 import MockupAnimation from "../animations/MockupAnimation";
 import "./LeftProduct.css";
+import { FormattedMessage } from "react-intl";
 
 import PurchaseButton from "./buttons/PurchaseButton";
 function LeftProduct(props) {
@@ -94,8 +95,8 @@ else return true
             <ul className="LeftLinks">
               <li className="LeftLink">
 
-              <PurchaseButton/>
-                {/* <div
+              {/* <PurchaseButton/> */}
+                <div
                   className=" LefButton LefButton_small LefButton_fontSize LefButtonContainer"
                   style={{ opacity: 1, transform: "perspective(1000px)" }}
                 >
@@ -112,10 +113,10 @@ else return true
                       alt=""
                       href={props.url}
                     >
-                      Learn more
+                      <FormattedMessage id="homeHero.button.learnMore"/>
                     </a>
                   </div>
-                </div> */}
+                </div>
               </li>
             </ul>
           </div>

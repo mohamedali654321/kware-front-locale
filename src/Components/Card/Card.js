@@ -5,6 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { LocaleContext } from "../Hooks/useLocale";
 import { useIntl } from "react-intl";
+import { FormattedMessage } from "react-intl";
 
 function Card(props) {
   const locale = useContext(LocaleContext);
@@ -161,12 +162,19 @@ function Card(props) {
               <div className='AuthorContainer author author_small_label'>
                 <div>
                   <p className='card_text card_small_text author_color_label'>
-                    Author: {props.name}
+                  <FormattedMessage
+            id='blog.details.meta.author'
+            values={{ author: props.name }}
+          /> 
                   </p>
 
                   {props.translator ? (
                     <p className='card_text card_small_text author_color_label'>
-                      Translated by: {props.translator}
+                    <FormattedMessage
+            id='blog.details.meta.translatedBy'
+            values={{ translator: props.translator }}
+          />
+                      
                     </p>
                   ) : null}
 

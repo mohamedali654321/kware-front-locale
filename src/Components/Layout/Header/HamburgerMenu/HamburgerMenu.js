@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { FormattedMessage } from "react-intl";
 
 const COLORS = {
 
@@ -116,12 +117,7 @@ const ItemLink = styled(NavLink)`
   color: ${COLORS.primaryLight};
   padding: 1rem 2rem;
 
-  background-image: linear-gradient(
-    120deg,
-    transparent 0%,
-    transparent 50%,
-    #fff 50%
-  );
+
   background-size: 240%;
   transition: all 0.4s;
 
@@ -146,7 +142,7 @@ function HamburgerMenu() {
         <List>
           <li>
             <ItemLink className="cool"  onClick={handleClick} to="/">
-              Home
+            <FormattedMessage id="navbar.links.home" />
             </ItemLink>
           </li>
           <li>
