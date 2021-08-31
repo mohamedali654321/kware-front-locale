@@ -145,7 +145,7 @@ class Header extends React.Component {
 
           <Language />
 
-          <a href="/login">login</a>
+          
           <div className='display'>
             <HamburgerMenu />
           </div>

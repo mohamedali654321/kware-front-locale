@@ -54,8 +54,7 @@ function App() {
             <Switch>
               <Route path='/' exact component={HomePage} />
               <Route path='/blog' exact component={MainPage} />
-              <Route  path="/register" component={Register}></Route>
-               <Route path="/login" component={Login}></Route>
+              
               <Route path='/:locale/blog/:slug' exact component={BlogDetails} />
               <Route path='/our-partners' exact component={OurPartners} />
               <Route path='/our-clients' exact component={OurClints} />
