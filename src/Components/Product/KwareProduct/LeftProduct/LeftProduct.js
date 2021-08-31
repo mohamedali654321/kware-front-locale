@@ -112,7 +112,7 @@ else return true
                       target="_blank"
                       rel="noopener"
                       alt=""
-                      href={props.url}
+                      href='/resources'
                     >
                       <FormattedMessage id="homeHero.button.learnMore"/>
                     </a>

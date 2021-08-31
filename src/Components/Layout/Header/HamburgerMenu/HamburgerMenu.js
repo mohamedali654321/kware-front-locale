@@ -147,32 +147,32 @@ function HamburgerMenu() {
           </li>
           <li>
             <ItemLink className="cool"  onClick={handleClick} to="/Products">
-            Products
+            <FormattedMessage id="navbar.links.products" />
             </ItemLink>
           </li>
           <li>
             <ItemLink className="cool"  onClick={handleClick} to="/Services">
-            Services
+            <FormattedMessage id="navbar.links.services" />
             </ItemLink>
           </li>
           <li>
             <ItemLink className="cool"  onClick={handleClick} to="/blog">
-              Blog
+            <FormattedMessage id="navbar.links.blog" />
             </ItemLink>
           </li>
           <li>
             <ItemLink className="cool" onClick={handleClick} to="//sys-solutions">
-            Sys & Solutions
+            <FormattedMessage id="navbar.links.solutions" />
             </ItemLink>
           </li>
           <li>
             <ItemLink className="cool"  onClick={handleClick} to="/our-partners">
-            Our-Parteners
+            <FormattedMessage id="navbar.links.ourPartners" />
             </ItemLink>
           </li>
           <li>
             <ItemLink className="cool"  onClick={handleClick} to="/our-clients">
-            Our-Clients
+            <FormattedMessage id="navbar.links.ourClients" />
             </ItemLink>
           </li>
         </List>

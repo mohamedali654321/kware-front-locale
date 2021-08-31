@@ -19,6 +19,7 @@ import { StyleSheetManager } from "styled-components";
 import stylisRTLCSS from "stylis-rtlcss";
 import Login from './Components/Login/Login'
 import Register from './Components/Login/Register'
+import Resouces from './Components/Product/Resouces'
 
 function App() {
   const [locale, setLocale] = useLocale(
@@ -59,6 +60,7 @@ function App() {
               <Route path='/our-partners' exact component={OurPartners} />
               <Route path='/our-clients' exact component={OurClints} />
               <Route path='/sys-solutions' exact component={SysSolutions} />
+              <Route path='/resources' exact component={Resouces} />
               <Route path='/services' exact component={Services} />
               <Route path='/products' exact component={Products} />
             </Switch>
