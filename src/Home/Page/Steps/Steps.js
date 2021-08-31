@@ -3,7 +3,7 @@ import "./Steps.css";
 import { FormattedMessage } from "react-intl";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Desktop from './Desktop' 
+
 function Steps() {
   const [page, setPage] = useState();
 
