@@ -2,6 +2,7 @@ import React,{useEffect} from 'react'
 import './FristSection.css'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
+import { FormattedMessage } from "react-intl";
 function FristSection() {
 
   useEffect(()=>{
@@ -41,7 +42,7 @@ class="fristSection_gradient fristSection_slice fristSection_TextNextToImage fri
             <span>
                 <div
                   style={{position: "relative" ,display: "inline-block", opacity: 1, transform:" perspective(1000px) translate3d(0px, 0px, 0px)",bottom:"40px" ,maxWidth:"20px"}}
-                  class="">Better Performance</div>
+                  class=""><FormattedMessage id="service.product.performance"/></div>
                 
               </span>
               </div>
@@ -62,10 +63,7 @@ class="fristSection_gradient fristSection_slice fristSection_TextNextToImage fri
      
            
               
-              >You can now generate pages at deployment time and serve them over a CDN.
-               With headless CMS and a Static Site Generator, 
-              only the most relevant parts of the stack are ever running when a user makes a request,
-               speeding the whole process by reducing the number of steps.</div>
+              ><FormattedMessage id="service.product.performance.description"/>.</div>
            
             
             

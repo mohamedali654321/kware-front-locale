@@ -2,6 +2,7 @@ import React,{useEffect} from 'react'
 import './ThirdSection.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { FormattedMessage } from "react-intl";
 export default function ThirdSection() {
 
   useEffect(()=>{
@@ -38,7 +39,7 @@ export default function ThirdSection() {
                             <div
             
                               style={{position: "relative", display: "inline-block", opacity: 1, transform: "perspective(1000px) translate3d(0px, 0px, 0px)"}}
-                              class="">Scale your traffic, not your costs  </div>
+                              class=""><FormattedMessage id="service.product.scale" /> </div>
                             
                           </span></div>
                       </h1>
@@ -46,8 +47,7 @@ export default function ThirdSection() {
                         class="thirdSectionText  thirdSectionText_style  thirdSectionTitle_fontSize thirdSectionText_color">
                         <div
                           style={{position: "relative", display: "inline-block", opacity: 1, transform: "perspective(1000px) translate3d(0px, 0px, 0px)"}}
-                          class="">Because your files are served through CDN, when your app gets more requests, 
-                          the CDN easily compensates for higher traffic.</div>
+                          class=""><FormattedMessage id="service.product.scale.description" /></div>
                         
                       </div>
                     </div>

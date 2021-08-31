@@ -11,13 +11,14 @@ import BlogMeta from "./components/BlogMeta/BlogMeta";
 function BlogDetails({ match, history }) {
   const intl = useIntl();
   const [details, setDetails] = useState([]);
+  const BACKEND_URL ='54.220.211.123:1335'
 
   useEffect(() => {
     const updatePath = (locale, slug) => {
       const path = generatePath(match.path, { locale, slug });
       history.replace(path);
     };
-
+   
     axios
       .get(
         `http://54.220.211.123:1335/articles?slug=${match.params.slug}&_locale=${match.params.locale}`
@@ -128,8 +129,9 @@ function BlogDetails({ match, history }) {
                   // data-aos='zoom-in'
                   // data-aos-once='true'
                 >
-                  <div className='articleCoverImage'></div>
-                  {!details.image && !details.coverMedia && (
+                  {/* <div className='articleCoverImage'></div>
+                
+                  
                     <div className='styles_ratio_img styles_fluid_img'>
                       <img
                         src='/images/default.png'
@@ -147,8 +149,82 @@ function BlogDetails({ match, history }) {
                           ))}
                       </ul>
                       <span className='defaultTitle'>{details.title}</span>
-                    </div>
-                  )}
+                    </div> */}
+
+                    {
+                    <>
+                      <div className='styles_CoverImage'>
+                        <div className='ratio fluid'>
+                          <img
+                            src='/images/bg-hero.png'
+                            alt=''
+                            className='styles_Img styles_img '
+                            style={{
+                              opacity: 1,
+                              visibility: "inherit",
+                            }}
+                          />
+
+                          <div class='SixthSection_mobileInnerWrapper SixthSection_innerWrapper'>
+                            <div
+                              class='SixthSectionLabelTitleText SixthSectionLabelTitleText_width SixthSectionLabelTitleText_withGradient SixthSectionLabelTitleText_center'
+                              style={{ opacity: 1 }}
+                            >
+                              {details.categories&&
+                                details.categories.map((tag) => (
+                                  <div class='SixthSectionLabel SixthSectionLabel_style SixthSectionLabel_color'>
+                                    <div>
+                                      <div
+                                        style={{
+                                          position: "relative",
+                                          display: "inline-block",
+                                          opacity: 0.7,
+                                          transform:
+                                            "perspective(1000px) translate3d(0px, 0px, 0px)",
+                                          color: "#fff",
+                                          fontWeight: "500",
+                                          fontSize:"34px"
+                                        }}
+                                        class='default_Category'
+                                        
+                                      >
+                                        {tag.name}
+                                      </div>
+                                    </div>
+                                  </div>
+                                ))}
+
+                              <h2 class='card_text card_text_abstract abstract_small_text card_text_color_abstractPublish '>
+                                <div class=''>
+                                  <span>
+                                    <div
+                                      style={{
+                                        position: "relative",
+                                        opacity: 1,
+                                        transform:
+                                          "perspective(1000px) translate3d(0px, 0px, 0px)",
+                                        fontSize: "35px",
+                                        color: "#fff",
+                                        fontWeight: "500",
+                                        zIndex: "100",
+                                        marginTop:"50px",
+                                        
+                                        
+                                      }}
+                                      class='default_Title'
+                                    >
+                                      {details.title}
+                                    </div>
+                                  </span>
+                                </div>
+                              </h2>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  }
+                  
                 </div>
               </div>
             </div>

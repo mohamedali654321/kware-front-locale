@@ -2,6 +2,7 @@ import React,{useEffect} from 'react'
 import './ProductDescription.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { FormattedMessage } from "react-intl";
 
 
 function ProductDescription() {
@@ -34,7 +35,7 @@ function ProductDescription() {
                   
                     style={{position: "relative", display: "inline-block", opacity: 1, transform: "perspective(1000px) translate3d(0px, 0px, 0px)"}}
               
-                    class="">What is a Folio?  </div>
+                    class=""><FormattedMessage id="service.product.whatIs" />  </div>
                  
                 </div>
               </div>
@@ -43,12 +44,7 @@ function ProductDescription() {
                 <div
                   style={{position: "relative", display: "inline-block", opacity: 1, transform: "perspective(1000px) translate3d(0px, 0px, 0px)"}}
                   
-                  class="">FOLIO, an open source project, aims to reimagine library software through a unique collaboration of libraries, developers and vendors. 
-                  It moves beyond the traditional library management system to a new paradigm, where apps are built on an open platform,
-                   providing libraries more choice and delivering new services to users.
-
-                       The FOLIO platform includes core functionality found in current library management systems and is extensible, 
-                       allowing libraries to meet ever changing needs.</div>
+                  class=""><FormattedMessage id="service.product.abstract" /> </div>
                 
               </div>
             </div>

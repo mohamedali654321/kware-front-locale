@@ -17,6 +17,8 @@ import MainPage from "./Views/Blog/MainPage";
 import BlogDetails from "./Views/BlogDetails/BlogDetails";
 import { StyleSheetManager } from "styled-components";
 import stylisRTLCSS from "stylis-rtlcss";
+import Login from './Components/Login/Login'
+import Register from './Components/Login/Register'
 
 function App() {
   const [locale, setLocale] = useLocale(
@@ -51,6 +53,8 @@ function App() {
             <Switch>
               <Route path='/' exact component={HomePage} />
               <Route path='/blog' exact component={MainPage} />
+              <Route  path="/register" component={Register}></Route>
+               <Route path="/login" component={Login}></Route>
               <Route path='/:locale/blog/:slug' exact component={BlogDetails} />
               <Route path='/our-partners' exact component={OurPartners} />
               <Route path='/our-clients' exact component={OurClints} />

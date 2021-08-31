@@ -2,6 +2,7 @@ import React,{useEffect} from 'react'
 import './SecondSection.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { FormattedMessage } from "react-intl";
 function SecondSection() {
 
   useEffect(()=>{
@@ -38,7 +39,7 @@ function SecondSection() {
                                    data-aos-duration="1000"
                                    data-aos-once="true"
                                    
-                              >Higher Security</div>
+                              ><FormattedMessage id="service.product.security"/></div>
                             
                           </span></div>
                       </h1>
@@ -47,9 +48,7 @@ function SecondSection() {
                         <div
                
                           style={{position: "relative", display: "inline-block", opacity: 1, transform: "perspective(1000px) translate3d(0px, 0px, 0px)"}}
-                          class="">Stop worrying about vulnerabilities. 
-                          With a Headless CMS, you have no need for a server-side language to be executed,
-                           thus reducing your attack surface area and the risk of malware code injection.</div>
+                          class=""><FormattedMessage id="service.product.security.description"/></div>
                         
                       </div>
                     </div>

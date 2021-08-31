@@ -44,9 +44,10 @@ else return true
                       opacity: 1,
                       transform:
                         "perspective(1000px) translate3d(0px, 0px, 0px)",
+                        
                     }}
                   >
-                    {props.title} :
+                    {props.title} 
                   </div>
                 </span>
               </div>
@@ -63,7 +64,7 @@ else return true
                   display: "inline-block",
                   opacity: 1,
                   transform: "perspective(1000px) translate3d(0px, 0px, 0px)",
-                  fontSize:"17px",
+                  fontSize:"21px",
                  
                   
                 }}
@@ -84,7 +85,7 @@ else return true
                   display: "inline-block",
                   opacity: 1,
                   transform: "perspective(1000px) translate3d(0px, 0px, 0px)",
-                  fontSize:"17px"
+                  fontSize:"18px"
                 }}
               >
                 

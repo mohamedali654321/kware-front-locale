@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Steps.css";
-
+import { FormattedMessage } from "react-intl";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Desktop from './Desktop' 
 function Steps() {
   const [page, setPage] = useState();
 
@@ -49,7 +50,7 @@ console.log(page)
                       }}
                       className=""
                     >
-                      Step-by-step guide
+                      <FormattedMessage id="home.steps"/>
                     </div>
                   </div>
                 </div>
@@ -73,7 +74,7 @@ console.log(page)
                         }}
                         className=""
                       >
-                        How does it work?
+                        <FormattedMessage id="home.steps.title"/>
                       </div>
                     </span>
                   </div>
@@ -96,8 +97,7 @@ console.log(page)
                     }}
                     className=""
                   >
-                    Make a flexible data structure in 2 minutes. Use our
-                    powerful features to customize your API.
+                    <FormattedMessage id="home.steps.description"/>
                   </div>
                 </div>
               </div>
@@ -170,7 +170,7 @@ console.log(page)
 
 
 
-              <div></div>
+             
 
 
               
@@ -377,7 +377,7 @@ console.log(page)
                           transform: "translate(0px, 0px)",
                         }}
                       >
-                        Step. 1
+                        <FormattedMessage id="home.steps.step1"/>
                       </span>
                     </p>
                     <h1 className=" stepTitle step_StepsTitleWrapper step_stepsnumber_fontsize stepTitle_color">
@@ -392,8 +392,7 @@ console.log(page)
                             transform: "translate(0px, 0px)",
                           }}
                         >
-                          Effortlessly create content structures that flex to
-                          your needs.
+                          <FormattedMessage id="home.steps.step1.title"/>
                         </div>
                       </span>
                     </h1>
@@ -412,9 +411,7 @@ console.log(page)
               
               data-aos="zoom-in"
                         >
-                          No matter which data structure is the best for your
-                          business, you can easily define models and add
-                          relations to create rich layout experiences.
+                          <FormattedMessage id="home.steps.step1.description"/>
                         </div>
                       </span>
                     </p>
@@ -456,7 +453,7 @@ console.log(page)
                           transform: "translate(0px, 0px)",
                         }}
                       >
-                        Step. 2
+                        <FormattedMessage id="home.steps.step2"/>
                       </span>
                     </p>
                     <h1 className=" stepTitle step_StepsTitleWrapper step_stepsnumber_fontsize stepTitle_color">
@@ -471,7 +468,7 @@ console.log(page)
                             transform: "translate(0px, 0px)",
                           }}
                         >
-                          Seamlessly write, edit and manage any content types.
+                          <FormattedMessage id="home.steps.step2.title"/>
                         </div>
                       </span>
                     </h1>
@@ -487,11 +484,7 @@ console.log(page)
                             transform: "translate(0px, 0px)",
                           }}
                         >
-                          Once you have created your content architecture, you
-                          can start telling engaging stories. Allow
-                          cross-functional teams to deliver content faster no
-                          matter your industries, use cases, locations, devices,
-                          and channels.
+                          <FormattedMessage id="home.steps.step2.description"/>
                         </div>
                       </span>
                     </p>
@@ -533,7 +526,7 @@ console.log(page)
                           transform: "translate(0px, 0px)",
                         }}
                       >
-                        Step. 3
+                        <FormattedMessage id="home.steps.step3"/>
                       </span>
                     </p>
                     <h1 className=" stepTitle step_StepsTitleWrapper step_stepsnumber_fontsize stepTitle_color">
@@ -548,8 +541,8 @@ console.log(page)
                             transform: "translate(0px, 0px)",
                           }}
                         >
-                          Easily build apps and digital experiences without the
-                          distraction of CMS complexities.
+                         <FormattedMessage id="home.steps.step3.title"/>
+                          
                         </div>
                       </span>
                     </h1>
@@ -565,9 +558,7 @@ console.log(page)
                             transform: "translate(0px, 0px)",
                           }}
                         >
-                          Focus your talent on what matters. You can integrate
-                          individual best-in-className services by third-party
-                          vendors and connect any framework of your choice.
+                          <FormattedMessage id="home.steps.step3.description"/>
                         </div>
                       </span>
                     </p>
@@ -609,7 +600,7 @@ console.log(page)
                           transform: "translate(0px, 0px)",
                         }}
                       >
-                        Step. 4
+                        <FormattedMessage id="home.steps.step4"/>
                       </span>
                     </p>
                     <h1 className=" stepTitle step_StepsTitleWrapper step_stepsnumber_fontsize stepTitle_color">
@@ -624,8 +615,8 @@ console.log(page)
                             transform: "translate(0px, 0px)",
                           }}
                         >
-                          Consume Strapi API from any client using REST or
-                          GraphQL.
+                          <FormattedMessage id="home.steps.step4.title"/>
+                          
                         </div>
                       </span>
                     </h1>
@@ -641,10 +632,9 @@ console.log(page)
                             transform: "translate(0px, 0px)",
                           }}
                         >
-                          You can use a standard RESTful API or GraphQL to query
-                          your content. Based on Apollo, our GraphQL plugin
-                          offers a full compatibility with the whole GraphQL
-                          ecosystem.
+                          <FormattedMessage id="home.steps.step4.description"/>
+                          
+                          
                         </div>
                       </span>
                     </p>
@@ -686,7 +676,7 @@ console.log(page)
                           transform: "translate(0px, 0px)",
                         }}
                       >
-                        Step. 5
+                        <FormattedMessage id="home.steps.step5"/>
                       </span>
                     </p>
                     <h1 className=" stepTitle step_StepsTitleWrapper step_stepsnumber_fontsize stepTitle_color">
@@ -701,7 +691,7 @@ console.log(page)
                             transform: "translate(0px, 0px)",
                           }}
                         >
-                          Deploy in 1-click on Digital Ocean, AWS or Heroku.
+                          <FormattedMessage id="home.steps.step5.title"/>
                         </div>
                       </span>
                     </h1>
@@ -717,9 +707,8 @@ console.log(page)
                             transform: "translate(0px, 0px)",
                           }}
                         >
-                          We partner with the best hosting platforms for a
-                          smooth and seamless deployment. All you have to do is
-                          choose the platform and use the 1-click deploy button.
+                         <FormattedMessage id="home.steps.step5.description"/>
+                          
                         </div>
                       </span>
                     </p>

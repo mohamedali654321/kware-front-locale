@@ -2,6 +2,7 @@ import React,{useEffect} from 'react'
 import './Feature.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { FormattedMessage } from "react-intl";
 function Feature() {
   useEffect(()=>{
     AOS.init()
@@ -31,7 +32,7 @@ function Feature() {
                       }}
                       class=""
                     >
-                      Top Features
+                      <FormattedMessage id="home.feature" />
                     </div>
                     
                   </div>
@@ -54,7 +55,7 @@ function Feature() {
                         }}
                         class=""
                       >
-                        Build apps fast.
+                        <FormattedMessage id="home.feature.title" />
                       </div>
                       
                     </span>
@@ -76,7 +77,7 @@ function Feature() {
                     }}
                     class=""
                   >
-                    Building self-hosted, customizable, and performant content API has never been easier.
+                   <FormattedMessage id="home.feature.text" />
                   </div>
                   
                 </div>
@@ -205,7 +206,7 @@ function Feature() {
                         }}
                       >
                         <h1  class=" featureTitle featureIcon_title featureIcon_titleFontSize featureTitle_color">
-                          Open Source
+                          <FormattedMessage id="home.feature.source"/>
                         </h1>
                       </div>
                     </div>
@@ -221,7 +222,7 @@ function Feature() {
                           transform: "translate(0px, 0px)",
                         }}
                       >
-                        Forever. The entire codebase is available on GitHub and maintained by hundreds of contributors.
+                        <FormattedMessage id="home.feature.source.description"/>
 
                       </div>
                       
@@ -434,7 +435,7 @@ function Feature() {
                         }}
                       >
                         <h1 class=" featureTitle featureIcon_title featureIcon_titleFontSize featureTitle_color">
-                          Customizable
+                          <FormattedMessage id="home.feature.customizable"/>
                         </h1>
                       </div>
                     </div>
@@ -450,8 +451,7 @@ function Feature() {
                           transform: "translate(0px, 0px)",
                         }}
                       >
-                        Easily customize the admin panel as well as the API. Extend your content
-                        management with custom plugins, in seconds.
+                        <FormattedMessage id="home.feature.customizable.description"/>
                       </div>
                      
                     </div>
@@ -598,7 +598,7 @@ function Feature() {
                         }}
                       >
                         <h1 class=" featureTitle featureIcon_title featureIcon_titleFontSize featureTitle_color">
-                          RESTful or GraphQL
+                          <FormattedMessage id="home.feature.restful"/>
                         </h1>
                       </div>
                     </div>
@@ -614,7 +614,7 @@ function Feature() {
                           transform: "translate(0px, 0px)",
                         }}
                       >
-                        Consume the API from any client (React,Vue, Angular), mobile apps or even IoT devices, using REST or GraphQL.
+                        <FormattedMessage id="home.feature.restful.description"/>
                       </div>
                      
                     </div>
@@ -913,7 +913,7 @@ function Feature() {
                         }}
                       >
                         <h1 class=" featureTitle featureIcon_title featureIcon_titleFontSize featureTitle_color">
-                          Self-hosted
+                        <FormattedMessage id="home.feature.hosted"/>
                         </h1>
                       </div>
                     </div>
@@ -929,7 +929,7 @@ function Feature() {
                           transform: "translate(0px, 0px)",
                         }}
                       >
-                        Don’t give up on data privacy or lock yourself in. Keep control of your data and your costs at all time.
+                       <FormattedMessage id="home.feature.hosted.description"/>
                       </div>
                       
                     </div>

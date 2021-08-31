@@ -141,7 +141,7 @@
 
 
   .featureLabel {
-    font-family: Poppins, serif;
+    font-family: Effra-ar;
     font-size: 11px;
     line-height: 1;
     text-transform: uppercase;
@@ -197,7 +197,7 @@
 
 
   .featureTitle {
-    font-family: Poppins, serif;
+    font-family: Effra-ar;
     font-size: 23px;
     font-weight: 700;
     line-height: 140%;
@@ -240,7 +240,7 @@
 
 
   .featureText {
-    font-family: Poppins, serif;
+    font-family: Effra-ar;
     font-size: 17px;
     font-weight: 400;
     line-height: 28px;
@@ -282,7 +282,7 @@
   }
   
   .featureText_rich {
-    font-family: Poppins, serif;
+    font-family: Effra-ar;
     word-break: break-word;
     white-space: pre-line;
   }

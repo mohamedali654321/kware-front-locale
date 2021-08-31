@@ -40,30 +40,13 @@ function HomeHero() {
                       class="HeroRatio"
                       style={{ paddingBottom: "100.6829268292683%" }}
                     >
-                      {/* <img
-                        class="  HeroImg HeroImgCover HeroImgCenter"
-                        src="./images/hero/ring.png"
-                        
-                        style={{ opacity: 1, visibility: "inherit" }}
-                      /> */}
+                      
 
                    
                     </div>
                  
                         </div>
-                  {/* <div class="HeroBackgroundBottom">
-                    <div
-                      class="HeroRatio"
-                      style={{ paddingBottom: "100.56179775280899%" }}
-                    >
-                      <img
-                        class="  HeroImg HeroImgCover HeroImgCenter"
-                        src="./images/hero/hp-square-hero_dabb2415b2.svg"
-                        
-                        style={{ opacity: 1, visibility: "inherit" }}
-                      />
-                    </div>
-                  </div> */}
+                  
                 </div>
                 <div class="HeroWrapper HeroWrapper_style"
                  data-aos="zoom-in"              
@@ -94,6 +77,7 @@ function HomeHero() {
                             >
                              
                              <span class="clip ">
+                            
                              <FormattedMessage id="homeHero.kware.slogan" />
 
                              </span> 
@@ -128,82 +112,7 @@ function HomeHero() {
                           <span style={{fontSize:"20"}}><FormattedMessage id="homeHero.kware.description"/></span>
                         </div>
                       </h2>
-                      <ul class="HeroLinks">
-                        <li class="HeroLink"
-
-data-aos="zoom-in"              
-          data-aos-once="true"
-          data-aos-offset="200"
-        data-aos-delay="500"
-        
-     data-aos-duration="1100"
-                        
-                        >
-                          <div
-                            class=" HeroLink_buttonWidth HeroLink_buttonContainer"
-                            style={{
-                              opacity: 1,
-                              transform: "perspective(1000px)",
-                            }}
-                          >
-                            <div class="HeroLink_buttonStyle HeroLink_buttonBackgroundColor">
-                              
-                              <div
-                                class=" HeroLink_buttonBackground HeroLink_buttonBackgroundColor"
-                                style={{ transform: "perspective(800px)" }}
-                              >
-                                
-                              </div>
-                              <a
-                                id="1"
-                                class=" HeroLink_buttonLink HeroLink_buttonFontSize"
-                                target="_blank"
-                                rel="noopener"
-                                alt=""
-                                href="https://strapi.io/documentation/developer-docs/latest/getting-started/quick-start.html#_1-install-strapi-and-create-a-new-project"
-                              >
-                                <FormattedMessage id="homeHero.button.start"/>
-                              </a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="HeroLink"
-
-                        
-         data-aos="zoom-in"              
-          data-aos-once="true"
-          data-aos-offset="200"
-        data-aos-delay="1500"
-        
-     data-aos-duration="900"
-                        
-                        >
-                          <div
-                            class=" HeroLink_buttonWidth HeroLink_buttonContainer"
-                            style={{
-                              opacity: 1,
-                              transform: "perspective(1000px)",
-                            }}
-                          >
-                            <div class="HeroLink_buttonStyle HeroLink_YellowBackground">
-                              
-                              <div
-                                class=" HeroLink_buttonBackground HeroLink_YellowBackground"
-                                style={{ transform: "perspective(800px)" }}
-                              >
-                               
-                              </div>
-                              <a
-                                class=" HeroLink_buttonLink HeroLink_buttonFontSize"
-                                alt=""
-                                href="https://strapi.io/demo"
-                              >
-                                <FormattedMessage id="homeHero.button.demo"/>
-                              </a>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
+                 
                     </div>
                     <div
                       class="HeroAssetWrapper"

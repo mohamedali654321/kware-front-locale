@@ -43,7 +43,94 @@
     "services.label":"Folio",
     "services.title":"The Future of Libraries is Open",
     "services.description":"FOLIO is a collaboration of libraries, developers and vendors building an open source library services platform. It supports traditional resource management functionality and can be extended into other institutional areas.",
-    "services.text":"FOLIO, an open source project, aims to reimagine library software through a unique collaboration of libraries, developers and vendors. It moves beyond the traditional library management system to a new paradigm, where apps are built on an open platform, providing libraries more choice and delivering new services to users"
+    "services.text":"FOLIO, an open source project, aims to reimagine library software through a unique collaboration of libraries, developers and vendors. It moves beyond the traditional library management system to a new paradigm, where apps are built on an open platform, providing libraries more choice and delivering new services to users",
+    "service.product.whatIs":"WHAT IS A FOLIO?",
+    "service.product.abstract":"FOLIO, an open source project, aims to reimagine library software through a unique collaboration of libraries, developers and vendors. It moves beyond the traditional library management system to a new paradigm, where apps are built on an open platform, providing libraries more choice and delivering new services to users. The FOLIO platform includes core functionality found in current library management systems and is extensible, allowing libraries to meet ever changing needs.",
+    "service.product.performance":"Better Performance",
+    "service.product.performance.description":"You can now generate pages at deployment time and serve them over a CDN. With headless CMS and a Static Site Generator, only the most relevant parts of the stack are ever running when a user makes a request, speeding the whole process by reducing the number of steps.",
+    "service.product.security":"Higher Security",
+    "service.product.security.description":"Stop worrying about vulnerabilities. With a Headless CMS, you have no need for a server-side language to be executed, thus reducing your attack surface area and the risk of malware code injection.",
+    "service.product.scale":"Scale your traffic, not your costs",
+    "service.product.scale.description":" Because your files are served through CDN, when your app gets more requests, the CDN easily compensates for higher traffic.",
+    "service.product.team":" Happier Engineering Team",
+    "service.product.team.description":"Your dev team is not tied to a monolithic structure and can use any expert microservices. No more need to maintain several stacks for several usage, all content is centralized.",
+    "service.product.team.abstract":"Thanks to the folks at Strapi who made the easiest tool to build database and data relationship. Building data without fightin’ with weird SQL command is dope. Great work!",
+    "service.product.team.author":"Julien JohnTax",
+    "service.product.team.authorJob":"Software Engineer",
+    "service.product.marketing":"Independent marketing team",
+    "service.product.marketing.description":"Marketers and content editors are able to not only modify the existing pages but also autonomously build new pages using components.",
+
+    "home.feature":"TOP FEATURES",
+    "home.feature.title":"Build apps fast.",
+    "home.feature.text":"Building self-hosted, customizable, and performant content API has never been easier.",
+    "home.feature.source":"Open Source",
+    "home.feature.source.description":"Forever. The entire codebase is available on GitHub and maintained by hundreds of contributors.",
+    "home.feature.customizable":"Customizable",
+    "home.feature.customizable.description":"Easily customize the admin panel as well as the API. Extend your content management with custom plugins, in seconds.",
+    "home.feature.restful":"RESTful or GraphQL",
+    "home.feature.restful.description":"Consume the API from any client (React,Vue, Angular), mobile apps or even IoT devices, using REST or GraphQL.",
+    "home.feature.hosted":"Self-hosted",
+    "home.feature.hosted.description":"Don’t give up on data privacy or lock yourself in. Keep control of your data and your costs at all time.",
+
+
+
+
+
+    "home.steps":"STEP-BY-STEP GUIDE",
+    "home.steps.title":"How does it work?",
+    "home.steps.description":"Make a flexible data structure in 2 minutes. Use our powerful features to customize your API.",
+    "home.steps.step1":"Step. 1",
+    "home.steps.step1.title":"Effortlessly create content structures that flex to your needs.",
+    "home.steps.step1.description":"No matter which data structure is the best for your business, you can easily define models and add relations to create rich layout experiences.",
+    "home.steps.step2":"Step. 2",
+    "home.steps.step2.title":"Seamlessly write, edit and manage any content types.",
+    "home.steps.step2.description":"   Once you have created your content architecture, you can start telling engaging stories. Allow cross-functional teams to deliver content faster no  matter your industries, use cases, locations, devices, and channels.",
+    "home.steps.step3":"Step. 3",
+    "home.steps.step3.title":"Easily build apps and digital experiences without the distraction of CMS complexities.",
+    "home.steps.step3.description":"Focus your talent on what matters. You can integrate individual best-in-className services by third-party vendors and connect any framework of your choice.",
+    "home.steps.step4":"Step. 4",
+    "home.steps.step4.title":"Consume Strapi API from any client using REST or GraphQL.",
+    "home.steps.step4.description":"You can use a standard RESTful API or GraphQL to query your content. Based on Apollo, our GraphQL plugin offers a full compatibility with the whole GraphQL ecosystem.",
+    
+    "home.steps.step5":"Step. 5",
+    "home.steps.step5.title":"Deploy in 1-click on Digital Ocean, AWS or Heroku.",
+    "home.steps.step5.description":" We partner with the best hosting platforms for a smooth and seamless deployment. All you have to do is choose the platform and use the 1-click deploy button."
+    
+
+
+    
+
+
+    
+
+
+    
+    
+    
+    
+    
+
+
+    
+
+    
+    
+    
+
+
+
+    
+    
+
+
+    
+    
+    
+
+    
+    
+    
+
 
     
 

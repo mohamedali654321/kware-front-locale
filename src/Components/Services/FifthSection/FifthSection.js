@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react'
 import CardPush from '../CardPush/CardPush'
 import './FifthSection.css'
+import { FormattedMessage } from "react-intl";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 function FifthSection() {
@@ -32,7 +33,7 @@ function FifthSection() {
                       <div class="fifthSection_titleContainer"><span>
                           <div
                             style={{position: "relative", display: "inline-block", opacity: 1, transform: "perspective(1000px) translate3d(0px, 0px, 0px)"}}
-                            class="">Independent marketing team</div>
+                            class=""><FormattedMessage id="service.product.marketing"/></div>
                           
                         </span></div>
                     </h1>
@@ -40,8 +41,7 @@ function FifthSection() {
                       class="fifthSectionText  fifthSectionText_style  fifthSectionTitle_fontSize fifthSectionText_color">
                       <div
                         style={{position: "relative", display: "inline-block", opacity: 1, transform: "perspective(1000px) translate3d(0px, 0px, 0px)"}}
-                        class="">Marketers and content editors are able to not only modify the existing pages 
-                        but also autonomously build new pages using components.</div>
+                        class=""><FormattedMessage id="service.product.marketing.description"/></div>
                       
                     </div>
                     <ul class="fifthSectionLinks"
@@ -62,7 +62,7 @@ function FifthSection() {
                             </div><a class="fifthSectionLink_buttonLink fifthSectionLink_buttonFont"
                             
                              alt=""
-                              href="https://strapi.io/features/content-types-builder">Learn more</a>
+                              href="https://strapi.io/features/content-types-builder"><FormattedMessage id="homeHero.button.learnMore"/></a>
                           </div>
                         </div>
                       </li>

@@ -2,6 +2,7 @@ import React,{useEffect} from 'react'
 import './FourthSection.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { FormattedMessage } from "react-intl";
 function FourthSection() {
 
   useEffect(()=>{
@@ -31,7 +32,7 @@ function FourthSection() {
                               style={{position: "relative", display: "inline-block", opacity: 1, transform: "perspective(1000px) translate3d(0px, 0px, 0px)"}}
                               class=""
                               
-                              >Happier Engineering Team </div>
+                              ><FormattedMessage id="service.product.team"/></div>
                             
                           </span></div>
                       </h1>
@@ -44,8 +45,7 @@ function FourthSection() {
                         class="fourthSectionText  fourthSectionText_style  fourthSectionTitle_fontSize fourthSectionText_color">
                         <div
                           style={{position: "relative", display: "inline-block", opacity: 1, transform: "perspective(1000px) translate3d(0px, 0px, 0px)"}}
-                          class="">Your dev team is not tied to a monolithic structure and can use any expert microservices.
-                           No more need to maintain several stacks for several usage, all content is centralized.</div>
+                          class=""><FormattedMessage id="service.product.team.description"/></div>
                         
                       </div>
                     </div>
@@ -60,8 +60,7 @@ function FourthSection() {
                     <div
                     
                       style={{position: "relative", display: "inline-block", opacity: 1, transform: "perspective(1000px) translate3d(0px, 0px, 0px)"}}>
-                      Thanks to the folks at Strapi who made the easiest tool to build database and data relationship. 
-                      Building data without fightin’ with weird SQL command is dope. Great work!</div>
+                      <FormattedMessage id="service.product.team.abstract"/></div>
                     
                     </p>
                     <div style={{opacity: 1, transform: "perspective(1000px)"}}>
@@ -93,10 +92,9 @@ function FourthSection() {
                         <span class="fourthSection_authorWrapper">
                         <span
                       
-                              class="fourthSectionText fourthSection_authorName fourthSectionText_smallFont fourthSection_authorColor">Julien
-                              JohnTax</span><span
+                              class="fourthSectionText fourthSection_authorName fourthSectionText_smallFont fourthSection_authorColor"><FormattedMessage id="service.product.team.author"/></span><span
                               class="fourthSectionText styles_jobCompany__svFIH fourthSectionText_smallFont fourthSectionText_color">,
-                              Software Engineer</span></span></div>
+                              <FormattedMessage id="service.product.team.authorJob"/></span></span></div>
                       </div>
                     </div>
                   </div>
