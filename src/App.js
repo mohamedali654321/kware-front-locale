@@ -17,8 +17,7 @@ import MainPage from "./Views/Blog/MainPage";
 import BlogDetails from "./Views/BlogDetails/BlogDetails";
 import { StyleSheetManager } from "styled-components";
 import stylisRTLCSS from "stylis-rtlcss";
-import Login from './Components/Login/Login'
-import Register from './Components/Login/Register'
+import Auth from './Components/Auth/Auth'
 import Resouces from './Components/Product/Resouces'
 
 function App() {
@@ -61,6 +60,7 @@ function App() {
               <Route path='/sys-solutions' exact component={SysSolutions} />
               <Route path='/resources' exact component={Resouces} />
               <Route path='/services' exact component={Services} />
+              <Route path='/auth' exact component={Auth}/>
               <Route path='/products' exact component={Products} />
             </Switch>
             <Footer />

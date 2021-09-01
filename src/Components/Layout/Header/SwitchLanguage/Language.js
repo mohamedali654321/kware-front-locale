@@ -12,7 +12,25 @@ const switchText = {
   paddingTop: -4,
   backgroundColor: "#fff;",
 };
+const buttonStyle={
+  background: "#fff",
+  borderRadius:"10px",
+  cursor:"pointer",
+  color:"#8D1CB8",
+  padding:"5px 7px",
+  alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    fontSize:"15px",
+    fontWeight:"600",
+    boxShadow: "0 1px 4px rgb(26 26 67 / 40%)",
+    zIndex: "1000",
+    border:"none",
+    fontFamily: "Effra-ar"
 
+  
+  
+}
 function Language() {
   const [checked, setChecked] = useState(false);
 
@@ -20,7 +38,7 @@ function Language() {
     <LocaleContext.Consumer>
       {({ value, setValue }) => {
         return (
-          <div style={{ fontFamily: "sans-serif" }}>
+          <div style={{ fontFamily: "Effra-ar" }}>
             {/* <Switch
               checked={checked}
               onChange={() => {
@@ -42,13 +60,16 @@ function Language() {
             /> */}
             <button
                 buttonStyle="zoom"
+                style={buttonStyle}
                 // id="tooltip112445449"
                 onClick={() => {
                   value === "ar" ? setValue("en") : setValue("ar");
                 }}
                 // onMouseDown={(e) => e.preventDefault()}
               >
-                {value === "ar" ? "en" : "ar"}
+              
+                {value === "ar" ? "English" : "العربية"}
+                <i style={{margin:"5px"}} class="fas fa-globe"></i>
               </button>
           </div>
         );
