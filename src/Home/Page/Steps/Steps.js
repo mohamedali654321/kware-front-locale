@@ -3,6 +3,7 @@ import "./Steps.css";
 import { FormattedMessage } from "react-intl";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import AnimateBackground from "./AnimateBackground/AnimateBackground";
 
 function Steps() {
   const [page, setPage] = useState();
@@ -10,11 +11,10 @@ function Steps() {
   window.addEventListener("scroll", () => {
     setPage(window.pageYOffset);
   });
-console.log(page)
+  console.log(page);
   useEffect(() => {
     AOS.init();
   });
-
 
   return (
     <div>
@@ -50,7 +50,7 @@ console.log(page)
                       }}
                       className=""
                     >
-                      <FormattedMessage id="home.steps"/>
+                      <FormattedMessage id="home.steps" />
                     </div>
                   </div>
                 </div>
@@ -74,7 +74,7 @@ console.log(page)
                         }}
                         className=""
                       >
-                        <FormattedMessage id="home.steps.title"/>
+                        <FormattedMessage id="home.steps.title" />
                       </div>
                     </span>
                   </div>
@@ -97,7 +97,7 @@ console.log(page)
                     }}
                     className=""
                   >
-                    <FormattedMessage id="home.steps.description"/>
+                    <FormattedMessage id="home.steps.description" />
                   </div>
                 </div>
               </div>
@@ -166,218 +166,27 @@ console.log(page)
           <div className="step_steps">
             <div className="step_stepsAnimatedBackground">
               <div className="step_stepsInnerWrapper">
-
-
-
-
-             
-
-
-              
-                <div
-                  className={
-                    (page > 3280  && page < 4270 ) || (page > 5230  && page < 6205 )
-                      ? " float-right step_stepsAssetsWrapper"
-                      : "float-left step_stepsAssetsWrapper"
-                  }
-
-                >
-                  <div className="step_stepsBackground_Img">
-                    <div
-                      className="step_stepsImage_ratio"
-                      style={{ paddingBottom: "77.40112994350282%" }}
-                    >
-                      <img
-                        className=" step_stepsImage step_stepsImage_cover step_stepsimage_center"
-                        src="./images/hero/hp-primary-desktop_e0dab1f509.svg"
-                        alt="Illustration of desktop "
-                        style={{ opacity: 1, visibility: "inherit" }}
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="step_steps_secondaryAssetsWrapper"
-                    style={{ transform: "translate(0%, 0px)" }}
-                  >
-                    <div
-                   
-                     className={(page > 2259 && page < 3280) ? 'step_steps_secondary secondaryImgDisplayType1' : 'step_steps_secondary  secondaryImg-notDisplayType1'}
-                      // className="step_steps_secondary"
-                      // style={{
-                      //   opacity: 1,
-                      //   transform: "translate(0px, 30%)",
-                      // }}
-                    >
-                      <div>
-                        <div
-                          className="step_stepsImage_ratio"
-                          style={{
-                            paddingBottom: "76.98744769874477%",
-                          }}
-                        >
-                          <img
-                            className=" step_stepsImage step_stepsImage_cover step_stepsimage_center"
-                            src="./images/hero/hp-step1-2D_aeea862f0b.svg"
-                            alt="Illustration of the Strapi Content-type fields"
-                            style={{
-                              opacity: 1,
-                              visibility: "inherit",
-                            }}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                  
-                    className={(page > 3280 && page < 4272) ? 'step_steps_secondary secondaryImgDisplayType1' : 'step_steps_secondary  secondaryImg-notDisplayType1'}
-                      // className="step_steps_secondary"
-                      // style={{
-                      //   opacity: 0,
-                      //   transform: "translate(0px, 30%)",
-                      // }}
-                      style={{transform:"translate(-220px, 0%)"}}
-                    >
-                      <div>
-                        <div
-                          className="step_stepsImage_ratio"
-                          style={{
-                            paddingBottom: "76.98744769874477%",
-                          }}
-                        >
-                          <img
-                            className="step_stepsImage step_stepsImage_cover step_stepsimage_center"
-                            src="./images/hero/hp-step2-2D_6729998af1.svg"
-                            alt="Illustration of the Strapi Content Manager"
-                            style={{
-                              opacity: 1,
-                              visibility: "inherit",
-                            }}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                    
-
-
-                    className={(page > 4264 && page < 5230) ? 'step_steps_secondary secondaryImgDisplayType2' : 'step_steps_secondary  secondaryImg-notDisplayType2'}
-                      // className="step_steps_secondary"
-                      // style={{
-                      //   opacity: 0,
-                      //   transform: "translate(0px, 0%)",
-                      // }}
-                    >
-                      <div>
-                        <div
-                          className="step_stepsImage_ratio"
-                          style={{ paddingBottom: "92.96%" }}
-                        >
-                          <img
-                            className=" step_stepsImage step_stepsImage_cover step_stepsimage_center"
-                            src="./images/hero/hp-step3-2D_7bc731eae8.svg"
-                            alt="Illustration of Partner technologies of Strapi like AWS, Next.js, React, Netlify or Node.JS"
-                            style={{
-                              opacity: 1,
-                              visibility: "inherit",
-                            }}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                    
-
-                      className={(page > 5210 && page < 6215) ? 'step_steps_secondary secondaryImgDisplayType1 ' : 'step_steps_secondary  secondaryImg-notDisplayType1'}
-
-                   
-                      // className="step_steps_secondary"
-                      
-                      // style={{
-                      //   opacity: 1,
-                      //   transform: "translate(0px, 30%)",
-                      // }}
-                      style={{transform:"translate(-220px, 0%)"}}
-                    >
-                      <div>
-                        <div
-                          className="step_stepsImage_ratio"
-                          style={{
-                            paddingBottom: "73.88268156424581%",
-                          }}
-                        >
-                          <img
-                            className=" step_stepsImage step_stepsImage_cover step_stepsimage_center"
-                            src="./images/hero/hp-step4-2D_9ab379c7f5.svg"
-                            alt="Illustration of a GraphQL request"
-                            style={{
-                              opacity: 1,
-                              visibility: "inherit",
-                            }}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                  
-                    className={(page > 6215 ) ? 'step_steps_secondary secondaryImgDisplayType1' : 'step_steps_secondary  secondaryImg-notDisplayType1'}
-                      // className="step_steps_secondary"
-                      // style={{
-                      //   opacity: 1,
-                      //   transform: "translate(0px, 30%)",
-                      // }}
-                    >
-                      <div>
-                        <div
-                          className="step_stepsImage_ratio"
-                          style={{
-                            paddingBottom: "76.98744769874477%",
-                          }}
-                        >
-                          <img
-                            className=" step_stepsImage step_stepsImage_cover step_stepsimage_center"
-                            src="./images/hero/hp-step5-2D_9d3fc362cc.svg"
-                            alt="Illustration of the deployment options in Strapi"
-                            style={{
-                              opacity: 1,
-                              visibility: "inherit",
-                            }}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-
-
-
-
-
+              {/* animation-bg */}
+                <AnimateBackground />
               </div>
             </div>
 
-            <div
-              className="step_StepsContainer step_StepsContentRight"
-              
-             
-            >
+            <div className="step_StepsContainer step_StepsContentRight">
               <div className="step_StepsWrapper stepWrapper_style">
-                <div className="step_StepsInner" style={{ opacity: 1 }}
-                style={{marginTop:"30px"}}
-                
+                <div
+                  className="step_StepsInner"
+                  style={{ opacity: 1 }}
+                  style={{ marginTop: "30px" }}
                 >
                   <div className="step_StepsContent" style={{ opacity: 1 }}>
-                    <p className=" stepText step_StepsNumber step_stepsnumber_fontsize stepText_color"
-                    
-                    >
+                    <p className=" stepText step_StepsNumber step_stepsnumber_fontsize stepText_color">
                       <span
                         style={{
                           opacity: 1,
                           transform: "translate(0px, 0px)",
                         }}
                       >
-                        <FormattedMessage id="home.steps.step1"/>
+                        <FormattedMessage id="home.steps.step1" />
                       </span>
                     </p>
                     <h1 className=" stepTitle step_StepsTitleWrapper step_stepsnumber_fontsize stepTitle_color">
@@ -392,7 +201,7 @@ console.log(page)
                             transform: "translate(0px, 0px)",
                           }}
                         >
-                          <FormattedMessage id="home.steps.step1.title"/>
+                          <FormattedMessage id="home.steps.step1.title" />
                         </div>
                       </span>
                     </h1>
@@ -408,10 +217,9 @@ console.log(page)
                             transform: "translate(0px, 0px)",
                           }}
                           data-aos-delay="200"
-              
-              data-aos="zoom-in"
+                          data-aos="zoom-in"
                         >
-                          <FormattedMessage id="home.steps.step1.description"/>
+                          <FormattedMessage id="home.steps.step1.description" />
                         </div>
                       </span>
                     </p>
@@ -440,11 +248,14 @@ console.log(page)
               data-aos-delay="200"
               data-aos-duration="200"
               data-aos-offset="200"
-              
               data-aos="zoom-in"
             >
               <div className="step_StepsWrapper stepWrapper_style">
-                <div className="step_StepsInner" style={{ opacity: 1 }} style={{marginTop:"30px"}}>
+                <div
+                  className="step_StepsInner"
+                  style={{ opacity: 1 }}
+                  style={{ marginTop: "30px" }}
+                >
                   <div className="step_StepsContent" style={{ opacity: 1 }}>
                     <p className=" stepText step_StepsNumber step_stepsnumber_fontsize stepText_color">
                       <span
@@ -453,7 +264,7 @@ console.log(page)
                           transform: "translate(0px, 0px)",
                         }}
                       >
-                        <FormattedMessage id="home.steps.step2"/>
+                        <FormattedMessage id="home.steps.step2" />
                       </span>
                     </p>
                     <h1 className=" stepTitle step_StepsTitleWrapper step_stepsnumber_fontsize stepTitle_color">
@@ -468,7 +279,7 @@ console.log(page)
                             transform: "translate(0px, 0px)",
                           }}
                         >
-                          <FormattedMessage id="home.steps.step2.title"/>
+                          <FormattedMessage id="home.steps.step2.title" />
                         </div>
                       </span>
                     </h1>
@@ -484,7 +295,7 @@ console.log(page)
                             transform: "translate(0px, 0px)",
                           }}
                         >
-                          <FormattedMessage id="home.steps.step2.description"/>
+                          <FormattedMessage id="home.steps.step2.description" />
                         </div>
                       </span>
                     </p>
@@ -513,7 +324,6 @@ console.log(page)
               data-aos-delay="200"
               data-aos-duration="200"
               data-aos-offset="200"
-              
               data-aos="zoom-in"
             >
               <div className="step_StepsWrapper stepWrapper_style">
@@ -526,7 +336,7 @@ console.log(page)
                           transform: "translate(0px, 0px)",
                         }}
                       >
-                        <FormattedMessage id="home.steps.step3"/>
+                        <FormattedMessage id="home.steps.step3" />
                       </span>
                     </p>
                     <h1 className=" stepTitle step_StepsTitleWrapper step_stepsnumber_fontsize stepTitle_color">
@@ -541,8 +351,7 @@ console.log(page)
                             transform: "translate(0px, 0px)",
                           }}
                         >
-                         <FormattedMessage id="home.steps.step3.title"/>
-                          
+                          <FormattedMessage id="home.steps.step3.title" />
                         </div>
                       </span>
                     </h1>
@@ -558,7 +367,7 @@ console.log(page)
                             transform: "translate(0px, 0px)",
                           }}
                         >
-                          <FormattedMessage id="home.steps.step3.description"/>
+                          <FormattedMessage id="home.steps.step3.description" />
                         </div>
                       </span>
                     </p>
@@ -587,7 +396,6 @@ console.log(page)
               data-aos-delay="200"
               data-aos-duration="200"
               data-aos-offset="200"
-             
               data-aos="zoom-in"
             >
               <div className="step_StepsWrapper stepWrapper_style">
@@ -600,7 +408,7 @@ console.log(page)
                           transform: "translate(0px, 0px)",
                         }}
                       >
-                        <FormattedMessage id="home.steps.step4"/>
+                        <FormattedMessage id="home.steps.step4" />
                       </span>
                     </p>
                     <h1 className=" stepTitle step_StepsTitleWrapper step_stepsnumber_fontsize stepTitle_color">
@@ -615,8 +423,7 @@ console.log(page)
                             transform: "translate(0px, 0px)",
                           }}
                         >
-                          <FormattedMessage id="home.steps.step4.title"/>
-                          
+                          <FormattedMessage id="home.steps.step4.title" />
                         </div>
                       </span>
                     </h1>
@@ -632,9 +439,7 @@ console.log(page)
                             transform: "translate(0px, 0px)",
                           }}
                         >
-                          <FormattedMessage id="home.steps.step4.description"/>
-                          
-                          
+                          <FormattedMessage id="home.steps.step4.description" />
                         </div>
                       </span>
                     </p>
@@ -663,7 +468,6 @@ console.log(page)
               data-aos-delay="200"
               data-aos-duration="200"
               data-aos-offset="200"
-            
               data-aos="zoom-in"
             >
               <div className="step_StepsWrapper stepWrapper_style">
@@ -676,7 +480,7 @@ console.log(page)
                           transform: "translate(0px, 0px)",
                         }}
                       >
-                        <FormattedMessage id="home.steps.step5"/>
+                        <FormattedMessage id="home.steps.step5" />
                       </span>
                     </p>
                     <h1 className=" stepTitle step_StepsTitleWrapper step_stepsnumber_fontsize stepTitle_color">
@@ -691,7 +495,7 @@ console.log(page)
                             transform: "translate(0px, 0px)",
                           }}
                         >
-                          <FormattedMessage id="home.steps.step5.title"/>
+                          <FormattedMessage id="home.steps.step5.title" />
                         </div>
                       </span>
                     </h1>
@@ -707,8 +511,7 @@ console.log(page)
                             transform: "translate(0px, 0px)",
                           }}
                         >
-                         <FormattedMessage id="home.steps.step5.description"/>
-                          
+                          <FormattedMessage id="home.steps.step5.description" />
                         </div>
                       </span>
                     </p>

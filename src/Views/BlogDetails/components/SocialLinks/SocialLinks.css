@@ -3,13 +3,14 @@
   left: 0;
   top: 0;
   height: 100%;
+  z-index: 1000;
 }
 
 .ShareContainer .share {
   display: block;
   position: sticky;
   top: 100px;
-  padding-bottom: 600px;
+  padding-bottom: 100px;
   flex-direction: column;
   list-style: none;
 }
@@ -22,34 +23,41 @@
   padding-inline-start: 40px;
 }
 
+
 .share .socialMedia {
   position: relative;
   display: list-item;
   text-align: -webkit-match-parent;
+  left: -50px;
+  right: -50px;
+  z-index: 10000;
 }
 
 @media (max-width: 992px) {
   .ShareContainer {
-    left: -90px;
+    /* left: -90px; */
   }
 }
 
 @media (max-width: 1300px) {
   .ShareContainer {
-    left: -30px;
+    /* left: -30px; */
   }
+  
 }
 
 @media (max-width: 450px) {
   .ShareContainer {
     z-index: 100000;
-    left: -53px;
+    /* left: -53px; */
   }
 }
 
 @media (max-width: 768px) {
   .ShareContainer {
     z-index: 100000;
-    left: -55px;
+    /* left: -50px; */
+   
+    
   }
 }

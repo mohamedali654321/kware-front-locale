@@ -541,7 +541,8 @@ label::after {
 @media (max-width:845px) {
 
   .logo{
-      padding-left: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
   }
  
   .HeaderGroup{
@@ -598,7 +599,8 @@ label::after {
 
 @media (max-width:450px) {
   .logo{
-      padding-left: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
   }
  
   .display{
@@ -616,7 +618,8 @@ label::after {
 
 @media (max-width:768px) {
   .logo{
-      padding-left: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
   }
  
   .display{

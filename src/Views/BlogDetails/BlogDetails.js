@@ -64,7 +64,7 @@ function BlogDetails({ match, history }) {
     match.params.slug,
     match.path,
   ]);
-
+   
   return (
     <div>
       <div className='details_container'>
@@ -129,30 +129,35 @@ function BlogDetails({ match, history }) {
                   // data-aos='zoom-in'
                   // data-aos-once='true'
                 >
-                  {/* <div className='articleCoverImage'></div>
+                {/* {details.image !== null  &&
+                          
+                           (
+                            <div className="styles_ratio_img styles_fluid_img">
+                              <img
+                                src={BACKEND_URL + details.image.url}
+                                className="
+                              
+                              styles_img_article
+                              
+                              styles_img_center
+                            "
+                                style={{
+                                  opacity: 1,
+                                  visibility: "inherit",
+                                  position: "absolute",
+                                }}
+                              />
+                            </div>
+                           )
+                          } */}
+
+
                 
                   
-                    <div className='styles_ratio_img styles_fluid_img'>
-                      <img
-                        src='/images/default.png'
-                        alt='default.png'
-                        style={{ opacity: 1, visibility: "inherit" }}
-                        className='styles_img_article styles_img_center'
-                      />
-                      <ul className='styles_tags'>
-                        {details.categories &&
-                          details.categories.length > 0 &&
-                          details.categories.map((tag) => (
-                            <li className='style_tag'>
-                              <p className='defaultCat'>{tag.name}</p>
-                            </li>
-                          ))}
-                      </ul>
-                      <span className='defaultTitle'>{details.title}</span>
-                    </div> */}
 
                     {
-                    <>
+                      
+                    (
                       <div className='styles_CoverImage'>
                         <div className='ratio fluid'>
                           <img
@@ -183,9 +188,9 @@ function BlogDetails({ match, history }) {
                                             "perspective(1000px) translate3d(0px, 0px, 0px)",
                                           color: "#fff",
                                           fontWeight: "500",
-                                          fontSize:"34px"
+                                          
                                         }}
-                                        class='default_Category'
+                                        class='default_Category  default_fontSize'
                                         
                                       >
                                         {tag.name}
@@ -194,7 +199,7 @@ function BlogDetails({ match, history }) {
                                   </div>
                                 ))}
 
-                              <h2 class='card_text card_text_abstract abstract_small_text card_text_color_abstractPublish '>
+                              <h2 class=' '>
                                 <div class=''>
                                   <span>
                                     <div
@@ -203,15 +208,15 @@ function BlogDetails({ match, history }) {
                                         opacity: 1,
                                         transform:
                                           "perspective(1000px) translate3d(0px, 0px, 0px)",
-                                        fontSize: "35px",
+                                        
                                         color: "#fff",
                                         fontWeight: "500",
                                         zIndex: "100",
-                                        marginTop:"50px",
+                                       
                                         
                                         
                                       }}
-                                      class='default_Title'
+                                      class='default_Title_article'
                                     >
                                       {details.title}
                                     </div>
@@ -222,7 +227,7 @@ function BlogDetails({ match, history }) {
                           </div>
                         </div>
                       </div>
-                    </>
+                    )
                   }
                   
                 </div>

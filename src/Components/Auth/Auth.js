@@ -4,169 +4,113 @@ import './Auth.css'
 
 function Auth() {
   
-	let container = document.getElementById('container')
 
-	const  toggle = () => {
-		  container.classList.toggle('sign-in')
-		  container.classList.toggle('sign-up')
-  
-	  }
-  
+
 
     useEffect(()=>{
+
+const signUp = document.getElementById('sign-up');
+const  signIn = document.getElementById('sign-in');
+const   loginIn = document.getElementById('login-in');
+const   loginUp = document.getElementById('login-up');
   
-          setTimeout(() => {
-              container.classList.add('sign-in')
-          }, 200)
-           
+  
+        signUp.addEventListener('click', ()=>{
+			// Remove classes first if they exist
+			loginIn.classList.remove('block')
+			loginUp.classList.remove('none')
+		
+			// Add classes
+			loginIn.classList.toggle('none')
+			loginUp.classList.toggle('block')
+		})
+		
+		signIn.addEventListener('click', ()=>{
+			// Remove classes first if they exist
+			loginIn.classList.remove('none')
+			loginUp.classList.remove('block')
+		
+			// Add classes
+			loginIn.classList.toggle('block')
+			loginUp.classList.toggle('none')
+		})
+		
         
         
-    })
+    },[])
     
 
 
    
     return (
 
-        <div id="container" class="container">
-		
-		<div class="row">
-			
-			<div class="col align-items-center flex-col sign-up">
-				<div class="form-wrapper align-items-center">
-					<div class="form sign-up">
-						<div class="input-group">
-							<i class='bx bxs-user'></i>
-							<input type="text" placeholder="Username"/>
-						</div>
-						<div class="input-group">
-							<i class='bx bx-mail-send'></i>
-							<input type="email" placeholder="Email"/>
-						</div>
-						<div class="input-group">
-							<i class='bx bxs-lock-alt'></i>
-							<input type="password" placeholder="Password"/>
-						</div>
-						<div class="input-group">
-							<i class='bx bxs-lock-alt'></i>
-							<input type="password" placeholder="Confirm password"/>
-						</div>
-						<button>
-							Sign up
-						</button>
-						<p>
-							<span>
-								Already have an account?
-							</span>
-							<b onclick={()=>{toggle()}} class="pointer">
-								Sign in here
-							</b>
-						</p>
-					</div>
-				</div>
-				<div class="form-wrapper">
-					<div class="social-list align-items-center sign-up">
-						<div class="align-items-center facebook-bg">
-							<i class='bx bxl-facebook'></i>
-						</div>
-						<div class="align-items-center google-bg">
-							<i class='bx bxl-google'></i>
-						</div>
-						<div class="align-items-center twitter-bg">
-							<i class='bx bxl-twitter'></i>
-						</div>
-						<div class="align-items-center insta-bg">
-							<i class='bx bxl-instagram-alt'></i>
-						</div>
-					</div>
-				</div>
+		<div class="login">
+		<div class="login__content">
+			<div class="login__img">
+				<img src="./images/signup-1.png" alt=""/>
 			</div>
-			
-			<div class="col align-items-center flex-col sign-in">
-				<div class="form-wrapper align-items-center">
-					<div class="form sign-in">
-						<div class="input-group">
-							<i class='bx bxs-user'></i>
-							<input type="text" placeholder="Username"/>
-						</div>
-						<div class="input-group">
-							<i class='bx bxs-lock-alt'></i>
-							<input type="password" placeholder="Password"/>
-						</div>
-						<button>
-							Sign in
-						</button>
-						<p>
-							<b>
-								Forgot password?
-							</b>
-						</p>
-						<p>
-							<span>
-								Don't have an account?
-							</span>
-							<b onclick={()=>{toggle()}} class="pointer">
-								Sign up here
-							</b>
-						</p>
+
+			<div class="login__forms">
+				<form action="" class="login__registre" id="login-in">
+					<h1 class="login__title">Sign In</h1>
+
+					<div class="login__box">
+						<i class='bx bx-user login__icon'></i>
+						<input type="text" placeholder="Username" class="login__input"/>
 					</div>
-				</div>
-				<div class="form-wrapper">
-					<div class="social-list align-items-center sign-in">
-						<div class="align-items-center facebook-bg">
-							<i class='bx bxl-facebook'></i>
-						</div>
-						<div class="align-items-center google-bg">
-							<i class='bx bxl-google'></i>
-						</div>
-						<div class="align-items-center twitter-bg">
-							<i class='bx bxl-twitter'></i>
-						</div>
-						<div class="align-items-center insta-bg">
-							<i class='bx bxl-instagram-alt'></i>
-						</div>
+
+					<div class="login__box">
+						<i class='bx bx-lock-alt login__icon'></i>
+						<input type="password" placeholder="Password" class="login__input"/>
 					</div>
-				</div>
+
+					<a href="#" class="login__forgot">Forgot password?</a>
+
+					<a href="#" class="login__button">Sign In</a>
+
+					<div>
+						<span class="login__account">Don't have an Account ?</span>
+						<span class="login__signin" id="sign-up">Sign Up</span>
+					</div>
+				</form>
+
+				<form action="" class="login__create none" id="login-up">
+					<h1 class="login__title">Create Account</h1>
+
+					<div class="login__box">
+						<i class='bx bx-user login__icon'></i>
+						<input type="text" placeholder="Username" class="login__input"/>
+					</div>
+
+					<div class="login__box">
+						<i class='bx bx-at login__icon'></i>
+						<input type="text" placeholder="Email" class="login__input"/>
+					</div>
+
+					<div class="login__box">
+						<i class='bx bx-lock-alt login__icon'></i>
+						<input type="password" placeholder="Password" class="login__input"/>
+					</div>
+					<div class="login__box">
+						<i class='bx bx-lock-alt login__icon'></i>
+						<input type="password" placeholder="Confirm-Password" class="login__input"/>
+					</div>
+
+					<a href="#" class="login__button">Sign Up</a>
+
+					<div>
+						<span class="login__account">Already have an Account ?</span>
+						<span class="login__signup" id="sign-in">Sign In</span>
+					</div>
+
+					<div class="login__social">
+						<a href="#" class="login__social-icon"><i class='bx bxl-facebook' ></i></a>
+						<a href="#" class="login__social-icon"><i class='bx bxl-twitter' ></i></a>
+						<a href="#" class="login__social-icon"><i class='bx bxl-google' ></i></a>
+					</div>
+				</form>
 			</div>
-			
 		</div>
-	
-		<div class="row content-row">
-			
-			<div class="col align-items-center flex-col">
-				<div class="text sign-in">
-					<h2>
-						Welcome back
-					</h2>
-					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit obcaecati, accusantium
-						molestias, laborum, aspernatur deserunt officia voluptatum tempora dicta quo ab ullam. Assumenda
-						enim harum minima possimus dignissimos deserunt rem.
-					</p>
-				</div>
-				<div class="img sign-in">
-					<img src="assets/undraw_different_love_a3rg.svg" alt="welcome"/>
-				</div>
-			</div>
-			
-			<div class="col align-items-center flex-col">
-				<div class="img sign-up">
-					<img src="assets/undraw_creative_team_r90h.svg" alt="welcome"/>
-				</div>
-				<div class="text sign-up">
-					<h2>
-						Join with us
-					</h2>
-					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit obcaecati, accusantium
-						molestias, laborum, aspernatur deserunt officia voluptatum tempora dicta quo ab ullam. Assumenda
-						enim harum minima possimus dignissimos deserunt rem.
-					</p>
-				</div>
-			</div>
-			
-		</div>
-		
 	</div>
         
     )
