@@ -18,6 +18,8 @@ import BlogDetails from "./Views/BlogDetails/BlogDetails";
 import { StyleSheetManager } from "styled-components";
 import stylisRTLCSS from "stylis-rtlcss";
 import Auth from './Components/Auth/Auth'
+import Login from './Components/Auth/Login/Login'
+import Register from "./Components/Auth/Register/Register";
 import Resouces from './Components/Product/Resouces'
 
 function App() {
@@ -61,6 +63,8 @@ function App() {
               <Route path='/resources' exact component={Resouces} />
               <Route path='/services' exact component={Services} />
               <Route path='/auth' exact component={Auth}/>
+              <Route path='/auth/login' exact component={Login}/>
+              <Route path='/auth/register' exact component={Register}/>
               <Route path='/products' exact component={Products} />
             </Switch>
             <Footer />

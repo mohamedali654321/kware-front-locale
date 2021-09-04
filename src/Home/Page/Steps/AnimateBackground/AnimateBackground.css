@@ -1,14 +1,17 @@
+
+
+
 .float-left {
-  transform: translate(0%, 0px) rotate(-4e-5deg) rotateY(15deg)
-    rotateX(9.99994deg) !important;
+  /* transform: translate(0%, 0px) rotate(-4e-5deg) rotateY(15deg) rotateX(9.99994deg) !important; */
+ 
   transition: 1s cubic-bezier(0.2, 0.82, 0.2, 1);
 }
 
 .float-right {
-  transform: translate(90%, 0px) rotate(-4e-5deg) rotateY(-15deg)
-    rotateX(9.99994deg) !important;
+  transform: translate(90%, 0px) rotate(-4e-5deg) rotateY(-15deg)rotateX(9.99994deg) !important;
+    
 
-  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  /* transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1); */
 }
 
 .secondaryImgDisplayType1 {
@@ -54,9 +57,9 @@
   transform-origin: center top;
   -webkit-transform: rotateY(15deg) rotateX(10deg);
   -moz-transform: rotateY(15deg) rotateX(10deg);
-  transform: rotateY(15deg) rotateX(10deg);
+ 
 
-  transition: 0.5 cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 1s cubic-bezier(0.2, 0.82, 0.2, 1);
 }
 .step_stepsAssetsWrapper .step_stepsBackground_Img {
   z-index: 0;
@@ -80,14 +83,14 @@
   -webkit-perspective: 800px;
   perspective: 800px;
 }
-.step_steps_secondaryAssetsWrapper .step_steps_secondary {
+.step_steps_secondary {
   position: absolute;
   width: 100%;
   height: auto;
   opacity: 0;
   will-change: transform;
 }
-.step_steps_secondaryAssetsWrapper .step_steps_secondary img {
+.step_steps_secondary img {
   display: block;
   width: 100%;
   height: auto;

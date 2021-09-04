@@ -1,8 +1,71 @@
 import React, { useState } from "react";
-import "./AnimateBackground.css";
-import { useIntl } from "react-intl";
-import styled from 'styled-components'
 
+import { useIntl } from "react-intl";
+import styled from "styled-components";
+
+const AnimatedWrapper = styled.div`
+  position: relative;
+  will-change: transform;
+  width: 50%;
+  -webkit-transform-origin: center top;
+  -moz-transform-origin: center top;
+  transform-origin: center top;
+  -webkit-transform: rotateY(15deg) rotateX(10deg);
+  -moz-transform: rotateY(15deg) rotateX(10deg);
+  transform: rotateY(15deg) rotateX(10deg);
+  transition: 1s cubic-bezier(0.2, 0.82, 0.2, 1);
+  transform: ${(props) =>
+    (props.page > 3280 && props.page < 4270) ||
+    (props.page > 5230 && props.page < 6205)
+      ? "translate(90%, 0px) rotate(-4e-5deg) rotateY(-15deg) rotateX(9.99994deg) "
+      : "rotateY(15deg) rotateX(10deg) "};
+`;
+
+const AnimatedBackground = styled.div`
+  z-index: 0;
+  position: relative;
+  width: 115%;
+`;
+
+const ImageRatio = styled.div`
+  position: relative;
+  width: 100%;
+`;
+const AnimatedImg = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 1;
+  visibility: inherit;
+`;
+const SecondaryAssetsWrapper = styled.div`
+  z-index: 1;
+  position: absolute;
+  bottom: -30%;
+  left: 30%;
+  width: 80%;
+  height: 100%;
+  will-change: transform;
+  -webkit-perspective: 800px;
+  perspective: 800px;
+  transform: translate(0%, 0px);
+`;
+const SecondaryBackground = styled.div`
+  position: absolute;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  will-change: transform;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+`;
 function AnimateBackground() {
   const intl = useIntl();
   const [page, setPage] = useState();
@@ -10,172 +73,101 @@ function AnimateBackground() {
   window.addEventListener("scroll", () => {
     setPage(window.pageYOffset);
   });
-
-
   return (
     <>
-      <div
-        className={
-          ((page > 3280 && page < 4270) || (page > 5230 && page < 6205)) && intl.locale === 'en'
-            ? " float-right step_stepsAssetsWrapper"
-            : "float-left step_stepsAssetsWrapper"
-        }
-      >
-        <div className="step_stepsBackground_Img">
-          <div
-            className="step_stepsImage_ratio"
-            style={{ paddingBottom: "77.40112994350282%" }}
-          >
-            <img
-              className=" step_stepsImage step_stepsImage_cover step_stepsimage_center"
+      <AnimatedWrapper page={page} locale={intl.locale}>
+        <AnimatedBackground>
+          <ImageRatio style={{ paddingBottom: "77.40112994350282%" }}>
+            <AnimatedImg
               src="./images/hero/hp-primary-desktop_e0dab1f509.svg"
               alt="Illustration of desktop "
-              style={{ opacity: 1, visibility: "inherit" }}
             />
-          </div>
-        </div>
-        <div
-          className="step_steps_secondaryAssetsWrapper"
-          style={{ transform: "translate(0%, 0px)" }}
-        >
-          <div
-            className={
-              page > 2259 && page < 3280
-                ? "step_steps_secondary secondaryImgDisplayType1"
-                : "step_steps_secondary  secondaryImg-notDisplayType1"
-            }
+          </ImageRatio>
+        </AnimatedBackground>
+
+        <SecondaryAssetsWrapper>
+          <SecondaryBackground
+            style={page > 2259 && page < 3280 ? { opacity: 1 } : { opacity: 0 }}
           >
-            <div>
-              <div
-                className="step_stepsImage_ratio"
-                style={{
-                  paddingBottom: "76.98744769874477%",
-                }}
-              >
-                <img
-                  className=" step_stepsImage step_stepsImage_cover step_stepsimage_center"
-                  src="./images/hero/hp-step1-2D_aeea862f0b.svg"
-                  alt="Illustration of the Strapi Content-type fields"
-                  style={{
-                    opacity: 1,
-                    visibility: "inherit",
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            className={
-              page > 3280 && page < 4272
-                ? "step_steps_secondary secondaryImgDisplayType1"
-                : "step_steps_secondary  secondaryImg-notDisplayType1"
-            }
-            style={{ transform: "translate(-220px, 0%)" }}
+            <ImageRatio
+              style={{
+                paddingBottom: "76.98744769874477%",
+              }}
+            >
+              <AnimatedImg
+                src="./images/hero/hp-step1-2D_aeea862f0b.svg"
+                alt="Illustration of the Strapi Content-type fields"
+              />
+            </ImageRatio>
+          </SecondaryBackground>
+
+          <SecondaryBackground
+            style={page > 3280 && page < 4272 ? { opacity: 1 } : { opacity: 0 }}
           >
-            <div>
-              <div
-                className="step_stepsImage_ratio"
-                style={{
-                  paddingBottom: "76.98744769874477%",
-                }}
-              >
-                <img
-                  className="step_stepsImage step_stepsImage_cover step_stepsimage_center"
-                  src="./images/hero/hp-step2-2D_6729998af1.svg"
-                  alt="Illustration of the Strapi Content Manager"
-                  style={{
-                    opacity: 1,
-                    visibility: "inherit",
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            className={
-              page > 4264 && page < 5230
-                ? "step_steps_secondary secondaryImgDisplayType2"
-                : "step_steps_secondary  secondaryImg-notDisplayType2"
-            }
+            <ImageRatio style={{ paddingBottom: "76.98744769874477%" }}>
+              <AnimatedImg
+                style={
+                  intl.locale === "en"
+                    ? { transform: "translate(-220px, 0%)" }
+                    : { transform: "translate(220px, 0%)" }
+                }
+                src="./images/hero/hp-step2-2D_6729998af1.svg"
+                alt="Illustration of the Strapi Content Manager"
+              />
+            </ImageRatio>
+          </SecondaryBackground>
+
+          <SecondaryBackground
+            style={page > 4264 && page < 5230 ? { opacity: 1 } : { opacity: 0 }}
           >
-            <div>
-              <div
-                className="step_stepsImage_ratio"
-                style={{ paddingBottom: "92.96%" }}
-              >
-                <img
-                  className=" step_stepsImage step_stepsImage_cover step_stepsimage_center"
-                  src="./images/hero/hp-step3-2D_7bc731eae8.svg"
-                  alt="Illustration of Partner technologies of Strapi like AWS, Next.js, React, Netlify or Node.JS"
-                  style={{
-                    opacity: 1,
-                    visibility: "inherit",
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            className={
-              page > 5210 && page < 6215
-                ? "step_steps_secondary secondaryImgDisplayType1 "
-                : "step_steps_secondary  secondaryImg-notDisplayType1"
-            }
-            style={{ transform: "translate(-220px, 0%)" }}
+            <ImageRatio style={{ paddingBottom: "92.96%" }}>
+              <AnimatedImg
+                style={
+                  intl.locale === "en"
+                    ? { transform: "translate(-220px, 0%)" }
+                    : { transform: "translate(220px, 0%)" }
+                }
+                src="./images/hero/hp-step3-2D_7bc731eae8.svg"
+                alt="Illustration of Partner technologies of Strapi like AWS, Next.js, React, Netlify or Node.JS"
+              />
+            </ImageRatio>
+          </SecondaryBackground>
+
+          <SecondaryBackground
+            style={page > 5210 && page < 6215 ? { opacity: 1 } : { opacity: 0 }}
           >
-            <div>
-              <div
-                className="step_stepsImage_ratio"
-                style={{
-                  paddingBottom: "73.88268156424581%",
-                }}
-              >
-                <img
-                  className=" step_stepsImage step_stepsImage_cover step_stepsimage_center"
-                  src="./images/hero/hp-step4-2D_9ab379c7f5.svg"
-                  alt="Illustration of a GraphQL request"
-                  style={{
-                    opacity: 1,
-                    visibility: "inherit",
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            className={
-              page > 6215
-                ? "step_steps_secondary secondaryImgDisplayType1"
-                : "step_steps_secondary  secondaryImg-notDisplayType1"
-            }
+            <ImageRatio style={{ paddingBottom: "73.88268156424581%" }}>
+              <AnimatedImg
+                style={
+                  intl.locale === "en"
+                    ? { transform: "translate(-220px, 0%)" }
+                    : { transform: "translate(220px, 0%)" }
+                }
+                src="./images/hero/hp-step4-2D_9ab379c7f5.svg"
+                alt="Illustration of a GraphQL request"
+              />
+            </ImageRatio>
+          </SecondaryBackground>
+
+          <SecondaryBackground
+            style={page > 6215 ? { opacity: 1 } : { opacity: 0 }}
           >
-            <div>
-              <div
-                className="step_stepsImage_ratio"
-                style={{
-                  paddingBottom: "76.98744769874477%",
-                }}
-              >
-                <img
-                  className=" step_stepsImage step_stepsImage_cover step_stepsimage_center"
-                  src="./images/hero/hp-step5-2D_9d3fc362cc.svg"
-                  alt="Illustration of the deployment options in Strapi"
-                  style={{
-                    opacity: 1,
-                    visibility: "inherit",
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            <ImageRatio style={{ paddingBottom: "76.98744769874477%" }}>
+              <AnimatedImg
+                style={
+                  intl.locale === "en"
+                    ? { transform: "translate(-220px, 0%)" }
+                    : { transform: "translate(220px, 0%)" }
+                }
+                src="./images/hero/hp-step5-2D_9d3fc362cc.svg"
+                alt="Illustration of the deployment options in Strapi"
+              />
+            </ImageRatio>
+          </SecondaryBackground>
+        </SecondaryAssetsWrapper>
+      </AnimatedWrapper>
     </>
   );
 }
 
 export default AnimateBackground;
-
-
-
-
