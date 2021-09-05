@@ -625,7 +625,7 @@ table {
   }
 }
 
-/* .article_Author {
+.article_Author {
   display: flex;
   align-items: center;
 }
@@ -643,7 +643,7 @@ table {
   height: 50px;
   margin-right: 18px;
   border-radius: 50%;
-} */
+}
 
 /* stop2 */
 

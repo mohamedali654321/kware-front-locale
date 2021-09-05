@@ -1,22 +1,21 @@
 import React from "react";
 
 import './Footer.css'
-
+import { FormattedMessage } from "react-intl";
 
 function Footer() {
   const menu = [
     {
       title: "product",
       lists: [
-        "Why KwareTech?",
-        "Content Architecture",
-        "Features",
-        "Enterprise Edition",
-        "Partner Program",
-        "Roadmap",
-        "Support",
-        "Support",
-        "Changelog",
+        "Folio",
+        "Strapi",
+        "DSpace",
+        "Koha",
+        "Vufind",
+        "ASPEN",
+        "Tickets System",
+        
       ],
     },
     {
@@ -27,8 +26,6 @@ function Footer() {
         "Tutorials",
         "API documentation",
         "GitHub repository",
-        "Starters",
-        "Strapi vs Wordpress",
         "The Guide to Headless CMS",
       ],
     },
@@ -37,19 +34,15 @@ function Footer() {
       lists: [
         "All integrations",
         "React CMS",
-        "Next.js CMS",
-        "Gatsby CMS",
-        "Vue.js CMS",
-        "Nuxt.js CMS",
-        "Gridsome CMS",
-        "Flutter CMS",
-        "Hugo CMS",
-        "Typescript CMS",
+        "Localization CMS",
+        "Folio Vufind",
+        "Translatiopn APP Folio",
+        
       ],
     },
     {
       title: "company",
-      lists: ["About us", "Blog", "Careers", "Contact", "Newsroom"],
+      lists: ["About us", "Blog", "Careers", "Contact"],
     },
   ];
 
@@ -131,7 +124,7 @@ function Footer() {
                 target=""
                 alt=""
                 as="/"
-                href="https://strapi.io/"
+                href=""
               >
                 <img
                   class="left_logo_img"
@@ -160,7 +153,7 @@ function Footer() {
                     <a
                       class="ItemLink FooterLinkItem"
                       alt=""
-                      href="https://strapi.io/why-strapi"
+                      href=""
                     >
                       {list}
                     </a>
@@ -192,7 +185,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener"
                 alt=""
-                href="https://github.com/strapi/strapi/blob/master/LICENSE"
+                href=""
               >
                 <span class="footer_text legal_subLink legal_subLink_label footer_text_color">
                   License
@@ -202,7 +195,7 @@ function Footer() {
                 class="legal_subLink"
                 target=""
                 alt=""
-                href="https://strapi.io/terms"
+                href=""
               >
                 <span class="footer_text legal_subLink legal_subLink_label footer_text_color">
                   Terms
@@ -212,7 +205,7 @@ function Footer() {
                 class="legal_subLink"
                 target=""
                 alt=""
-                href="https://strapi.io/privacy"
+                href=""
               >
                 <span class="footer_text legal_subLink legal_subLink_label footer_text_color">
                   Privacy
@@ -230,7 +223,7 @@ function Footer() {
                     target="_blank"
                     rel="noopener"
                     alt=""
-                    href="https://github.com/strapi"
+                    href=""
                   >
                     <div
                       class="iconWrapper"
@@ -278,7 +271,7 @@ function Footer() {
                     target="_blank"
                     rel="noopener"
                     alt=""
-                    href="https://github.com/strapi"
+                    href=""
                   >
                     <div
                       class="iconWrapper"
@@ -328,7 +321,7 @@ function Footer() {
                     target="_blank"
                     rel="noopener"
                     alt=""
-                    href="https://discord.strapi.io/"
+                    href=""
                   >
                     <div
                       class="iconWrapper"
@@ -376,7 +369,7 @@ function Footer() {
                     target="_blank"
                     rel="noopener"
                     alt=""
-                    href="https://twitter.com/strapijs"
+                    href=""
                   >
                     <div
                       class="iconWrapper"
@@ -422,7 +415,7 @@ function Footer() {
                     target="_blank"
                     rel="noopener"
                     alt=""
-                    href="https://www.facebook.com/strapijs/"
+                    href=""
                   >
                     <div
                       class="iconWrapper"
@@ -468,7 +461,7 @@ function Footer() {
                     target="_blank"
                     rel="noopener"
                     alt=""
-                    href="https://www.linkedin.com/company/strapi"
+                    href=""
                   >
                     <div
                       class="iconWrapper"
@@ -514,7 +507,7 @@ function Footer() {
                     target="_blank"
                     rel="noopener"
                     alt=""
-                    href="https://www.instagram.com/strapijs/"
+                    href=""
                   >
                     <div
                       class="iconWrapper"

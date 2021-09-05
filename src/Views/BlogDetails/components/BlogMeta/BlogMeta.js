@@ -9,7 +9,7 @@ function BlogMeta({ author, translator, publishDate }) {
       <div className='styles_image_Author'>
         <div className='styles_ratio_img styles_fluid_img'>
           <img
-            className='styles_img_articlebstyles_img_center'
+            className='styles_img_article  styles_img_center'
             src='https://d2zv2ciw0ln4h1.cloudfront.net/uploads/22731000_59503fccb4.jpeg'
             alt=''
             style={{ opacity: 1, visibility: "inherit" }}

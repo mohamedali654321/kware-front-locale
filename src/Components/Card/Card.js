@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 import { LocaleContext } from "../Hooks/useLocale";
 import { useIntl } from "react-intl";
 import { FormattedMessage } from "react-intl";
+import Icons from "./Icons/Icons";
 
 function Card(props) {
   const locale = useContext(LocaleContext);
@@ -97,6 +98,7 @@ const BACKEND_URL="http://54.220.211.123:1335";
                     </li>
                   ))}
               </ul>
+            
 
                               <h2 class='card_text card_text_abstract abstract_small_text card_text_color_abstractPublish '>
                                 <div class=''>
@@ -120,25 +122,10 @@ const BACKEND_URL="http://54.220.211.123:1335";
                                 </div>
                                 
                               </h2>
-{/* 
-           <div class="social-list align-items-center sign-in">
-						<div class="align-items-center facebook-bg">
-							<i class='bx bxl-facebook'></i>
-						</div>
-						<div class="align-items-center google-bg">
-							<i class='bx bxl-google'></i>
-						</div>
-						<div class="align-items-center twitter-bg">
-							<i class='bx bxl-twitter'></i>
-						</div>
-						<div class="align-items-center insta-bg">
-							<i class='bx bxl-instagram-alt'></i>
-						</div>
-					</div> */}
 
          
                                      
-                              <div className="icon-list sticky-icon">
+                              {/* <div className="icon-list sticky-icon">
                                 {props.icons.length !== 0 && (
                                   <>
                                   {
@@ -160,8 +147,13 @@ const BACKEND_URL="http://54.220.211.123:1335";
                                     
                                   </>
                                 )}
-                              </div>
 
+                                
+                              </div> */}
+                              <Icons
+                              icons={props.icons}
+
+                              />
                               
                             </div>
                           </div>
