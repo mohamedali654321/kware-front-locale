@@ -68,7 +68,7 @@ class Header extends React.Component {
                 <FormattedMessage id="navbar.links.home" />
               </a>
             </li>
-            <li
+            {/* <li
               className={
                 document.location.pathname.length === 1 ||
                 document.location.pathname === "/services"
@@ -91,7 +91,7 @@ class Header extends React.Component {
               <a href='/services' className='cool'>
               <FormattedMessage id="navbar.links.services" />
               </a>
-            </li>
+            </li> */}
             <li
               className={
                 document.location.pathname.length === 1 ||
@@ -104,7 +104,7 @@ class Header extends React.Component {
               <FormattedMessage id="navbar.links.blog" />
               </a>
             </li>
-            <li
+            {/* <li
               className={
                 document.location.pathname.length === 1 ||
                 document.location.pathname === "/services"
@@ -115,8 +115,8 @@ class Header extends React.Component {
               <a href='/sys-solutions' className='cool'>
               <FormattedMessage id="navbar.links.solutions" />
               </a>
-            </li>
-            <li
+            </li> */}
+            {/* <li
               className={
                 document.location.pathname.length === 1 ||
                 document.location.pathname === "/services"
@@ -127,8 +127,8 @@ class Header extends React.Component {
               <a href='/our-partners' className='cool'>
               <FormattedMessage id="navbar.links.ourPartners" />
               </a>
-            </li>
-            <li
+            </li> */}
+            {/* <li
               className={
                 document.location.pathname.length === 1 ||
                 document.location.pathname === "/services"
@@ -140,7 +140,7 @@ class Header extends React.Component {
               <a href='/our-clients' className='cool'>
               <FormattedMessage id="navbar.links.ourClients" />
               </a>{" "}
-            </li>
+            </li> */}
           </ul>
 
           <Language />

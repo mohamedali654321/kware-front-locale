@@ -131,7 +131,8 @@
   padding: 50px 0 0;
   transform: translateZ(1000px);
   width: 100%;
-  max-width: 1200px;
+  /* max-width: 1200px; */
+  max-width: 600px;
   z-index: 1;
   position: relative;
   margin-left: auto;
@@ -293,7 +294,8 @@ height: 55px;
   display: flex;
   flex-direction: row;
   flex: 1 1;
-  max-width: 1000px;
+  /* max-width: 1000px; */
+  max-width: 300px;
   margin: 0 auto;
   list-style: none;
   justify-content: space-between;

@@ -10,7 +10,7 @@ import { FormattedMessage } from "react-intl";
 function Card(props) {
   const locale = useContext(LocaleContext);
   const intl = useIntl();
-
+const BACKEND_URL="http://54.220.211.123:1335";
   useEffect(() => {
     AOS.init();
   });
@@ -58,9 +58,9 @@ function Card(props) {
                 <div className='styles_children'>
                   {
                     <>
-                      <div className='styles_CoverImage'>
+                      <div className='styles_CoverImage' style={{backgroundColor:"#000"}}>
                         <div className='ratio fluid'>
-                          <img
+                          {/* <img
                             src='/images/bg-hero.png'
                             alt=''
                             className='styles_Img styles_img '
@@ -68,19 +68,21 @@ function Card(props) {
                               opacity: 1,
                               visibility: "inherit",
                             }}
-                          />
+                          /> */}
 
                           <div class='SixthSection_mobileInnerWrapper SixthSection_innerWrapper'>
                             <div
                               class='SixthSectionLabelTitleText SixthSectionLabelTitleText_width SixthSectionLabelTitleText_withGradient SixthSectionLabelTitleText_center'
                               style={{ opacity: 1 }}
                             >
-                              {props.tag &&
-                                props.tag.map((tag) => (
-                                  <div class='SixthSectionLabel SixthSectionLabel_style SixthSectionLabel_color'>
-                                    <div>
-                                      <div
-                                        style={{
+                           
+
+              <ul className='category_tags SixthSectionLabel SixthSectionLabel_style SixthSectionLabel_color'>
+                {props.tag &&
+                  props.tag.map((tag) => (
+                    <li className='category_tags_styles category_tags_items'>
+                      <span className='category_label category_label_style default_Category ' 
+                       style={{
                                           position: "relative",
                                           display: "inline-block",
                                           opacity: 0.7,
@@ -89,13 +91,12 @@ function Card(props) {
                                           color: "#fff",
                                           fontWeight: "500",
                                         }}
-                                        class='default_Category'
-                                      >
-                                        {tag.name}
-                                      </div>
-                                    </div>
-                                  </div>
-                                ))}
+                      >
+                        {tag.name}
+                      </span>
+                    </li>
+                  ))}
+              </ul>
 
                               <h2 class='card_text card_text_abstract abstract_small_text card_text_color_abstractPublish '>
                                 <div class=''>
@@ -117,26 +118,57 @@ function Card(props) {
                                     </div>
                                   </span>
                                 </div>
+                                
                               </h2>
+{/* 
+           <div class="social-list align-items-center sign-in">
+						<div class="align-items-center facebook-bg">
+							<i class='bx bxl-facebook'></i>
+						</div>
+						<div class="align-items-center google-bg">
+							<i class='bx bxl-google'></i>
+						</div>
+						<div class="align-items-center twitter-bg">
+							<i class='bx bxl-twitter'></i>
+						</div>
+						<div class="align-items-center insta-bg">
+							<i class='bx bxl-instagram-alt'></i>
+						</div>
+					</div> */}
+
+         
+                                     
+                              <div className="icon-list sticky-icon">
+                                {props.icons.length !== 0 && (
+                                  <>
+                                  {
+                                    props.icons.map(icon=>(
+                                      <div className="cardIcon sticky-icon  ">
+                                      <img
+                                        className="imgIcon styles_Img  "
+                                        src={BACKEND_URL+icon.url}
+                                        style={{ opacity: 1 }}
+                                      />
+                                    </div>
+                                    
+
+                                    ))
+                                  }
+                                   
+
+                                    
+                                    
+                                  </>
+                                )}
+                              </div>
+
+                              
                             </div>
                           </div>
                         </div>
                       </div>
                     </>
                   }
-
-                  <div className='styles_CoverImage'>
-                    <div className='ratio fluid'>
-                      <img
-                        className='styles_Img styles_img'
-                        alt=''
-                        style={{
-                          opacity: 1,
-                          visibility: "inherit",
-                        }}
-                      />
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

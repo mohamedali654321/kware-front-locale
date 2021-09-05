@@ -145,7 +145,7 @@ function HamburgerMenu() {
             <FormattedMessage id="navbar.links.home" />
             </ItemLink>
           </li>
-          <li>
+          {/* <li>
             <ItemLink className="cool"  onClick={handleClick} to="/Products">
             <FormattedMessage id="navbar.links.products" />
             </ItemLink>
@@ -154,13 +154,13 @@ function HamburgerMenu() {
             <ItemLink className="cool"  onClick={handleClick} to="/Services">
             <FormattedMessage id="navbar.links.services" />
             </ItemLink>
-          </li>
+          </li> */}
           <li>
             <ItemLink className="cool"  onClick={handleClick} to="/blog">
             <FormattedMessage id="navbar.links.blog" />
             </ItemLink>
           </li>
-          <li>
+          {/* <li>
             <ItemLink className="cool" onClick={handleClick} to="//sys-solutions">
             <FormattedMessage id="navbar.links.solutions" />
             </ItemLink>
@@ -174,7 +174,7 @@ function HamburgerMenu() {
             <ItemLink className="cool"  onClick={handleClick} to="/our-clients">
             <FormattedMessage id="navbar.links.ourClients" />
             </ItemLink>
-          </li>
+          </li> */}
         </List>
       </Navigation>
     </>

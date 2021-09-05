@@ -16,6 +16,7 @@ const buttonStyle={
   background: "#fff",
   borderRadius:"10px",
   cursor:"pointer",
+  boxSizing: "border-box",
   color:"#8D1CB8",
   padding:"5px 7px",
   alignItems: "center",

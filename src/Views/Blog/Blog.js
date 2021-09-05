@@ -166,6 +166,7 @@ export default function Blog() {
                       translator={item.translator ? item.translator : null}
                       index={index}
                       delay={item.id}
+                      icons={item.icons}
                     />
                   ))}
                 </div>
