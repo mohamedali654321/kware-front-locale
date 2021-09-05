@@ -183,7 +183,7 @@ export default function Blog() {
                         className='styles_background styles_buttons_bg'
                         style={{ transform: "perspective(800px)" }}
                       ></div>
-                      <Link className='buttonLink ' onClick={showMoreItems}>
+                      <button className='buttonLink ' onClick={showMoreItems}>
                         <FormattedMessage id="homeHero.button.seeMore"/>
                         <svg
                           className='styles_SmallArrow SmallArrowstyles  '
@@ -200,7 +200,7 @@ export default function Blog() {
                             fill='#74E4A2'
                           ></path>
                         </svg>
-                      </Link>
+                      </button>
                     </div>
                   </div>
                 </div>

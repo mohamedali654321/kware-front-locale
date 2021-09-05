@@ -26,7 +26,7 @@ function Products() {
 
     return (
       <div>
-      <ProductHero/>
+      {/* <ProductHero/>
 
         {
                     products.map((product, index)=>(
@@ -41,7 +41,7 @@ function Products() {
 
 
                     ))
-                }
+                } */}
 
       </div>
       

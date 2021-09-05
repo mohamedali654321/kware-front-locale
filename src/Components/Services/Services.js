@@ -14,7 +14,7 @@ function Services() {
         <div class="singleProductContainer">
           
           
-        <div class="singleProductWrapper">
+        {/* <div class="singleProductWrapper">
          
         
 
@@ -57,7 +57,7 @@ function Services() {
 
        
           </div>
-        </div>
+        </div> */}
 
         
       </div>
