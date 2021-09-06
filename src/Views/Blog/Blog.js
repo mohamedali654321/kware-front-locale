@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import { isEqual } from "lodash";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -16,15 +16,40 @@ export default function Blog() {
   const [card, setCard] = useState([]);
   const [categories, setCategories] = useState([]);
   const [inputText, setInputText] = useState("");
-
+  const [searchResults,setSearchResults]=useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
+  const inputElement = useRef("");
 
+const handleSearch = (inputText)  =>{
+  setInputText(inputText);
+  if(inputText !== ""){
+
+    const newCarddata= card.filter((item)=>{
+     return Object.values(item).join(" ").toLowerCase().includes(inputText.toLowerCase());
+    });
+    setCard(newCarddata)
+
+  }
+  else{
+    setCard(card)
+  }
+
+}
+
+const serchTerm=()=>{
+  handleSearch(inputElement.current.value)
+}
+
+console.log({searchResults})
+ 
   const showMoreItems = () => {
     setVisible((prevValue) => prevValue + 12);
   };
 
   useEffect(() => {
     AOS.init();
+    
+    
   });
 
   useEffect(() => {
@@ -34,7 +59,7 @@ export default function Blog() {
         if (!isEqual(res.data, card)) {
           setCard(res.data);
         }
-        console.log(res.data);
+        // console.log(res.data);
       })
       .catch((err) => console.log(err));
   }, [card, intl.locale]);
@@ -122,13 +147,15 @@ export default function Blog() {
                       />
                   <div className='InputText_search searchText'>
                     <input
+                    ref={inputElement}
                       type='text'
-                      value={inputText}
+                      value={inputElement.current.value}
                       name='search'
                       placeholder={intl.formatMessage({
                         id: "blog.searchBox.placeholder",
                       })}
-                      onChange={(e) => setInputText(e.target.value)}
+                      onChange={serchTerm}
+                      
                     />
                     <svg
                       viewBox='0 0 14 14'
