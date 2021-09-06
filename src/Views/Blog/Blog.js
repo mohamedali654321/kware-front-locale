@@ -20,27 +20,25 @@ export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const inputElement = useRef("");
 
-const handleSearch = (inputText)  =>{
-  setInputText(inputText);
+const handleSearch = (searchTerm)  =>{
+  setInputText(searchTerm);
   if(inputText !== ""){
 
     const newCarddata= card.filter((item)=>{
      return Object.values(item).join(" ").toLowerCase().includes(inputText.toLowerCase());
     });
-    setCard(newCarddata)
+    setSearchResults(newCarddata)
 
   }
-  else{
-    setCard(card)
-  }
+ 
 
 }
 
-const serchTerm=()=>{
+const searchTerm=()=>{
   handleSearch(inputElement.current.value)
 }
 
-console.log({searchResults})
+console.log({card})
  
   const showMoreItems = () => {
     setVisible((prevValue) => prevValue + 12);
@@ -48,6 +46,7 @@ console.log({searchResults})
 
   useEffect(() => {
     AOS.init();
+ 
     
     
   });
@@ -154,7 +153,7 @@ console.log({searchResults})
                       placeholder={intl.formatMessage({
                         id: "blog.searchBox.placeholder",
                       })}
-                      onChange={serchTerm}
+                      onChange={searchTerm}
                       
                     />
                     <svg
@@ -175,12 +174,12 @@ console.log({searchResults})
                   <p className='styles_blog_text results small_tags_text styles_blog_textColor'>
                     <span>
                       <FormattedMessage id="blog.resault.showing"/> {visible <= card.length ? visible : card.length}
-                      <FormattedMessage id="blog.resault.ofBlog"/> {card.length}  <FormattedMessage id="blog.resault.blogPosts"/>
+                      <FormattedMessage id="blog.resault.ofBlog"/> {searchResults.length ? searchResults.length : card.length }  <FormattedMessage id="blog.resault.blogPosts"/>
                     </span>
                   </p>
                 </div>
                 <div className='CardsGrid ' style={{ opacity: 1 }}>
-                  {card.slice(0, visible).map((item, index) => (
+                  {(searchResults.length  || inputText !== "" ? searchResults : card).slice(0, visible).map((item, index) => (
                     <Card
                       cardData={item}
                       image={item.image ? item.image : null}
