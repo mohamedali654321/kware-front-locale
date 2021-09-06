@@ -10,13 +10,36 @@ function Icons(props) {
       <>
       {
         props.icons.map(icon=>(
-          <div className="cardIcon sticky-icon  ">
-          <img
-            className="imgIcon styles_Img  "
-            src={BACKEND_URL+icon.url}
-            style={{ opacity: 1 }}
-          />
-        </div>
+          <div
+                    class=" iconCircle iconCircle_img"
+                    
+                  >
+                    <div
+                      class="iconCircle_imgStyle"
+                      
+                    >
+                      <div
+                        class="iconRatio"
+                        style={{
+                          paddingBottom: "100%",
+                          
+                        }}
+                      >
+                        <img
+                          class=" iconPicture "
+                          src={BACKEND_URL+icon.url}
+                          
+                          style={{
+                            opacity: 1,
+                            visibility: "inherit",
+                            objectFit:"contain",
+                            objectPosition:"center"
+                           
+                          }}
+                        />
+                      </div>
+                    </div>
+                  </div>
         
 
         ))

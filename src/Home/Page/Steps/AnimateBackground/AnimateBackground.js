@@ -15,8 +15,8 @@ const AnimatedWrapper = styled.div`
   transform: rotateY(15deg) rotateX(10deg);
   transition: 1s cubic-bezier(0.2, 0.82, 0.2, 1);
   transform: ${(props) =>
-    (props.page > 3280 && props.page < 4270) ||
-    (props.page > 5230 && props.page < 6205)
+    (props.page > 3111 && props.page < 4095) ||
+    (props.page > 5070 && props.page < 6035)
       ? "translate(90%, 0px) rotate(-4e-5deg) rotateY(-15deg) rotateX(9.99994deg) "
       : "rotateY(15deg) rotateX(10deg) "};
 `;
@@ -87,7 +87,7 @@ function AnimateBackground() {
 
         <SecondaryAssetsWrapper>
           <SecondaryBackground
-            style={page > 2259 && page < 3280 ? { opacity: 1 } : { opacity: 0 }}
+            style={ page < 3111 ? { opacity: 1 } : { opacity: 0 }}
           >
             <ImageRatio
               style={{
@@ -102,7 +102,7 @@ function AnimateBackground() {
           </SecondaryBackground>
 
           <SecondaryBackground
-            style={page > 3280 && page < 4272 ? { opacity: 1 } : { opacity: 0 }}
+            style={page > 3111 && page < 4095 ? { opacity: 1 } : { opacity: 0 }}
           >
             <ImageRatio style={{ paddingBottom: "76.98744769874477%" }}>
               <AnimatedImg
@@ -118,14 +118,14 @@ function AnimateBackground() {
           </SecondaryBackground>
 
           <SecondaryBackground
-            style={page > 4264 && page < 5230 ? { opacity: 1 } : { opacity: 0 }}
+            style={page > 4095 && page < 5070 ? { opacity: 1 } : { opacity: 0 }}
           >
             <ImageRatio style={{ paddingBottom: "92.96%" }}>
               <AnimatedImg
                 style={
                   intl.locale === "en"
                     ? { transform: "translate(-220px, 0%)" }
-                    : { transform: "translate(220px, 0%)" }
+                    : { transform: "translate(-220px, 0%)" }
                 }
                 src="./images/hero/hp-step3-2D_7bc731eae8.svg"
                 alt="Illustration of Partner technologies of Strapi like AWS, Next.js, React, Netlify or Node.JS"
@@ -134,7 +134,7 @@ function AnimateBackground() {
           </SecondaryBackground>
 
           <SecondaryBackground
-            style={page > 5210 && page < 6215 ? { opacity: 1 } : { opacity: 0 }}
+            style={page > 5070 && page < 6035? { opacity: 1 } : { opacity: 0 }}
           >
             <ImageRatio style={{ paddingBottom: "73.88268156424581%" }}>
               <AnimatedImg
@@ -150,7 +150,7 @@ function AnimateBackground() {
           </SecondaryBackground>
 
           <SecondaryBackground
-            style={page > 6215 ? { opacity: 1 } : { opacity: 0 }}
+            style={page > 6035 ? { opacity: 1 } : { opacity: 0 }}
           >
             <ImageRatio style={{ paddingBottom: "76.98744769874477%" }}>
               <AnimatedImg

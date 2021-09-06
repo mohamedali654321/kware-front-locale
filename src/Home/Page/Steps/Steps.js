@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./Steps.css";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage , useIntl } from "react-intl";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import AnimateBackground from "./AnimateBackground/AnimateBackground";
 
 function Steps() {
   const [page, setPage] = useState();
-
+  const intl = useIntl();
   window.addEventListener("scroll", () => {
     setPage(window.pageYOffset);
   });
@@ -15,6 +15,8 @@ function Steps() {
   useEffect(() => {
     AOS.init();
   });
+
+
 
   return (
     <div>
@@ -240,7 +242,28 @@ function Steps() {
                     </div>
                   </div>
                 </div>
+
+
               </div>
+
+              <div 
+              className={intl.locale ==='ar' ? 'steps_SeparateBackground steps_SeparateType2'  : 'steps_SeparateBackground steps_SeparateType1'}>
+             
+              <div
+                className="steps_ShapesGroup"
+              
+              >
+                <img
+                  className="steps_ShapesTriangle"
+                  src="https://strapi.io/assets/decoration/triangle.svg"
+                  alt="triangle"
+                /><img
+                  className="steps_ShapesDots"
+                  src="https://strapi.io/assets/decoration/dots.svg"
+                  alt="dots"
+                />
+              </div>
+            </div>
             </div>
             <div style={{ width: "100%", height: 0 }}></div>
             <div
@@ -317,6 +340,29 @@ function Steps() {
                   </div>
                 </div>
               </div>
+              <div className="steps_SeparateBackground steps_SeparateType2"
+              className={intl.locale === 'ar' ? 'steps_SeparateBackground steps_SeparateType6'  :  'steps_SeparateBackground steps_SeparateType2'}
+              
+              
+              
+              >
+
+              
+              <div
+                className="steps_ShapesGroup"
+                style={{transform: "translate3d(0px, 18.329%, 0px)", opacity: 1}}
+              >
+                <img
+                  className="steps_ShapesTriangle"
+                  src="https://strapi.io/assets/decoration/triangle.svg"
+                  alt="triangle"
+                /><img
+                  className="steps_ShapesDots"
+                  src="https://strapi.io/assets/decoration/dots.svg"
+                  alt="dots"
+                />
+              </div>
+            </div>
             </div>
             <div style={{ width: "100%", height: 0 }}></div>
             <div
@@ -389,6 +435,22 @@ function Steps() {
                   </div>
                 </div>
               </div>
+              <div className="steps_SeparateBackground steps_SeparateType3">
+              <div
+                className="steps_ShapesGroup"
+                style={{transform: "translate3d(0px, 19.97%, 0px)", opacity: 1}}
+              >
+                <img
+                  className="steps_ShapesTriangle"
+                  src="https://strapi.io/assets/decoration/triangle.svg"
+                  alt="triangle"
+                /><img
+                  className="steps_ShapesDots"
+                  src="https://strapi.io/assets/decoration/dots.svg"
+                  alt="dots"
+                />
+              </div>
+            </div>
             </div>
             <div style={{ width: "100%", height: 0 }}></div>
             <div
@@ -461,6 +523,22 @@ function Steps() {
                   </div>
                 </div>
               </div>
+              <div className="steps_SeparateBackground steps_SeparateType4">
+              <div
+                className="steps_ShapesGroup"
+                style={{transform: "translate(0px, 20%)", opacity: 1}}
+              >
+                <img
+                  className="steps_ShapesTriangle"
+                  src="https://strapi.io/assets/decoration/triangle.svg"
+                  alt="triangle"
+                /><img
+                  className="steps_ShapesDots"
+                  src="https://strapi.io/assets/decoration/dots.svg"
+                  alt="dots"
+                />
+              </div>
+            </div>
             </div>
             <div style={{ width: "100%", height: 0 }}></div>
             <div
@@ -533,6 +611,22 @@ function Steps() {
                   </div>
                 </div>
               </div>
+              <div  className={intl.locale ==='ar' ? 'steps_SeparateBackground steps_SeparateType2'  : 'steps_SeparateBackground steps_SeparateType1'}>
+              <div
+                className="steps_ShapesGroup"
+                style={{transform: "translate(0px, 20%)", opacity: 1}}
+              >
+                <img
+                  className="steps_ShapesTriangle"
+                  src="https://strapi.io/assets/decoration/triangle.svg"
+                  alt="triangle"
+                /><img
+                  className="steps_ShapesDots"
+                  src="https://strapi.io/assets/decoration/dots.svg"
+                  alt="dots"
+                />
+              </div>
+            </div>
             </div>
           </div>
         </div>

@@ -27,7 +27,7 @@ const buttonStyle={
     boxShadow: "0 1px 4px rgb(26 26 67 / 40%)",
     zIndex: "1000",
     border:"none",
-    fontFamily: "Effra-ar"
+    fontFamily: "Effra-ar !important"
 
   
   

@@ -3,10 +3,55 @@
 .Logo{
     display: flex;
     flex-direction: row;
-    gap: 20px;
-    margin-top: 10px ;
+    gap: 20px !important;
+    margin-top: 40px ;
     justify-content: center;
     align-items: center;
    
+  }
+
+
+  .icon-list{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -10px !important;
+    gap: 20px;
+    position: relative;
+  }
+
+  
+  .iconCircle {
+    width: 100%;
+    
+    overflow: hidden;
+   
+  }
+
+  .iconCircle_img {
+    width: 100px;
+    flex-shrink: 0;
+    /* margin-right: 20px; */
+  }
+
+  .iconCircle_imgStyle {
+    width: 100%;
+  }
+
+
+
+
+
+  .iconRatio {
+    position: relative;
+    width: 100%;
+  }
+  .iconPicture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
  

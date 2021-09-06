@@ -58,8 +58,7 @@ class Header extends React.Component {
           <ul className='links'>
             <li
               className={
-                document.location.pathname.length === 1 ||
-                document.location.pathname === "/services"
+                document.location.pathname.length === 1 
                   ? "HomeHeader NavigationLabel"
                   : "NavigationLabel"
               }
@@ -70,8 +69,7 @@ class Header extends React.Component {
             </li>
             <li
               className={
-                document.location.pathname.length === 1 ||
-                document.location.pathname === "/services"
+                document.location.pathname.length === 1 
                   ? "HomeHeader NavigationLabel "
                   : "NavigationLabel"
               }
@@ -82,8 +80,7 @@ class Header extends React.Component {
             </li>
             <li
               className={
-                document.location.pathname.length === 1 ||
-                document.location.pathname === "/services"
+                document.location.pathname.length === 1 
                   ? "HomeHeader NavigationLabel "
                   : "NavigationLabel"
               }
@@ -94,8 +91,7 @@ class Header extends React.Component {
             </li>
             <li
               className={
-                document.location.pathname.length === 1 ||
-                document.location.pathname === "/services"
+                document.location.pathname.length === 1 
                   ? "HomeHeader NavigationLabel "
                   : "NavigationLabel"
               }
@@ -106,8 +102,7 @@ class Header extends React.Component {
             </li>
             <li
               className={
-                document.location.pathname.length === 1 ||
-                document.location.pathname === "/services"
+                document.location.pathname.length === 1 
                   ? "HomeHeader NavigationLabel "
                   : "NavigationLabel"
               }
@@ -118,8 +113,7 @@ class Header extends React.Component {
             </li>
             <li
               className={
-                document.location.pathname.length === 1 ||
-                document.location.pathname === "/services"
+                document.location.pathname.length === 1 
                   ? "HomeHeader NavigationLabel "
                   : "NavigationLabel"
               }
@@ -130,8 +124,7 @@ class Header extends React.Component {
             </li>
             <li
               className={
-                document.location.pathname.length === 1 ||
-                document.location.pathname === "/services"
+                document.location.pathname.length === 1 
                   ? "HomeHeader NavigationLabel "
                   : "NavigationLabel"
               }
