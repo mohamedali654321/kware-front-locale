@@ -122,11 +122,11 @@ function AnimateBackground() {
           >
             <ImageRatio style={{ paddingBottom: "92.96%" }}>
               <AnimatedImg
-                style={
-                  intl.locale === "en"
-                    ? { transform: "translate(-220px, 0%)" }
-                    : { transform: "translate(-220px, 0%)" }
-                }
+                // style={
+                //   intl.locale === "en"
+                //     ? { transform: "translate(-220px, 0%)" }
+                //     : { transform: "translate(-220px, 0%)" }
+                // }
                 src="./images/hero/hp-step3-2D_7bc731eae8.svg"
                 alt="Illustration of Partner technologies of Strapi like AWS, Next.js, React, Netlify or Node.JS"
               />

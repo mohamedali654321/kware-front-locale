@@ -255,11 +255,12 @@ function Steps() {
               >
                 <img
                   className="steps_ShapesTriangle"
-                  src="https://strapi.io/assets/decoration/triangle.svg"
+                  src="./images/logo.svg"
                   alt="triangle"
+                  
                 /><img
                   className="steps_ShapesDots"
-                  src="https://strapi.io/assets/decoration/dots.svg"
+                  src="./images/dots.svg"
                   alt="dots"
                 />
               </div>
@@ -341,7 +342,7 @@ function Steps() {
                 </div>
               </div>
               <div className="steps_SeparateBackground steps_SeparateType2"
-              className={intl.locale === 'ar' ? 'steps_SeparateBackground steps_SeparateType6'  :  'steps_SeparateBackground steps_SeparateType2'}
+              className={intl.locale === 'ar' ? 'steps_SeparateBackground steps_SeparateType4'  :  'steps_SeparateBackground steps_SeparateType2'}
               
               
               
@@ -354,11 +355,12 @@ function Steps() {
               >
                 <img
                   className="steps_ShapesTriangle"
-                  src="https://strapi.io/assets/decoration/triangle.svg"
+                  src="./images/logo.svg"
                   alt="triangle"
+                  style={{width:"35%"}}
                 /><img
                   className="steps_ShapesDots"
-                  src="https://strapi.io/assets/decoration/dots.svg"
+                  src="./images/dots.svg"
                   alt="dots"
                 />
               </div>
@@ -442,11 +444,11 @@ function Steps() {
               >
                 <img
                   className="steps_ShapesTriangle"
-                  src="https://strapi.io/assets/decoration/triangle.svg"
+                  src="./images/logo.svg"
                   alt="triangle"
                 /><img
                   className="steps_ShapesDots"
-                  src="https://strapi.io/assets/decoration/dots.svg"
+                  src="./images/dots.svg"
                   alt="dots"
                 />
               </div>
@@ -530,11 +532,11 @@ function Steps() {
               >
                 <img
                   className="steps_ShapesTriangle"
-                  src="https://strapi.io/assets/decoration/triangle.svg"
+                  src="./images/logo.svg"
                   alt="triangle"
                 /><img
                   className="steps_ShapesDots"
-                  src="https://strapi.io/assets/decoration/dots.svg"
+                  src="./images/dots.svg"
                   alt="dots"
                 />
               </div>
@@ -618,11 +620,11 @@ function Steps() {
               >
                 <img
                   className="steps_ShapesTriangle"
-                  src="https://strapi.io/assets/decoration/triangle.svg"
+                  src="./images/logo.svg"
                   alt="triangle"
                 /><img
                   className="steps_ShapesDots"
-                  src="https://strapi.io/assets/decoration/dots.svg"
+                  src="./images/dots.svg"
                   alt="dots"
                 />
               </div>
