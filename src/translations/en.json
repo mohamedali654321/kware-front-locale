@@ -94,7 +94,8 @@
     
     "home.steps.step5":"Step. 5",
     "home.steps.step5.title":"Deploy in 1-click on Digital Ocean, AWS or Heroku.",
-    "home.steps.step5.description":" We partner with the best hosting platforms for a smooth and seamless deployment. All you have to do is choose the platform and use the 1-click deploy button."
+    "home.steps.step5.description":" We partner with the best hosting platforms for a smooth and seamless deployment. All you have to do is choose the platform and use the 1-click deploy button.",
+    "blog.noResults":"No results for"
     
 
 
