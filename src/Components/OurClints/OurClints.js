@@ -1,9 +1,10 @@
 import React from 'react'
+import Comming from '../Comming/Comming'
 
 function OurClints() {
     return (
         <div>
-            <h2 style={{paddingTop:"200px",textAlign:"center"}}>OurClints</h2>
+           <Comming/>
            
         </div>
     )

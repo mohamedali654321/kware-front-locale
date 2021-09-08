@@ -21,7 +21,7 @@ function SmallCard(props) {
       <a
           class="SmallCardContainer_style " target="" alt=""
           
-          href="https://strapi.io/integrations/gatsby-cms"
+          href="/"
           style={{opacity: 1, transform: "perspective(1000px)"}}
           
           >

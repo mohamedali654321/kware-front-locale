@@ -1,0 +1,33 @@
+
+.main {
+    position: relative;
+    text-align: center;
+    top: 300px;
+    font-family: 'Effra-ar';
+}
+
+.title {
+    color: #5c2d91;
+    font-size: 4em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: 'Effra-ar';
+}
+
+.separator {
+    margin: 20px auto;
+    height: 2px;
+    width: 200px;
+    background-color: #9d916c;
+
+}
+
+.message {
+    font-size: 1.2em;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    color: #5c2d91;
+    font-family: 'Effra-ar';
+}
+
+

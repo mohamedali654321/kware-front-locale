@@ -5,6 +5,7 @@ import { isEqual } from "lodash";
 
 import LeftProduct from './KwareProduct/LeftProduct/LeftProduct'
 import ProductHero from './ProductHero/ProductHero'
+import Comming from '../Comming/Comming';
 
 function Products() {
 
@@ -26,6 +27,7 @@ function Products() {
 
     return (
       <div>
+      <Comming/>
       {/* <ProductHero/>
 
         {

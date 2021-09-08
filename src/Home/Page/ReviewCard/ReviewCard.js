@@ -20,7 +20,7 @@ function ReviewCard(props) {
         <a
           class=" reviewCardWithArrowLink reviewCardWrapper reviewCardWrapperLink"
           
-          href="https://strapi.io/user-stories/societe-generale-e-training-platform"
+          href="/"
         >
           <div class="reviewCard_backgroundContainer">
             <div class=" reviewCard_background reviewCard_type1"></div>

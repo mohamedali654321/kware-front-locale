@@ -1,9 +1,10 @@
 import React from 'react'
+import Comming from '../Comming/Comming'
 
 function OurPartners() {
     return (
         <div>
-            <h2 style={{paddingTop:"200px",textAlign:"center"}}>OurPartners</h2>
+           <Comming/>
         </div>
     )
 }

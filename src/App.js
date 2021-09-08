@@ -21,6 +21,7 @@ import Auth from './Components/Auth/Auth'
 import Login from './Components/Auth/Login/Login'
 import Register from "./Components/Auth/Register/Register";
 import Resouces from './Components/Product/Resouces'
+import NotFound from './NotFound/NotFound'
 
 function App() {
   const [locale, setLocale] = useLocale(
@@ -66,6 +67,7 @@ function App() {
               <Route path='/auth/login' exact component={Login}/>
               <Route path='/auth/register' exact component={Register}/>
               <Route path='/products' exact component={Products} />
+              <Route path='*' component={NotFound}/>
             </Switch>
             <Footer />
           </Router>

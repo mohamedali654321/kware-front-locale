@@ -18,28 +18,28 @@ export default function Blog() {
   const [inputText, setInputText] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
-  const [filteredData,setFilteredData]=useState([]);
+  const [categoryFilter,setCategoryFilter]=useState([]);
   const inputElement = useRef("");
   const filterElement = useRef("");
  
    
 
-  const handleSearch = (searchTerm) => {
-    setInputText(searchTerm);
-    if (inputText !== "") {
-      const newCarddata = card.filter((item) => {
-        return Object.values(item)
-          .join(" ")
-          .toLowerCase()
-          .includes(inputText.toLowerCase());
-      });
-      setSearchResults(newCarddata);
-    }
-  };
+  // const handleSearch = (searchTerm) => {
+  //   setInputText(searchTerm);
+  //   if (inputText !== "") {
+  //     const newCarddata = card.filter((item) => {
+  //       return Object.values(item)
+  //         .join(" ")
+  //         .toLowerCase()
+  //         .includes(inputText.toLowerCase());
+  //     });
+  //     setSearchResults(newCarddata);
+  //   }
+  // };
 
-  const searchTerm = () => {
-    handleSearch(inputElement.current.value);
-  };
+  // const searchTerm = () => {
+  //   handleSearch(inputElement.current.value);
+  // };
 
 
 
@@ -48,7 +48,7 @@ export default function Blog() {
 
 
 useEffect(()=>{
-    if(selectedCategory !== "" )
+    if(selectedCategory !== "" && inputText === "" )
     {
       const handleFilter = card.filter(card =>{
         if(card.categories.length){
@@ -56,13 +56,43 @@ useEffect(()=>{
       
         }
       }     
+
       );
-      setFilteredData(handleFilter)
+      setCategoryFilter(handleFilter)
+      setSearchResults(handleFilter)
       
 
     }
 
-},[selectedCategory]);
+
+   
+      if (inputText !== "") {
+        const newCarddata = (categoryFilter.length && selectedCategory !== ""   ? categoryFilter : card).filter((item) => {
+          return Object.values(item)
+            .join(" ")
+            .toLowerCase()
+            .includes(inputText.toLowerCase());
+        });
+      
+        setSearchResults(newCarddata);
+      }
+    
+
+
+    // if(selectedCategory !== "" && inputText !== "" && categoryFilter.length){
+    //   if (inputText !== "" ) {
+    //     const newCarddata = categoryFilter.filter((item) => {
+    //       return Object.values(item)
+    //         .join(" ")
+    //         .toLowerCase()
+    //         .includes(inputText.toLowerCase());
+    //     });
+      
+    //     setSearchResults(newCarddata);
+    //   }
+    // }
+
+},[selectedCategory,inputText]);
 
 
 
@@ -187,12 +217,12 @@ useEffect(()=>{
                     <input
                       ref={inputElement}
                       type="text"
-                      value={inputElement.current.value}
+                      value={inputText}
                       name="search"
                       placeholder={intl.formatMessage({
                         id: "blog.searchBox.placeholder",
                       })}
-                      onChange={searchTerm}
+                      onChange={(e) => setInputText(e.target.value)}
                     />
                     <svg
                       viewBox="0 0 14 14"
@@ -222,7 +252,7 @@ useEffect(()=>{
                   </p>
                 </div>
                 <div className="CardsGrid " style={{ opacity: 1 }}>
-                  {(searchResults.length || inputText !== ""
+                  {(searchResults.length || inputText !== "" || selectedCategory !== ""
                     ? searchResults
                     : card
                   )
@@ -246,7 +276,7 @@ useEffect(()=>{
                       />
                     ))}
                 </div>
-                {!searchResults.length && inputText !== "" && (
+                {!searchResults.length && (inputText !== "" || selectedCategory !== "") && (
                   <>
                     <div className="noResultsContent">
                       <div className="noResultsBlog">
@@ -282,7 +312,7 @@ useEffect(()=>{
                 <div
                   className="buttonContainer_showMore"
                   style={
-                    !searchResults.length && inputText !== ""
+                    !searchResults.length && (inputText !== "" || selectedCategory !== "")
                       ? { display: "none" }
                       : { display: "block" }
                   }

@@ -9,9 +9,12 @@ import ThirdSection from './ThirdSection/ThirdSection'
 import SixthSection from './SixthSection/SixthSection'
 import FifthSection from './FifthSection/FifthSection'
 import FourthSection from './FourthSection/FourthSection'
+import Comming from '../Comming/Comming'
 function Services() {
     return (
         <div class="singleProductContainer">
+
+        <Comming/>
           
           
         {/* <div class="singleProductWrapper">
