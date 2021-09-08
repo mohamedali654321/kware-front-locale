@@ -18,11 +18,11 @@ export default function Blog() {
   const [inputText, setInputText] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
- 
+  const [filteredData,setFilteredData]=useState([]);
   const inputElement = useRef("");
   const filterElement = useRef("");
  
-   const str ="New Release"
+   
 
   const handleSearch = (searchTerm) => {
     setInputText(searchTerm);
@@ -41,7 +41,31 @@ export default function Blog() {
     handleSearch(inputElement.current.value);
   };
 
- 
+
+
+  
+
+
+
+useEffect(()=>{
+    if(selectedCategory !== "" )
+    {
+      const handleFilter = card.filter(card =>{
+        if(card.categories.length){
+          return card.categories[0].name.toLowerCase() === selectedCategory.toLowerCase()
+      
+        }
+      }     
+      );
+      setFilteredData(handleFilter)
+      
+
+    }
+
+},[selectedCategory]);
+
+
+
 
 
 
@@ -52,7 +76,7 @@ export default function Blog() {
 
   useEffect(() => {
     AOS.init();
-    
+   
     
    
    
