@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './Language.css'
 import Switch from "react-switch";
 import { LocaleContext } from "../../../Hooks/useLocale";
 const switchText = {
@@ -13,18 +14,18 @@ const switchText = {
   backgroundColor: "#fff;",
 };
 const buttonStyle={
-  background: "#fff",
-  borderRadius:"10px",
+  background: "transparent",
+  // borderRadius:"10px",
   cursor:"pointer",
-  boxSizing: "border-box",
-  color:"#8D1CB8",
+  // boxSizing: "border-box",
+  color:"#fff",
   padding:"5px 7px",
   alignItems: "center",
     justifyContent: "center",
     textAlign: "center",
     fontSize:"15px",
-    fontWeight:"600",
-    boxShadow: "0 1px 4px rgb(26 26 67 / 40%)",
+    fontWeight:"500",
+    // boxShadow: "0 1px 4px rgb(26 26 67 / 40%)",
     zIndex: "1000",
     border:"none",
     fontFamily: "Effra-ar !important"
@@ -61,8 +62,9 @@ function Language() {
             /> */}
             <button
                 buttonStyle="zoom"
-                style={buttonStyle}
-                // id="tooltip112445449"
+                style={ document.location.pathname.length === 1 ? {color:"#fff"} : {color:"#5c2d91"}}
+                className="buttonStyle"
+                
                 onClick={() => {
                   value === "ar" ? setValue("en") : setValue("ar");
                 }}

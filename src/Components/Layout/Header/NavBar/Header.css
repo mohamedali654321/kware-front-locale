@@ -120,7 +120,13 @@
   transition: width .3s;
 }
 
+.HeaderScrolled .buttonStyle{
+  color: #5c2d91 !important;
+}
 
+.HeaderScrolled button {
+  color: #5c2d91 !important;
+}
 
 .HeaderGroup{
   margin-top: -50px;
