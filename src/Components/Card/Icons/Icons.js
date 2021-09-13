@@ -11,16 +11,17 @@ function Icons(props) {
       {props.icons.length !== 0 && (
         <>
           {props.icons.map((icon) => (
-            <div class=" iconCircle iconCircle_img">
-              <div class="iconCircle_imgStyle">
+
+            <div key={icon.id} className=" iconCircle iconCircle_img">
+              <div className="iconCircle_imgStyle">
                 <div
-                  class="iconRatio"
+                  className="iconRatio"
                   style={{
                     paddingBottom: "100%",
                   }}
                 >
                   <img
-                    class=" iconPicture "
+                    className=" iconPicture "
                     src={BACKEND_URL + icon.url}
                     style={{
                       opacity: 1,

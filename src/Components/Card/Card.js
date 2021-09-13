@@ -184,7 +184,7 @@ function Card(props) {
                           style={{ opacity: 1 }}
                         >
                           <ul className="category_tags  SixthSectionLabel_style SixthSectionLabel_color">
-                          {/* <CategoryLists> */}
+                            {/* <CategoryLists> */}
                             {props.tag &&
                               props.tag.map((tag) => (
                                 <li className="category_tags_styles category_tags_items">
@@ -204,7 +204,7 @@ function Card(props) {
                                   </span>
                                 </li>
                               ))}
-                            </ul>
+                          </ul>
                           {/* </CategoryLists> */}
 
                           <h2 class="card_text card_text_abstract abstract_small_text card_text_color_abstractPublish ">
@@ -240,50 +240,41 @@ function Card(props) {
             </CoverRatio>
           </CoverContainer>
 
+          <CardContent>
+            <CategoryList>
+              {props.tag &&
+                props.tag.map((tag) => <Category>{tag.name}</Category>)}
+            </CategoryList>
+            <h2 className="card_titleContainer card_title card_small_text card_text_color">
+              {props.title}
+            </h2>
+            <p className="card_text card_text_abstract abstract_small_text card_text_color_abstractPublish">
+              {props.abstract}
+            </p>
+            <div className="AuthorContainer author author_small_label">
+              <div>
+                <p className="card_text card_small_text author_color_label">
+                  <FormattedMessage
+                    id="blog.details.meta.author"
+                    values={{ author: props.name }}
+                  />
+                </p>
 
-          <div className="cardContent">
-            <div className="cardContainer ListCardContent  styles_List">
-              <ul className="category_tags">
-                {props.tag &&
-                  props.tag.map((tag) => (
-                    <li className="category_tags_styles category_tags_items">
-                      <span className="category_label category_label_style ">
-                        {tag.name}
-                      </span>
-                    </li>
-                  ))}
-              </ul>
-              <h2 className="card_titleContainer card_title card_small_text card_text_color">
-                {props.title}
-              </h2>
-              <p className="card_text card_text_abstract abstract_small_text card_text_color_abstractPublish">
-                {props.abstract}
-              </p>
-              <div className="AuthorContainer author author_small_label">
-                <div>
+                {props.translator ? (
                   <p className="card_text card_small_text author_color_label">
                     <FormattedMessage
-                      id="blog.details.meta.author"
-                      values={{ author: props.name }}
+                      id="blog.details.meta.translatedBy"
+                      values={{ translator: props.translator }}
                     />
                   </p>
+                ) : null}
 
-                  {props.translator ? (
-                    <p className="card_text card_small_text author_color_label">
-                      <FormattedMessage
-                        id="blog.details.meta.translatedBy"
-                        values={{ translator: props.translator }}
-                      />
-                    </p>
-                  ) : null}
-
-                  <p className="card_text publish_label card_text_color_abstractPublish">
-                    {props.publishDate}
-                  </p>
-                </div>
+                <p className="card_text publish_label card_text_color_abstractPublish">
+                  {props.publishDate}
+                </p>
               </div>
             </div>
-          </div>
+          </CardContent>
         </CardWrapper>
       </Link>
     </CardContainer>
@@ -291,3 +282,82 @@ function Card(props) {
 }
 
 export default Card;
+
+const CardContent = styled.div`
+  display: flex;
+  flex: 1 1;
+  position: relative;
+
+  flex-direction: column;
+  text-align: center;
+  padding: 24px;
+  width: 100%;
+  > * {
+    text-decoration: none;
+  }
+
+  text-align: left;
+  transform: translateZ(1000px);
+  width: 100%;
+`;
+
+const CategoryList = styled.ul`
+  display: inline-block;
+
+  margin-bottom: 14px;
+`;
+
+const Category = styled.li`
+  display: inline-block;
+  font-family: Effra-ar;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 10px;
+  color: #13bb70;
+
+  &:not(:last-child) {
+    position: relative;
+    padding-right: 22px;
+  }
+
+  &:not(:last-child):after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 3px;
+    border-radius: 20px;
+    background-color: #13bb70;
+  }
+
+  color: #13bb70;
+  font-weight: 600;
+  font-family: Effra-ar;
+  font-size: 11px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  @media (min-width: 992px) {
+    font-size: 13px;
+  }
+`;
+
+const CardTitle = styled.h2`
+font-family: Effra-ar;
+      font-size: 23px;
+      font-weight: 700;
+      line-height: 56px;
+      font-family: Effra-ar;
+      font-weight: 600;
+      color: #8D1CB8;
+      margin-bottom: 20px;
+      margin-bottom: 12px;
+      @media (min-width: 992px) {
+      
+        font-size: 33px;
+      
+    }
+`;

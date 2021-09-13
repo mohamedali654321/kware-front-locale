@@ -142,14 +142,14 @@ function Footer() {
             <nav class="navigation">
                      {
                          menu.map(item=>(
-                            <div class="MenuColumn">
+                            <div class="MenuColumn" key={item.title}>
                 <p class="footer_text sectionTitle TitleLabel themes_color">
                   {item.title}
                 </p>
                 <ul>
                 {
                     item.lists.map(list=>(
-                        <li class="MenuColumnLink">
+                        <li class="MenuColumnLink" key={list.id}>
                     <a
                       class="ItemLink FooterLinkItem"
                       alt=""

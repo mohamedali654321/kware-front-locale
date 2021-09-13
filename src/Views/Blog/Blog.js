@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { isEqual } from "lodash";
+import {  isEqual } from "lodash";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import axios from "axios";
@@ -21,7 +21,7 @@ export default function Blog() {
   const [categoryFilter, setCategoryFilter] = useState([]);
   const [visible, setVisible] = useState(12);
   const inputElement = useRef("");
-
+ console.log(selectedCategory,inputText)
 
   useEffect(() => {
     if (selectedCategory !== "" && inputText === "") {
@@ -57,7 +57,7 @@ export default function Blog() {
     else {
       setSearchResults(card);
     }
-  }, [selectedCategory, inputText]);
+  }, [selectedCategory, inputText,]);
 
 
   const showMoreItems = () => {
@@ -196,20 +196,43 @@ export default function Blog() {
                 <div className="tagsResults">
                   <div className="tagsWrapper"></div>
                   <p className="styles_blog_text results small_tags_text styles_blog_textColor">
+
+                    {
+                      inputText ==="" && selectedCategory === "" && !searchResults.length && (
+                        
                     <span>
                       <FormattedMessage id="blog.resault.showing" />{" "}
-                      {card.length &&
-                      visible <= card.length &&
-                      !searchResults.length
+                      {
+                      visible <= card.length && visible > 0 && card.length
                         ? visible
                         : card.length}
-                      {/* {!card.length && visible <= card.searchResults && searchResults.length ? visible : searchResults.length} */}
+                      
                       <FormattedMessage id="blog.resault.ofBlog" />{" "}
-                      {searchResults.length
-                        ? searchResults.length
-                        : card.length}{" "}
+                      { card.length ? card.length : null}{" "}
                       <FormattedMessage id="blog.resault.blogPosts" />
                     </span>
+
+                      )
+                    }
+                    
+                    {
+                      (inputText !=="" || selectedCategory !== "") && searchResults.length && (
+                        
+                    <span>
+                      <FormattedMessage id="blog.resault.showing" />{" "}
+                      {
+                      visible <= searchResults.length  && visible > 0 && searchResults.length
+                        ? visible
+                        : searchResults.length}
+                      
+                      <FormattedMessage id="blog.resault.ofBlog" />{" "}
+                      { searchResults.length ? searchResults.length : null}{" "}
+                      <FormattedMessage id="blog.resault.blogPosts" />
+                    </span>
+
+                      )
+                    }
+                   
                   </p>
                 </div>
                 <div className="CardsGrid " style={{ opacity: 1 }}>
@@ -222,6 +245,7 @@ export default function Blog() {
                     .slice(0, visible)
                     .map((item, index) => (
                       <Card
+                    key={item.id}
                         cardData={item}
                         image={item.image ? item.image : null}
                         tag={
@@ -271,7 +295,7 @@ export default function Blog() {
                 <div
                   className="buttonContainer_showMore"
                   style={
-                   (!searchResults.length && (inputText !== "" || selectedCategory !== "")) 
+                   (inputText !== "" || selectedCategory !== "") && !searchResults.length  
                     
                       ? { display: "none" }
                       : { display: "block" }
@@ -297,11 +321,11 @@ export default function Blog() {
                         >
                           <path
                             d="M5 9.4l3.2-3.8L5 1.8a1 1 0 01-.2-.7c0-.3 0-.6.2-.7.4-.4.9-.4 1.2 0L10 4.9c.3.4.3 1 0 1.4L6 10.8c-.3.4-.8.4-1.2 0-.3-.4-.3-1 0-1.4z"
-                            fill="#74E4A2"
+                            fill="#8d1cb8"
                           ></path>
                           <path
                             d="M1 4.7a.9.9 0 100 1.8V4.7zm7.4 0H1v1.8h7.4V4.7z"
-                            fill="#74E4A2"
+                            fill="#8d1cb8"
                           ></path>
                         </svg>
                       </button>

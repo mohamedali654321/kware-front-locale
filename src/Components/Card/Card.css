@@ -209,22 +209,22 @@
     .ListCardContent.styles_List {
       text-align: left;
     }
-    .ListCardContent.styles_List .card_title {
+     .card_title {
       margin-bottom: 12px;
     }
-    .ListCardContent.styles_List
+    
       .card_text_abstract
       + .author {
       padding-top: 24px;
     }
-    .ListCardContent.styles_List .category_tags {
+    .category_tags {
       display: inline-block;
     }
-    .ListCardContent.styles_List .author {
+     .author {
       display: flex;
       padding-top: 8px;
     }
-    .ListCardContent .styles_content__VKD7n {
+    .styles_content__VKD7n {
       display: flex;
       flex: 1 0 auto;
       flex-direction: column;
@@ -236,11 +236,11 @@
       display: none;
       margin-bottom: 14px;
     }
-    .ListCardContent .category_tags_items:not(:last-child) {
+     .category_tags_items:not(:last-child) {
       position: relative;
       padding-right: 22px;
     }
-    .ListCardContent .category_tags_items:not(:last-child):after {
+     .category_tags_items:not(:last-child):after {
       content: "";
       position: absolute;
       top: 50%;
@@ -251,17 +251,17 @@
       border-radius: 20px;
       background-color: #13bb70;
     }
-    .ListCardContent .category_label_style {
+    .category_label_style {
       color: #13bb70;
       font-weight: 600;
     }
-    .ListCardContent .card_title {
+     .card_title {
       font-family: Effra-ar;
       font-weight: 600;
       color: #8D1CB8;
       margin-bottom: 20px;
     }
-    .ListCardContent .card_text_abstract {
+     .card_text_abstract {
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
@@ -269,7 +269,7 @@
     }
     
  
-    .ListCardContent .author {
+    .author {
       display: none;
       margin-top: auto;
     }
@@ -277,10 +277,10 @@
     .ListCardContent.styles_List {
       text-align: left;
     }
-    .ListCardContent.styles_List .card_title {
+     .card_title {
       margin-bottom: 12px;
     }
-    .ListCardContent.styles_List
+   
       .card_text_abstract
       + .author {
       padding-top: 24px;
@@ -288,7 +288,7 @@
     .ListCardContent.styles_List .category_tags {
       display: inline-block;
     }
-    .ListCardContent.styles_List .author {
+    .author {
       display: flex;
       padding-top: 8px;
     }
@@ -360,10 +360,10 @@
       font-size: 17px;
       line-height: 1.5;
     }
-    .ListCardContent.styles_List .card_title {
+    .card_title {
       margin-bottom: 12px;
     }
-    .ListCardContent .card_title {
+     .card_title {
       font-family: Effra-ar;
       font-weight: 600;
       color: #8D1CB8;
@@ -422,7 +422,7 @@
       font-size: 11px;
       line-height: 18px;
     }
-    .ListCardContent .card_text_abstract {
+    .card_text_abstract {
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
@@ -436,7 +436,7 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
-    .ListCardContent.styles_List
+    
     .card_text_abstract
     + .author {
     padding-top: 24px;
