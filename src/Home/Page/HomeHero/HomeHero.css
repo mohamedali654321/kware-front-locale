@@ -382,7 +382,7 @@
 
 
 
-  .HeroAssetWrapper {
+  /* .HeroAssetWrapper {
     z-index: 0;
     position: relative;
     margin-bottom: -70px;
@@ -393,11 +393,9 @@
     .HeroAssetWrapper {
       margin-bottom: 0;
     }
-  }
-  .HeroAssetWrapper .HeroAssetphone {
-    
-  }
-  .HeroAssetWrapper .HeroBrowserWindowContainer {
+  } */
+ 
+  .HeroBrowserWindowContainer {
     z-index: 1;
     position: relative;
     width: 118%;
@@ -407,23 +405,26 @@
     overflow: hidden;
   }
   @media (min-width: 992px) {
-    .HeroAssetWrapper .HeroBrowserWindowContainer {
+ .HeroBrowserWindowContainer {
       overflow: visible;
     }
   }
-  .HeroAssetWrapper .HeroBrowserWindow,
-  .HeroAssetWrapper .HeroAssetphone {
+   .HeroBrowserWindow,
+   .HeroAssetphone {
     width: 100%;
   }
-  .HeroAssetWrapper .HeroAssetphoneContainer {
+  .HeroAssetphoneContainer {
     z-index: 2;
     position: absolute;
     top: -5%;
     right: -20px;
     width: 40%;
+    perspective: 1px;
+    transform:  translate(0%, 11.6756%) translate3d(0px, 0px, 0px);             
+                   
   }
   @media (min-width: 992px) {
-    .HeroAssetWrapper .HeroAssetphoneContainer {
+     .HeroAssetphoneContainer {
       right: -10.4%;
     }
   }
@@ -606,7 +607,7 @@
     background-repeat: no-repeat;
     background-size: 100%;
     z-index: -1;
-    top: 500px;
+    top: 600px;
     background-image: url(https://designcode.io/images/waves/course-wave1.svg);
     height: 600px;
     mix-blend-mode: overlay;
@@ -633,13 +634,31 @@
 }
 
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
+/* @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm)
 {
     .HeroWave3_wrapper {
         mix-blend-mode: normal;
         opacity: 0.2;
     }
 }
+ */
 
 
 
+
+
+
+/* iPhone MediaQuery */
+@media only screen 
+    and (device-width: 390px) 
+    and (device-height: 844px) 
+    and (-webkit-device-pixel-ratio: 3) {
+      .HeroTitle.HeroTitle_fontSize{
+        font-size: 30px;
+      }
+      
+
+
+
+
+     }

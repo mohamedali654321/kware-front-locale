@@ -5,99 +5,59 @@ import "aos/dist/aos.css";
 import axios from "axios";
 
 import "./Blog.css";
-import { Link } from "react-router-dom";
+
 import { FormattedMessage, useIntl } from "react-intl";
 import Card from "../../Components/Card/Card";
 import DropdownMenu from "../../Components/DropdownMenu/DropdownMenu";
 
 export default function Blog() {
   const intl = useIntl();
-  const [visible, setVisible] = useState(12);
+
   const [card, setCard] = useState([]);
   const [categories, setCategories] = useState([]);
   const [inputText, setInputText] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
-  const [categoryFilter,setCategoryFilter]=useState([]);
+  const [categoryFilter, setCategoryFilter] = useState([]);
+  const [visible, setVisible] = useState(12);
   const inputElement = useRef("");
-  const filterElement = useRef("");
- 
-   
-
-  // const handleSearch = (searchTerm) => {
-  //   setInputText(searchTerm);
-  //   if (inputText !== "") {
-  //     const newCarddata = card.filter((item) => {
-  //       return Object.values(item)
-  //         .join(" ")
-  //         .toLowerCase()
-  //         .includes(inputText.toLowerCase());
-  //     });
-  //     setSearchResults(newCarddata);
-  //   }
-  // };
-
-  // const searchTerm = () => {
-  //   handleSearch(inputElement.current.value);
-  // };
 
 
-
-  
-
-
-
-useEffect(()=>{
-    if(selectedCategory !== "" && inputText === "" )
-    {
-      const handleFilter = card.filter(card =>{
-        if(card.categories.length){
-          return card.categories[0].name.toLowerCase() === selectedCategory.toLowerCase()
-      
-        }
-      }     
-
-      );
-      setCategoryFilter(handleFilter)
-      setSearchResults(handleFilter)
-      
-
-    }
-
-
-   
-      if (inputText !== "") {
-        const newCarddata = (categoryFilter.length && selectedCategory !== ""   ? categoryFilter : card).filter((item) => {
-          return Object.values(item)
-            .join(" ")
-            .toLowerCase()
-            .includes(inputText.toLowerCase());
+  useEffect(() => {
+    if (selectedCategory !== "" && inputText === "") {
+      if (selectedCategory === intl.formatMessage({ id: "all.categories" })) {
+        setCategoryFilter(card);
+        setSearchResults(card);
+      } 
+      else {
+        const handleFilter = card.filter((card) => {
+          if (card.categories.length) {
+            return (
+              card.categories[0].name.toLowerCase() ===
+              selectedCategory.toLowerCase()
+            );
+          }
         });
-      
-        setSearchResults(newCarddata);
+        setCategoryFilter(handleFilter);
+        setSearchResults(handleFilter);
       }
-    
+    } 
+    else if (inputText !== "") {
+      const newCarddata = (
+        categoryFilter.length && selectedCategory !== "" ? categoryFilter : card
+      ).filter((item) => {
+        return Object.values(item)
+          .join(" ")
+          .toLowerCase()
+          .includes(inputText.toLowerCase());
+      });
 
-
-    // if(selectedCategory !== "" && inputText !== "" && categoryFilter.length){
-    //   if (inputText !== "" ) {
-    //     const newCarddata = categoryFilter.filter((item) => {
-    //       return Object.values(item)
-    //         .join(" ")
-    //         .toLowerCase()
-    //         .includes(inputText.toLowerCase());
-    //     });
-      
-    //     setSearchResults(newCarddata);
-    //   }
-    // }
-
-},[selectedCategory,inputText]);
-
-
-
-
-
+      setSearchResults(newCarddata);
+    } 
+    else {
+      setSearchResults(card);
+    }
+  }, [selectedCategory, inputText]);
 
 
   const showMoreItems = () => {
@@ -106,10 +66,6 @@ useEffect(()=>{
 
   useEffect(() => {
     AOS.init();
-   
-    
-   
-   
   });
 
   useEffect(() => {
@@ -121,7 +77,6 @@ useEffect(()=>{
         if (!isEqual(res.data, card)) {
           setCard(res.data);
         }
-        
       })
       .catch((err) => console.log(err));
   }, [card, intl.locale]);
@@ -163,7 +118,6 @@ useEffect(()=>{
                           transform:
                             "perspective(1000px) translate3d(0px, 0px, 0px)",
                         }}
-                        
                       >
                         <div class="liq-content">
                           <h2>
@@ -205,13 +159,15 @@ useEffect(()=>{
               <div className="styles_innerWrapper">
                 <div className="styles_filterBar">
                   <DropdownMenu
-                    ref={filterElement}
                     header={<FormattedMessage id="blog.categoryBox.label" />}
                     value={selectedCategory}
                     onChange={setSelectedCategory}
-                    options={[...categories.map((cat) => cat.name)]}
-                    
-                    
+                    options={[
+                      intl.formatMessage({
+                        id: "all.categories",
+                      }),
+                      ...categories.map((cat) => cat.name),
+                    ]}
                   />
                   <div className="InputText_search searchText">
                     <input
@@ -242,7 +198,12 @@ useEffect(()=>{
                   <p className="styles_blog_text results small_tags_text styles_blog_textColor">
                     <span>
                       <FormattedMessage id="blog.resault.showing" />{" "}
-                      {visible <= card.length ? visible : card.length}
+                      {card.length &&
+                      visible <= card.length &&
+                      !searchResults.length
+                        ? visible
+                        : card.length}
+                      {/* {!card.length && visible <= card.searchResults && searchResults.length ? visible : searchResults.length} */}
                       <FormattedMessage id="blog.resault.ofBlog" />{" "}
                       {searchResults.length
                         ? searchResults.length
@@ -252,7 +213,9 @@ useEffect(()=>{
                   </p>
                 </div>
                 <div className="CardsGrid " style={{ opacity: 1 }}>
-                  {(searchResults.length || inputText !== "" || selectedCategory !== ""
+                  {(searchResults.length ||
+                  inputText !== "" ||
+                  selectedCategory !== ""
                     ? searchResults
                     : card
                   )
@@ -276,43 +239,40 @@ useEffect(()=>{
                       />
                     ))}
                 </div>
-                {!searchResults.length && (inputText !== "" || selectedCategory !== "") && (
-                  <>
-                    <div className="noResultsContent">
-                      <div className="noResultsBlog">
-                        <svg
-                          width="35"
-                          height="35"
-                          fill="none"
-                          
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M34.727 29.405l-7.73-7.827a14.28 14.28 0 001.915-7.099C28.912 6.497 22.422 0 14.456 0 6.49 0 0 6.497 0 14.48c0 7.982 6.49 14.479 14.456 14.479 2.543 0 5.058-.702 7.3-2.041l7.693 7.8c.173.173.42.282.666.282.246 0 .492-.1.665-.282l3.947-3.992a.935.935 0 000-1.32zM14.454 5.64c4.867 0 8.823 3.963 8.823 8.838 0 4.876-3.956 8.84-8.823 8.84-4.867 0-8.823-3.965-8.823-8.84S9.587 5.64 14.454 5.64z"
-                            fill="#92A0C4"
-                          ></path>
-                        </svg>
-                        <p
-                          className="
+                {!searchResults.length &&
+                  (inputText !== "" || selectedCategory !== "") && (
+                    <>
+                      <div className="noResultsContent">
+                        <div className="noResultsBlog">
+                          <svg width="35" height="35" fill="none">
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M34.727 29.405l-7.73-7.827a14.28 14.28 0 001.915-7.099C28.912 6.497 22.422 0 14.456 0 6.49 0 0 6.497 0 14.48c0 7.982 6.49 14.479 14.456 14.479 2.543 0 5.058-.702 7.3-2.041l7.693 7.8c.173.173.42.282.666.282.246 0 .492-.1.665-.282l3.947-3.992a.935.935 0 000-1.32zM14.454 5.64c4.867 0 8.823 3.963 8.823 8.838 0 4.876-3.956 8.84-8.823 8.84-4.867 0-8.823-3.965-8.823-8.84S9.587 5.64 14.454 5.64z"
+                              fill="#92A0C4"
+                            ></path>
+                          </svg>
+                          <p
+                            className="
                      noResultsTextBlog
                       noResultsText_fontBlog
             
                                   "
-                        >
-                          <FormattedMessage id="blog.noResults"/>
-                          <span>
-                            <span className="searchedTerm_Blog">{`  " ${inputText} " `}</span>
-                          </span>
-                        </p>
+                          >
+                            <FormattedMessage id="blog.noResults" />
+                            <span>
+                              <span className="searchedTerm_Blog">{`  " ${inputText} " `}</span>
+                            </span>
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </>
-                )}
+                    </>
+                  )}
                 <div
                   className="buttonContainer_showMore"
                   style={
-                    !searchResults.length && (inputText !== "" || selectedCategory !== "")
+                   (!searchResults.length && (inputText !== "" || selectedCategory !== "")) 
+                    
                       ? { display: "none" }
                       : { display: "block" }
                   }
