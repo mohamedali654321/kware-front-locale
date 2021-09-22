@@ -68,8 +68,12 @@ function BlogDetails({ match, history }) {
   return (
     <div>
       <div className='details_container'>
+
+
         <div className='details_wrapper'>
           {/**Back to articles button */}
+
+          
           <a className='backTo_link' target='' alt='' to='/blog' href='/blog'>
             <span
               className='
@@ -102,6 +106,9 @@ function BlogDetails({ match, history }) {
               </span>
             </span>
           </a>
+
+
+
         </div>
 
         <section className='article_container article_maxWidth'>

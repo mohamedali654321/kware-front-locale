@@ -17,11 +17,10 @@ import MainPage from "./Views/Blog/MainPage";
 import BlogDetails from "./Views/BlogDetails/BlogDetails";
 import { StyleSheetManager } from "styled-components";
 import stylisRTLCSS from "stylis-rtlcss";
-import Auth from './Components/Auth/Auth'
-import Login from './Components/Auth/Login/Login'
-import Register from "./Components/Auth/Register/Register";
+import Register from './Components/Auth/Register'
 import Resouces from './Components/Product/Resouces'
 import NotFound from './NotFound/NotFound'
+import Login from "./Components/Auth/Login";
 
 function App() {
   const [locale, setLocale] = useLocale(
@@ -63,9 +62,8 @@ function App() {
               <Route path='/sys-solutions' exact component={SysSolutions} />
               <Route path='/resources' exact component={Resouces} />
               <Route path='/services' exact component={Services} />
-              <Route path='/auth' exact component={Auth}/>
-              <Route path='/auth/login' exact component={Login}/>
-              <Route path='/auth/register' exact component={Register}/>
+              <Route path='/register' exact component={Register}/>
+              <Route path='/login' exact component={Login}/>
               <Route path='/products' exact component={Products} />
               <Route path='*' component={NotFound}/>
             </Switch>

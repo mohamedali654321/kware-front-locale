@@ -14,10 +14,10 @@
 
 
 .HeaderScrolled{
-      opacity: 1;
+      /* opacity: 1;
       padding: 15px 0;
-      backdrop-filter: blur(25px);
-      justify-items: flex-end;
+      backdrop-filter: blur(25px); */
+      /* justify-items: flex-end; */
       background-color: #fff;
       border: 1px solid #f2f4ff;
   box-sizing: border-box;
@@ -72,9 +72,9 @@
 }
 .HomeHeader{
   opacity: 1;
-      padding: 15px 0;
+      /* padding: 15px 0;
       backdrop-filter: blur(25px);
-      justify-items: flex-end;
+      justify-items: flex-end; */
       
 }
 
@@ -91,15 +91,7 @@
 .HeaderScrolled .links a:hover{
   color: #8533ff  !important;
 }
-/* .HomeHeader .cool::after{
-  content: '';
-  display: block;
-  width: 0;
-  height: 3px;
-  background: #8533ff  !important;
-  transition: width .3s;
-}
-*/
+
 
 
 .Header.HomeCool .cool::after{
