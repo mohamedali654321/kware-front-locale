@@ -1,0 +1,121 @@
+header{
+    width: 100%;
+    min-height: 100px;
+    background: #282c34;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 30px;
+}
+header a{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+header ul li{
+    display: inline-block;
+    padding: 10px 20px;
+    opacity: 0.7;
+}
+header ul li:hover{
+    opacity: 1;
+}
+
+header ul li img{
+    width: 30px;
+    height: 30px;
+    transform: translateY(10px);
+    border-radius: 50%;
+}
+
+/* --------- Dropdown ---------- */
+.drop-nav{
+    position: relative;
+    padding: 5px 0px;
+}
+.drop-nav a{
+    text-transform: capitalize;
+    overflow: hidden;
+}
+.drop-nav .dropdown{
+    position: absolute;
+    padding: 10px;
+    background: #fff;
+    width: 84%;
+    /* width: calc(100% + 30px); */
+    top: 50px;
+    display: none;
+    border-radius: 10px;
+    gap: 10px;
+}
+.drop-nav .dropdown li{
+    display: block;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 5px;
+}
+.drop-nav:hover .dropdown{
+    display: block;
+}
+
+section .homeheader__avatar {
+    height: 20px !important;
+    width: 30px !important;
+    margin-right: 8px;
+}
+
+
+
+
+
+
+
+
+/* user */
+
+
+.postss__first {
+    display: flex;
+    align-items: center;
+    /* background-color: #fff; */
+    /* border-radius: 25px 150px 50px 100px; */
+    padding-right: 10px;
+    /* box-shadow: 0 10px 10px rgba(0, 0, 0, .2); */
+    
+    
+  }
+  .userStyle{
+      color: #fff;
+  }
+
+  .posts__first__img {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  .posts__first__img img {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .posts__first__name {
+    margin-left: 6px;
+  }
+
+  .posts__first__username {
+    margin-left: 6px;
+    color: silver;
+    font-weight: 300;
+  }
+  .posts__first__username span {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 14px;
+  }
+
+
+
+

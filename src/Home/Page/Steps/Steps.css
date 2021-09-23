@@ -1,5 +1,5 @@
 .stepSlice {
-  margin-top: 84px;
+  margin-top: 250px;
   scroll-behavior: smooth;
 }
 
@@ -28,7 +28,7 @@
 
 
 
-.step_gradient-left .stepTetris_decoration {
+.stepTetris_decoration {
   -webkit-transform: translate(-33.3333333333%, -33.3333333333%);
   -moz-transform: translate(-33.3333333333%, -33.3333333333%);
   transform: translate(-33.3333333333%, -33.3333333333%);

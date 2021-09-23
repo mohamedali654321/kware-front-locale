@@ -116,6 +116,12 @@
   color: #5c2d91 !important;
 }
 
+
+.HeaderScrolled .userStyle{
+  color: #5c2d91 !important;
+}
+
+
 .HeaderScrolled button {
   color: #5c2d91 !important;
 }
@@ -129,7 +135,7 @@
   padding: 50px 0 0;
   transform: translateZ(1000px);
   width: 100%;
-  max-width: 1200px;
+  max-width: 1800px;
   /* max-width: 600px; */
   z-index: 1;
   position: relative;

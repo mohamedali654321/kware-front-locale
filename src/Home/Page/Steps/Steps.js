@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Steps.css";
-import { FormattedMessage , useIntl } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import AnimateBackground from "./AnimateBackground/AnimateBackground";
+import MainProductHeader from "./AnimateBackground/MainProductHeader";
+import Product from "./AnimateBackground/Product";
 
 function Steps() {
   const [page, setPage] = useState();
@@ -16,164 +18,23 @@ function Steps() {
     AOS.init();
   });
 
-
-
   return (
     <div>
       <div className=" stepSlice stepGradientHeader stepContainer">
-        <section className=" step_gradient step_gradient-left stepContainer">
-          <div className="stepWrapper stepWrapper_style">
-            <div className=" stepMobileInnerWrapper stepInnerWrapper">
-              <div
-                className=" stepLabelTitleText stepLabelTitleText_wrapper stepLabelTitleText_withGradient stepLabelTitleText_center"
-                data-aos-delay="200"
-                data-aos-duration="200"
-                data-aos-offset="200"
-                data-aos-once="true"
-                data-aos="zoom-in"
-                style={{ opacity: 1 }}
-              >
-                <div
-                  className=" stepLabel stepLabelWrapper steplabel_color"
-                  data-aos-delay="200"
-                  data-aos-duration="200"
-                  data-aos-offset="200"
-                  data-aos-once="true"
-                  data-aos="zoom-in"
-                >
-                  <div>
-                    <div
-                      style={{
-                        position: "relative",
-                        display: "inline-block",
-                        opacity: 1,
-                        transform:
-                          "perspective(1000px) translate3d(0px, 0px, 0px)",
-                      }}
-                      className=""
-                    >
-                      <FormattedMessage id="home.steps" />
-                    </div>
-                  </div>
-                </div>
-                <h1
-                  className=" stepTitle stepTitle_wrapper stepTitle_fontSize stepTitle_color"
-                  data-aos-delay="200"
-                  data-aos-duration="200"
-                  data-aos-offset="200"
-                  data-aos-once="true"
-                  data-aos="zoom-in"
-                >
-                  <div className="stepTitleContainer">
-                    <span>
-                      <div
-                        style={{
-                          position: "relative",
-                          display: "inline-block",
-                          opacity: 1,
-                          transform:
-                            "perspective(1000px) translate3d(0px, 0px, 0px)",
-                        }}
-                        className=""
-                      >
-                        <FormattedMessage id="home.steps.title" />
-                      </div>
-                    </span>
-                  </div>
-                </h1>
-                <div
-                  className=" stepText stepText_style stepText_fontSize stepText_color"
-                  data-aos-delay="200"
-                  data-aos-duration="200"
-                  data-aos-offset="200"
-                  data-aos-once="true"
-                  data-aos="zoom-in"
-                >
-                  <div
-                    style={{
-                      position: "relative",
-                      display: "inline-block",
-                      opacity: 1,
-                      transform:
-                        "perspective(1000px) translate3d(0px, 0px, 0px)",
-                    }}
-                    className=""
-                  >
-                    <FormattedMessage id="home.steps.description" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className=" stepTetrisContainer stepTetris_decoration stepTetris_color">
-              <svg
-                fill="none"
-                viewBox="0 0 300 300"
-                style={{ transform: "rotate(0deg)" }}
-              >
-                <g clip-path="url(#variant-1_svg__clip0)">
-                  <path
-                    className="variant-1_svg__tetris-dark-path"
-                    fill="#7A4FF3"
-                    d="M100 200H0v100h100V200zm100-100H100v100h100V100zM300 0H200v100h100V0z"
-                  ></path>
-                  <g>
-                    <path
-                      className="variant-1_svg__tetris-light-path"
-                      fill="#956FFF"
-                      d="M200 0H100v100h100V0z"
-                    ></path>
-                  </g>
-                </g>
-                <defs>
-                  <clippath id="variant-1_svg__clip0">
-                    <path fill="#fff" d="M0 0h300v300H0z"></path>
-                  </clippath>
-                  <filter
-                    id="variant-1_svg__filter0_d"
-                    width="140"
-                    height="140"
-                    x="84"
-                    y="-12"
-                    color-interpolation-filters="sRGB"
-                    filterUnits="userSpaceOnUse"
-                  >
-                    <feflood
-                      flood-opacity="0"
-                      result="BackgroundImageFix"
-                    ></feflood>
-                    <fecolormatrix
-                      in="SourceAlpha"
-                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    ></fecolormatrix>
-                    <feoffset dx="4" dy="8"></feoffset>
-                    <fegaussianblur stdDeviation="10"></fegaussianblur>
-                    <fecolormatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"></fecolormatrix>
-                    <feblend
-                      in2="BackgroundImageFix"
-                      result="effect1_dropShadow"
-                    ></feblend>
-                    <feblend
-                      in="SourceGraphic"
-                      in2="effect1_dropShadow"
-                      result="shape"
-                    ></feblend>
-                  </filter>
-                </defs>
-              </svg>
-            </div>
-          </div>
-        </section>
+        <MainProductHeader />
 
         <div className="step_stepsWrapper stepContainer">
           <div className="step_steps">
             <div className="step_stepsAnimatedBackground">
               <div className="step_stepsInnerWrapper">
-              {/* animation-bg */}
+                {/* animation-bg */}
                 <AnimateBackground />
               </div>
             </div>
 
-            <div className="step_StepsContainer step_StepsContentRight">
+
+
+            {/* <div className="step_StepsContainer step_StepsContentRight">
               <div className="step_StepsWrapper stepWrapper_style">
                 <div
                   className="step_StepsInner"
@@ -242,33 +103,37 @@ function Steps() {
                     </div>
                   </div>
                 </div>
-
-
               </div>
 
-              <div 
-              className={intl.locale ==='ar' ? 'steps_SeparateBackground steps_SeparateType2'  : 'steps_SeparateBackground steps_SeparateType1'}>
-             
               <div
-                className="steps_ShapesGroup"
-              
+                className={
+                  intl.locale === "ar"
+                    ? "steps_SeparateBackground steps_SeparateType2"
+                    : "steps_SeparateBackground steps_SeparateType1"
+                }
               >
-                <img
-                  className="steps_ShapesTriangle"
-                  src="./images/logo.svg"
-                  alt="triangle"
-                  
-                /><img
-                  className="steps_ShapesDots"
-                  src="./images/dots.svg"
-                  alt="dots"
-                />
+                <div className="steps_ShapesGroup">
+                  <img
+                    className="steps_ShapesTriangle"
+                    src="./images/logo.svg"
+                    alt="triangle"
+                  />
+                  <img
+                    className="steps_ShapesDots"
+                    src="./images/dots.svg"
+                    alt="dots"
+                  />
+                </div>
               </div>
             </div>
-            </div>
-            <div style={{ width: "100%", height: 0 }}></div>
+             */}
+
+             <Product/>
+
+
+
             <div
-              className="step_StepsContainer contentLeft"
+              className="step_StepsContainer "
               data-aos-delay="200"
               data-aos-duration="200"
               data-aos-offset="200"
@@ -341,32 +206,39 @@ function Steps() {
                   </div>
                 </div>
               </div>
-              <div className="steps_SeparateBackground steps_SeparateType2"
-              className={intl.locale === 'ar' ? 'steps_SeparateBackground steps_SeparateType4'  :  'steps_SeparateBackground steps_SeparateType2'}
-              
-              
-              
-              >
-
-              
               <div
-                className="steps_ShapesGroup"
-                style={{transform: "translate3d(0px, 18.329%, 0px)", opacity: 1}}
+                className="steps_SeparateBackground steps_SeparateType2"
+                className={
+                  intl.locale === "ar"
+                    ? "steps_SeparateBackground steps_SeparateType4"
+                    : "steps_SeparateBackground steps_SeparateType2"
+                }
               >
-                <img
-                  className="steps_ShapesTriangle"
-                  src="./images/logo.svg"
-                  alt="triangle"
-                  style={{width:"35%"}}
-                /><img
-                  className="steps_ShapesDots"
-                  src="./images/dots.svg"
-                  alt="dots"
-                />
+                <div
+                  className="steps_ShapesGroup"
+                  style={{
+                    transform: "translate3d(0px, 18.329%, 0px)",
+                    opacity: 1,
+                  }}
+                >
+                  <img
+                    className="steps_ShapesTriangle"
+                    src="./images/logo.svg"
+                    alt="triangle"
+                    style={{ width: "35%" }}
+                  />
+                  <img
+                    className="steps_ShapesDots"
+                    src="./images/dots.svg"
+                    alt="dots"
+                  />
+                </div>
               </div>
             </div>
-            </div>
-            <div style={{ width: "100%", height: 0 }}></div>
+            
+
+
+
             <div
               className="step_StepsContainer step_StepsContentRight"
               data-aos-delay="200"
@@ -438,25 +310,35 @@ function Steps() {
                 </div>
               </div>
               <div className="steps_SeparateBackground steps_SeparateType3">
-              <div
-                className="steps_ShapesGroup"
-                style={{transform: "translate3d(0px, 19.97%, 0px)", opacity: 1}}
-              >
-                <img
-                  className="steps_ShapesTriangle"
-                  src="./images/logo.svg"
-                  alt="triangle"
-                /><img
-                  className="steps_ShapesDots"
-                  src="./images/dots.svg"
-                  alt="dots"
-                />
+                <div
+                  className="steps_ShapesGroup"
+                  style={{
+                    transform: "translate3d(0px, 19.97%, 0px)",
+                    opacity: 1,
+                  }}
+                >
+                  <img
+                    className="steps_ShapesTriangle"
+                    src="./images/logo.svg"
+                    alt="triangle"
+                  />
+                  <img
+                    className="steps_ShapesDots"
+                    src="./images/dots.svg"
+                    alt="dots"
+                  />
+                </div>
               </div>
             </div>
-            </div>
-            <div style={{ width: "100%", height: 0 }}></div>
+            
+
+
+
+
+
+
             <div
-              className="step_StepsContainer contentLeft"
+              className="step_StepsContainer "
               data-aos-delay="200"
               data-aos-duration="200"
               data-aos-offset="200"
@@ -526,23 +408,35 @@ function Steps() {
                 </div>
               </div>
               <div className="steps_SeparateBackground steps_SeparateType4">
-              <div
-                className="steps_ShapesGroup"
-                style={{transform: "translate(0px, 20%)", opacity: 1}}
-              >
-                <img
-                  className="steps_ShapesTriangle"
-                  src="./images/logo.svg"
-                  alt="triangle"
-                /><img
-                  className="steps_ShapesDots"
-                  src="./images/dots.svg"
-                  alt="dots"
-                />
+                <div
+                  className="steps_ShapesGroup"
+                  style={{ transform: "translate(0px, 20%)", opacity: 1 }}
+                >
+                  <img
+                    className="steps_ShapesTriangle"
+                    src="./images/logo.svg"
+                    alt="triangle"
+                  />
+                  <img
+                    className="steps_ShapesDots"
+                    src="./images/dots.svg"
+                    alt="dots"
+                  />
+                </div>
               </div>
             </div>
-            </div>
-            <div style={{ width: "100%", height: 0 }}></div>
+            
+
+
+
+
+
+
+
+
+
+
+            
             <div
               className="step_StepsContainer step_StepsContentRight"
               data-aos-delay="200"
@@ -613,22 +507,29 @@ function Steps() {
                   </div>
                 </div>
               </div>
-              <div  className={intl.locale ==='ar' ? 'steps_SeparateBackground steps_SeparateType2'  : 'steps_SeparateBackground steps_SeparateType1'}>
               <div
-                className="steps_ShapesGroup"
-                style={{transform: "translate(0px, 20%)", opacity: 1}}
+                className={
+                  intl.locale === "ar"
+                    ? "steps_SeparateBackground steps_SeparateType2"
+                    : "steps_SeparateBackground steps_SeparateType1"
+                }
               >
-                <img
-                  className="steps_ShapesTriangle"
-                  src="./images/logo.svg"
-                  alt="triangle"
-                /><img
-                  className="steps_ShapesDots"
-                  src="./images/dots.svg"
-                  alt="dots"
-                />
+                <div
+                  className="steps_ShapesGroup"
+                  style={{ transform: "translate(0px, 20%)", opacity: 1 }}
+                >
+                  <img
+                    className="steps_ShapesTriangle"
+                    src="./images/logo.svg"
+                    alt="triangle"
+                  />
+                  <img
+                    className="steps_ShapesDots"
+                    src="./images/dots.svg"
+                    alt="dots"
+                  />
+                </div>
               </div>
-            </div>
             </div>
           </div>
         </div>

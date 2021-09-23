@@ -8,6 +8,7 @@ import Review from "./Page/Review/Review";
 import Steps from "./Page/Steps/Steps";
 
 function HomePage() {
+  // console.log(window.sessionStorage.getItem('jwt'))
   return (
     <div>
       <div class="homeContainer">
@@ -18,12 +19,12 @@ function HomePage() {
             <div>
               {/* <Logo/> */}
 
-              <Feature />
+              {/* <Feature /> */}
               <Steps />
 
-              <SixthSection />
+              {/* <SixthSection />
 
-              <Review />
+              <Review /> */}
             </div>
           </section>
         </div>

@@ -45,7 +45,7 @@ const login = async()=>{
       )
       console.log({jwt,user})
       window.sessionStorage.setItem("jwt" ,jwt);
-      window.sessionStorage.setItem("user" , JSON.stringify(user));
+      window.sessionStorage.setItem("user" , JSON.parse(user));
       
   } catch (e) {
       setError(e.toString());
