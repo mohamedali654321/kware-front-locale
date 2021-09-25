@@ -6,9 +6,13 @@ import "aos/dist/aos.css";
 import AnimateBackground from "./AnimateBackground/AnimateBackground";
 import MainProductHeader from "./AnimateBackground/MainProductHeader";
 import Product from "./AnimateBackground/Product";
+import { isEqual } from "lodash";
+import axios from "axios";
+import styled from "styled-components";
 
 function Steps() {
   const [page, setPage] = useState();
+  const [products, setProducts] = useState([]);
   const intl = useIntl();
   window.addEventListener("scroll", () => {
     setPage(window.pageYOffset);
@@ -18,524 +22,100 @@ function Steps() {
     AOS.init();
   });
 
+  useEffect(() => {
+    axios
+      .get(`http://54.220.211.123:1335/products?_locale=${intl.locale}`)
+      .then((res) => {
+        if (!isEqual(res.data, products)) {
+          setProducts(res.data);
+        }
+        console.log(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, [products, intl.locale]);
+
   return (
-    <div>
-      <div className=" stepSlice stepGradientHeader stepContainer">
-        <MainProductHeader />
+    <Container>
+      <MainProductHeader />
 
-        <div className="step_stepsWrapper stepContainer">
-          <div className="step_steps">
-            <div className="step_stepsAnimatedBackground">
-              <div className="step_stepsInnerWrapper">
-                {/* animation-bg */}
-                <AnimateBackground />
-              </div>
-            </div>
-
-
-
-            {/* <div className="step_StepsContainer step_StepsContentRight">
-              <div className="step_StepsWrapper stepWrapper_style">
-                <div
-                  className="step_StepsInner"
-                  style={{ opacity: 1 }}
-                  style={{ marginTop: "30px" }}
-                >
-                  <div className="step_StepsContent" style={{ opacity: 1 }}>
-                    <p className=" stepText step_StepsNumber step_stepsnumber_fontsize stepText_color">
-                      <span
-                        style={{
-                          opacity: 1,
-                          transform: "translate(0px, 0px)",
-                        }}
-                      >
-                        <FormattedMessage id="home.steps.step1" />
-                      </span>
-                    </p>
-                    <h1 className=" stepTitle step_StepsTitleWrapper step_stepsnumber_fontsize stepTitle_color">
-                      <span>
-                        <div
-                          className=""
-                          style={{
-                            display: "block",
-                            textAlign: "start",
-                            position: "relative",
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <FormattedMessage id="home.steps.step1.title" />
-                        </div>
-                      </span>
-                    </h1>
-                    <p className=" stepText step_StepsDescription stepText_color">
-                      <span>
-                        <div
-                          className=""
-                          style={{
-                            display: "block",
-                            textAlign: "start",
-                            position: "relative",
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                          data-aos-delay="200"
-                          data-aos="zoom-in"
-                        >
-                          <FormattedMessage id="home.steps.step1.description" />
-                        </div>
-                      </span>
-                    </p>
-                  </div>
-                </div>
-                <div className="step_StepsAssets">
-                  <div className="step_stepsassets_img">
-                    <div
-                      className="step_stepsImage_ratio"
-                      style={{ paddingBottom: "76.98744769874477%" }}
-                    >
-                      <img
-                        className=" step_stepsImage step_stepsImage_cover step_stepsimage_center"
-                        src="./images/hero/hp-step1-2D_aeea862f0b.svg"
-                        alt="Illustration of the Strapi Content-type fields"
-                        style={{ opacity: 1, visibility: "inherit" }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className={
-                  intl.locale === "ar"
-                    ? "steps_SeparateBackground steps_SeparateType2"
-                    : "steps_SeparateBackground steps_SeparateType1"
-                }
-              >
-                <div className="steps_ShapesGroup">
-                  <img
-                    className="steps_ShapesTriangle"
-                    src="./images/logo.svg"
-                    alt="triangle"
-                  />
-                  <img
-                    className="steps_ShapesDots"
-                    src="./images/dots.svg"
-                    alt="dots"
-                  />
-                </div>
-              </div>
-            </div>
-             */}
-
-             <Product/>
-
-
-
-            <div
-              className="step_StepsContainer "
-              data-aos-delay="200"
-              data-aos-duration="200"
-              data-aos-offset="200"
-              data-aos="zoom-in"
-            >
-              <div className="step_StepsWrapper stepWrapper_style">
-                <div
-                  className="step_StepsInner"
-                  style={{ opacity: 1 }}
-                  style={{ marginTop: "30px" }}
-                >
-                  <div className="step_StepsContent" style={{ opacity: 1 }}>
-                    <p className=" stepText step_StepsNumber step_stepsnumber_fontsize stepText_color">
-                      <span
-                        style={{
-                          opacity: 1,
-                          transform: "translate(0px, 0px)",
-                        }}
-                      >
-                        <FormattedMessage id="home.steps.step2" />
-                      </span>
-                    </p>
-                    <h1 className=" stepTitle step_StepsTitleWrapper step_stepsnumber_fontsize stepTitle_color">
-                      <span>
-                        <div
-                          className=""
-                          style={{
-                            display: "block",
-                            textAlign: "start",
-                            position: "relative",
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <FormattedMessage id="home.steps.step2.title" />
-                        </div>
-                      </span>
-                    </h1>
-                    <p className=" stepText step_StepsDescription normal stepText_color">
-                      <span>
-                        <div
-                          className=""
-                          style={{
-                            display: "block",
-                            textAlign: "start",
-                            position: "relative",
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <FormattedMessage id="home.steps.step2.description" />
-                        </div>
-                      </span>
-                    </p>
-                  </div>
-                </div>
-                <div className="step_StepsAssets">
-                  <div className="step_stepsassets_img">
-                    <div
-                      className="step_stepsImage_ratio"
-                      style={{ paddingBottom: "76.98744769874477%" }}
-                    >
-                      <img
-                        className=" step_stepsImage step_stepsImage_cover step_stepsimage_center"
-                        src="./images/hero/hp-step2-2D_6729998af1.svg"
-                        alt="Illustration of the Strapi Content Manager"
-                        style={{ opacity: 1, visibility: "inherit" }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="steps_SeparateBackground steps_SeparateType2"
-                className={
-                  intl.locale === "ar"
-                    ? "steps_SeparateBackground steps_SeparateType4"
-                    : "steps_SeparateBackground steps_SeparateType2"
-                }
-              >
-                <div
-                  className="steps_ShapesGroup"
-                  style={{
-                    transform: "translate3d(0px, 18.329%, 0px)",
-                    opacity: 1,
-                  }}
-                >
-                  <img
-                    className="steps_ShapesTriangle"
-                    src="./images/logo.svg"
-                    alt="triangle"
-                    style={{ width: "35%" }}
-                  />
-                  <img
-                    className="steps_ShapesDots"
-                    src="./images/dots.svg"
-                    alt="dots"
-                  />
-                </div>
-              </div>
-            </div>
-            
-
-
-
-            <div
-              className="step_StepsContainer step_StepsContentRight"
-              data-aos-delay="200"
-              data-aos-duration="200"
-              data-aos-offset="200"
-              data-aos="zoom-in"
-            >
-              <div className="step_StepsWrapper stepWrapper_style">
-                <div className="step_StepsInner" style={{ opacity: 1 }}>
-                  <div className="step_StepsContent" style={{ opacity: 1 }}>
-                    <p className=" stepText step_StepsNumber step_stepsnumber_fontsize stepText_color">
-                      <span
-                        style={{
-                          opacity: 1,
-                          transform: "translate(0px, 0px)",
-                        }}
-                      >
-                        <FormattedMessage id="home.steps.step3" />
-                      </span>
-                    </p>
-                    <h1 className=" stepTitle step_StepsTitleWrapper step_stepsnumber_fontsize stepTitle_color">
-                      <span>
-                        <div
-                          className=""
-                          style={{
-                            display: "block",
-                            textAlign: "start",
-                            position: "relative",
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <FormattedMessage id="home.steps.step3.title" />
-                        </div>
-                      </span>
-                    </h1>
-                    <p className=" stepText step_StepsDescription normal stepText_color">
-                      <span>
-                        <div
-                          className="step_StepsLine"
-                          style={{
-                            display: "block",
-                            textAlign: "start",
-                            position: "relative",
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <FormattedMessage id="home.steps.step3.description" />
-                        </div>
-                      </span>
-                    </p>
-                  </div>
-                </div>
-                <div className="step_StepsAssets">
-                  <div className="step_stepsassets_img">
-                    <div
-                      className="step_stepsImage_ratio"
-                      style={{ paddingBottom: "92.96%" }}
-                    >
-                      <img
-                        className=" step_stepsImage step_stepsImage_cover step_stepsimage_center"
-                        src="./images/hero/hp-step3-2D_7bc731eae8.svg"
-                        alt="Illustration of Partner technologies of Strapi like AWS, Next.js, React, Netlify or Node.JS"
-                        style={{ opacity: 1, visibility: "inherit" }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="steps_SeparateBackground steps_SeparateType3">
-                <div
-                  className="steps_ShapesGroup"
-                  style={{
-                    transform: "translate3d(0px, 19.97%, 0px)",
-                    opacity: 1,
-                  }}
-                >
-                  <img
-                    className="steps_ShapesTriangle"
-                    src="./images/logo.svg"
-                    alt="triangle"
-                  />
-                  <img
-                    className="steps_ShapesDots"
-                    src="./images/dots.svg"
-                    alt="dots"
-                  />
-                </div>
-              </div>
-            </div>
-            
-
-
-
-
-
-
-            <div
-              className="step_StepsContainer "
-              data-aos-delay="200"
-              data-aos-duration="200"
-              data-aos-offset="200"
-              data-aos="zoom-in"
-            >
-              <div className="step_StepsWrapper stepWrapper_style">
-                <div className="step_StepsInner" style={{ opacity: 1 }}>
-                  <div className="step_StepsContent" style={{ opacity: 1 }}>
-                    <p className=" stepText step_StepsNumber step_stepsnumber_fontsize stepText_color">
-                      <span
-                        style={{
-                          opacity: 1,
-                          transform: "translate(0px, 0px)",
-                        }}
-                      >
-                        <FormattedMessage id="home.steps.step4" />
-                      </span>
-                    </p>
-                    <h1 className=" stepTitle step_StepsTitleWrapper step_stepsnumber_fontsize stepTitle_color">
-                      <span>
-                        <div
-                          className="step_StepsLine"
-                          style={{
-                            display: "block",
-                            textAlign: "start",
-                            position: "relative",
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <FormattedMessage id="home.steps.step4.title" />
-                        </div>
-                      </span>
-                    </h1>
-                    <p className=" stepText step_StepsDescription normal stepText_color">
-                      <span>
-                        <div
-                          className="step_StepsLine"
-                          style={{
-                            display: "block",
-                            textAlign: "start",
-                            position: "relative",
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <FormattedMessage id="home.steps.step4.description" />
-                        </div>
-                      </span>
-                    </p>
-                  </div>
-                </div>
-                <div className="step_StepsAssets">
-                  <div className="step_stepsassets_img">
-                    <div
-                      className="step_stepsImage_ratio"
-                      style={{ paddingBottom: "73.88268156424581%" }}
-                    >
-                      <img
-                        className=" step_stepsImage step_stepsImage_cover step_stepsimage_center"
-                        src="./images/hero/hp-step4-2D_9ab379c7f5.svg"
-                        alt="Illustration of a GraphQL request"
-                        style={{ opacity: 1, visibility: "inherit" }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="steps_SeparateBackground steps_SeparateType4">
-                <div
-                  className="steps_ShapesGroup"
-                  style={{ transform: "translate(0px, 20%)", opacity: 1 }}
-                >
-                  <img
-                    className="steps_ShapesTriangle"
-                    src="./images/logo.svg"
-                    alt="triangle"
-                  />
-                  <img
-                    className="steps_ShapesDots"
-                    src="./images/dots.svg"
-                    alt="dots"
-                  />
-                </div>
-              </div>
-            </div>
-            
-
-
-
-
-
-
-
-
-
-
-            
-            <div
-              className="step_StepsContainer step_StepsContentRight"
-              data-aos-delay="200"
-              data-aos-duration="200"
-              data-aos-offset="200"
-              data-aos="zoom-in"
-            >
-              <div className="step_StepsWrapper stepWrapper_style">
-                <div className="step_StepsInner" style={{ opacity: 1 }}>
-                  <div className="step_StepsContent" style={{ opacity: 1 }}>
-                    <p className=" stepText step_StepsNumber step_stepsnumber_fontsize stepText_color">
-                      <span
-                        style={{
-                          opacity: 1,
-                          transform: "translate(0px, 0px)",
-                        }}
-                      >
-                        <FormattedMessage id="home.steps.step5" />
-                      </span>
-                    </p>
-                    <h1 className=" stepTitle step_StepsTitleWrapper step_stepsnumber_fontsize stepTitle_color">
-                      <span>
-                        <div
-                          className=""
-                          style={{
-                            display: "block",
-                            textAlign: "start",
-                            position: "relative",
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <FormattedMessage id="home.steps.step5.title" />
-                        </div>
-                      </span>
-                    </h1>
-                    <p className=" stepText step_StepsDescription normal stepText_color">
-                      <span>
-                        <div
-                          className="step_StepsLine"
-                          style={{
-                            display: "block",
-                            textAlign: "start",
-                            position: "relative",
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <FormattedMessage id="home.steps.step5.description" />
-                        </div>
-                      </span>
-                    </p>
-                  </div>
-                </div>
-                <div className="step_StepsAssets">
-                  <div className="step_stepsassets_img">
-                    <div
-                      className="step_stepsImage_ratio"
-                      style={{ paddingBottom: "76.98744769874477%" }}
-                    >
-                      <img
-                        className=" step_stepsImage step_stepsImage_cover step_stepsimage_center"
-                        src="./images/hero/hp-step5-2D_9d3fc362cc.svg"
-                        alt="Illustration of the deployment options in Strapi"
-                        style={{ opacity: 1, visibility: "inherit" }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className={
-                  intl.locale === "ar"
-                    ? "steps_SeparateBackground steps_SeparateType2"
-                    : "steps_SeparateBackground steps_SeparateType1"
-                }
-              >
-                <div
-                  className="steps_ShapesGroup"
-                  style={{ transform: "translate(0px, 20%)", opacity: 1 }}
-                >
-                  <img
-                    className="steps_ShapesTriangle"
-                    src="./images/logo.svg"
-                    alt="triangle"
-                  />
-                  <img
-                    className="steps_ShapesDots"
-                    src="./images/dots.svg"
-                    alt="dots"
-                  />
-                </div>
-              </div>
-            </div>
+      <Wrapper>
+        <div className="step_stepsAnimatedBackground">
+          <div className="step_stepsInnerWrapper">
+            <AnimateBackground />
           </div>
         </div>
-      </div>
-    </div>
+
+        {products.map((product, index) => (
+          <Product
+            title={product.name}
+            slogan={product.slogan}
+            description={product.body}
+            index={index}
+          />
+        ))}
+      </Wrapper>
+    </Container>
   );
 }
 
 export default Steps;
+
+const Container = styled.div`
+  margin-top: 250px;
+  scroll-behavior: smooth;
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+const Wrapper = styled.div`
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 992px) {
+    margin: -20vh 0 0;
+  }
+`;
+
+const AnimatedBackground = styled.div`
+  z-index: 10;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+
+  @media (min-width: 992px) {
+    display: block;
+  }
+`;
+
+const Inner = styled.div`
+  -webkit-perspective: 1800px;
+  perspective: 1800px;
+  display: -moz-box;
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  position: sticky;
+  position: -webkit-sticky;
+  overflow: hidden;
+  top: 0;
+  margin: 0;
+  height: 100vh;
+  @media (min-width: 992px) {
+    width: 40%;
+    padding: 200px 45px;
+  }
+
+  @media (min-width: 1441px) {
+    overflow: visible;
+  }
+`;

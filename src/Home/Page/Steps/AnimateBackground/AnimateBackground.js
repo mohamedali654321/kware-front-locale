@@ -15,8 +15,7 @@ const AnimatedWrapper = styled.div`
   transform: rotateY(15deg) rotateX(10deg);
   transition: 1s cubic-bezier(0.2, 0.82, 0.2, 1);
   transform: ${(props) =>
-    (props.page > 2140 && props.page < 3110) ||
-    (props.page > 4065 && props.page < 5045)
+    (props.page > 2050 && props.page < 3315) ||  (props.page > 4218)
       ? "translate(90%, 0px) rotate(-4e-5deg) rotateY(-15deg) rotateX(9.99994deg) "
       : "rotateY(15deg) rotateX(10deg) "};
 `;
@@ -87,7 +86,7 @@ function AnimateBackground() {
 
         <SecondaryAssetsWrapper>
           <SecondaryBackground
-            style={ page < 2140 ? { opacity: 1 } : { opacity: 0 }}
+            style={ page < 2050 ? { opacity: 1 } : { opacity: 0 }}
           >
             <ImageRatio
               style={{
@@ -102,7 +101,7 @@ function AnimateBackground() {
           </SecondaryBackground>
 
           <SecondaryBackground
-            style={page > 2140 && page < 3110 ? { opacity: 1 } : { opacity: 0 }}
+            style={page > 2050 && page < 3315 ? { opacity: 1 } : { opacity: 0 }}
           >
             <ImageRatio style={{ paddingBottom: "76.98744769874477%" }}>
               <AnimatedImg
@@ -118,7 +117,7 @@ function AnimateBackground() {
           </SecondaryBackground>
 
           <SecondaryBackground
-            style={page > 3110 && page < 4065 ? { opacity: 1 } : { opacity: 0 }}
+            style={page > 3315 && page < 4218 ? { opacity: 1 } : { opacity: 0 }}
           >
             <ImageRatio style={{ paddingBottom: "92.96%" }}>
               <AnimatedImg
@@ -130,7 +129,7 @@ function AnimateBackground() {
           </SecondaryBackground>
 
           <SecondaryBackground
-            style={page > 4065 && page < 5045? { opacity: 1 } : { opacity: 0 }}
+            style={page > 4218 ? { opacity: 1 } : { opacity: 0 }}
           >
             <ImageRatio style={{ paddingBottom: "73.88268156424581%" }}>
               <AnimatedImg
@@ -145,21 +144,7 @@ function AnimateBackground() {
             </ImageRatio>
           </SecondaryBackground>
 
-          <SecondaryBackground
-            style={page > 5045 ? { opacity: 1 } : { opacity: 0 }}
-          >
-            <ImageRatio style={{ paddingBottom: "76.98744769874477%" }}>
-              <AnimatedImg
-                style={
-                  intl.locale === "en"
-                    ? { transform: "translate(-220px, 0%)" }
-                    : { transform: "translate(220px, 0%)" }
-                }
-                src="./images/hero/hp-step5-2D_9d3fc362cc.svg"
-                alt="Illustration of the deployment options in Strapi"
-              />
-            </ImageRatio>
-          </SecondaryBackground>
+         
         </SecondaryAssetsWrapper>
       </AnimatedWrapper>
     </>
