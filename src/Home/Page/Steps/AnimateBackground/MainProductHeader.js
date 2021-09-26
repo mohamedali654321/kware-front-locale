@@ -117,7 +117,7 @@ const TextWrapper = styled.div`
 
 const Label = styled.div`
   font-family: Effra-ar;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -136,7 +136,7 @@ const Label = styled.div`
     margin-bottom: 0;
   }
   @media (min-width: 992px) {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   position: relative;
@@ -160,17 +160,17 @@ const Title = styled.h1`
   margin-bottom: 35px;
 
   font-family: Effra-ar;
-  font-size: 23px;
+  font-size: 33px;
   font-weight: 700;
   line-height: 140%;
 
   @media (min-width: 992px) {
-    font-size: 33px;
+    
     line-height: 56px;
-    font-size: 43px;
+    font-size: 45px;
   }
 
-  font-size: 33px;
+  
   line-height: 1.19;
 
   color: #8d1cb8;
@@ -194,14 +194,14 @@ const Text = styled.div`
   margin-bottom: 57px;
   @media (min-width: 992px) {
     padding: 0;
-    font-size: 21px;
+    font-size: 23px;
   }
 
   &:last-child {
     margin-bottom: 0;
   }
   font-family: Effra-ar;
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 400;
   line-height: 28px;
   color: #9c45da;

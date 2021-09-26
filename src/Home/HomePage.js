@@ -22,9 +22,9 @@ function HomePage() {
               {/* <Feature /> */}
               <Steps />
 
-              {/* <SixthSection />
+              <SixthSection />
 
-              <Review /> */}
+              <Review />
             </div>
           </section>
         </div>

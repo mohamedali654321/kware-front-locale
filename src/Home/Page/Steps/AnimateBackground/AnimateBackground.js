@@ -13,7 +13,7 @@ const AnimatedWrapper = styled.div`
   -webkit-transform: rotateY(15deg) rotateX(10deg);
   -moz-transform: rotateY(15deg) rotateX(10deg);
   transform: rotateY(15deg) rotateX(10deg);
-  transition: 1s cubic-bezier(0.2, 0.82, 0.2, 1);
+  transition: .5s cubic-bezier(0.2, 0.82, 0.2, 1);
   transform: ${(props) =>
     (props.page > 2050 && props.page < 3315) ||  (props.page > 4218)
       ? "translate(90%, 0px) rotate(-4e-5deg) rotateY(-15deg) rotateX(9.99994deg) "

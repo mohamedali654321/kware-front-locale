@@ -33,6 +33,7 @@ function Steps() {
       })
       .catch((err) => console.log(err));
   }, [products, intl.locale]);
+  console.log(products)
 
   return (
     <Container>
@@ -45,7 +46,7 @@ function Steps() {
           </div>
         </div>
 
-        {products.map((product, index) => (
+        {products.slice(0,4).map((product, index) => (
           <Product
             title={product.name}
             slogan={product.slogan}
