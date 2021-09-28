@@ -1,7 +1,6 @@
-import React,{useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
 import ReviewCard from "../ReviewCard/ReviewCard";
-
-import SlideCard from '../SlideCard/SlideCard'
+import styled from "styled-components";
 import "./Review.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
@@ -9,26 +8,21 @@ import "swiper/components/pagination/pagination.min.css";
 import "swiper/components/navigation/navigation.min.css";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper/core";
 
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import AOS from "aos";
+import "aos/dist/aos.css";
+import PartnersHeader from "./components/PartnersHeader";
 
-// install Swiper modules
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 function Review() {
   const [visible, setVisible] = useState(3);
-useEffect(()=>{
-  setVisible(prevValue =>
-    prevValue + 3
+  useEffect(() => {
+    setVisible((prevValue) => prevValue + 3);
+  }, []);
 
-);
-
-},[])
-
-
-useEffect(()=>{
-  AOS.init()
-})
+  useEffect(() => {
+    AOS.init();
+  });
 
   const reviewCard = [
     {
@@ -76,8 +70,7 @@ useEffect(()=>{
     {
       image: "./images/hero/Erlkoenig_Logo_f4c1faea3b.png",
       text: "Strapi gives us a data-centric approach so that we can automize 100% of processes on the platform. It's a great tool to develop centralized datahubs which serve content to different channels.",
-      authorImg:
-        "./images/hero/Dominic_Land_1_38c4fd2c50_40835a8f8b_e37b53eaed.jpg",
+      authorImg:"./images/hero/Dominic_Land_1_38c4fd2c50_40835a8f8b_e37b53eaed.jpg",
       authorName: "Dominic Land",
       authorJob: " CEO",
     },
@@ -90,157 +83,128 @@ useEffect(()=>{
     },
   ];
 
-  const loop = [1, 2, 3];
-
   return (
-    <div>
-      <div class="review_slice reviewContainer">
-        <div class=" reviewGradientHeader review_fullWidth review_maxWidth">
-          <section class=" reviewGradient reviewGradient-center reviewGradient-fullWidth review_maxWidth">
-            <div class="reviewWrapper reviewWrapper_style">
-              <div class="reviewSubWrapper reviewWrapper_style">
-                <div class=" reviewMobileInnerWrapper reviewInnerWrapper">
-                  <div
-                    class=" reviewLabelTitleText reviewLabelTitleText_maxWidth reviewLabelTitleText_withGradient reviewLabelTitleText_center"
-                  
-                    style={{ opacity: 1 }}
-                  >
-                    <div class=" reviewLabel reviewLabel_style reviewLabel_color"
-                      data-aos-delay="200"
-                    data-aos-duration="200"
-                    data-aos-offset="200"
-          data-aos-once="true"
-          data-aos="zoom-in"
-                    >
-                      <div>
-                        <div
-                       
-                          style={{
-                            position: "relative",
-                            display: "inline-block",
-                            opacity: 1,
-                            transform:
-                              "perspective(1000px) translate3d(0px, 0px, 0px)",
-                          }}
-                          class=""
-                        >
-                          Reviews
-                        </div>
-                      </div>
-                    </div>
-                    <h1 class=" reviewTitle reviewTitleWrapper reviewTitle_fontSize reviewTitle_color"
+    <Container>
+      <Wrapper>
+        <PartnersHeader />
 
-data-aos-delay="400"
-                    data-aos-duration="200"
-                    data-aos-offset="200"
-          data-aos-once="true"
-          data-aos="zoom-in"
-                    
-                    >
-                      <div class="reviewTitleContainer">
-                        <span>
-                          <div
-                            style={{
-                              position: "relative",
-                              display: "inline-block",
-                              opacity: 1,
-                              transform:
-                                "perspective(1000px) translate3d(0px, 0px, 0px)",
-                            }}
-                            class=""
-                          >
-                            Here’s what people have to say about us.
-                          </div>
-                        </span>
-                      </div>
-                    </h1>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <div class="reviewSlider reviewWrapper_style">
-            <div class="stylesCardGrid">
-              <div class="stylesCardGrid_column ">
-                {reviewCard.slice(0, 3).map((card) => (
-                  <ReviewCard
-                    image={card.image}
-                    text={card.text}
-                    authorImg={card.authorImg}
-                    authorName={card.authorName}
-                    authorJob={card.authorJob}
-                  />
-                ))}
-              </div>
+        <ReviewWrapper>
+          <GridCard>
+            <CardColumn>
+              {reviewCard.slice(0, 3).map((card) => (
+                <ReviewCard
+                  image={card.image}
+                  text={card.text}
+                  authorImg={card.authorImg}
+                  authorName={card.authorName}
+                  authorJob={card.authorJob}
+                />
+              ))}
+            </CardColumn>
 
-              <div class="stylesCardGrid_column ">
-                {reviewCard.slice(3, 6).map((card) => (
-                  <ReviewCard
-                    image={card.image}
-                    text={card.text}
-                    authorImg={card.authorImg}
-                    authorName={card.authorName}
-                    authorJob={card.authorJob}
-                  />
-                ))}
-              </div>
+            <CardColumn>
+              {reviewCard.slice(3, 6).map((card) => (
+                <ReviewCard
+                  image={card.image}
+                  text={card.text}
+                  authorImg={card.authorImg}
+                  authorName={card.authorName}
+                  authorJob={card.authorJob}
+                />
+              ))}
+            </CardColumn>
 
-              <div class="stylesCardGrid_column ">
-                {reviewCard.slice(6, 9).map((card) => (
-                  <ReviewCard
-                    image={card.image}
-                    text={card.text}
-                    authorImg={card.authorImg}
-                    authorName={card.authorName}
-                    authorJob={card.authorJob}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
+            <CardColumn>
+              {reviewCard.slice(6, 9).map((card) => (
+                <ReviewCard
+                  image={card.image}
+                  text={card.text}
+                  authorImg={card.authorImg}
+                  authorName={card.authorName}
+                  authorJob={card.authorJob}
+                />
+              ))}
+            </CardColumn>
+          </GridCard>
+        </ReviewWrapper>
 
-          <div
-            class="reviewSlider_responsive reviewslider_responsive_style"
-            style={{ opacity: 1, height: "389px" }}
+        <SlideContainer>
+          <Swiper
+            spaceBetween={60}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
           >
-            <div class="reviewSlider_itemsContainer">
-              <div>
-                <div
-                  class="reviewSlider_itemsWrapper"
-                  style={{ marginTop: "-40px" }}
-                >
-                  <Swiper
-                    spaceBetween={60}
-                    centeredSlides={true}
-                    autoplay={{
-                      delay: 2500,
-                      disableOnInteraction: false,
-                    }}
-                    pagination={{
-                      clickable: true,
-                    }}
-                    className=""
-                  >
-                    {reviewCard.map((card) => (
-                      <SwiperSlide>
-                        <SlideCard
-                          image={card.image}
-                          text={card.text}
-                          authorImg={card.authorImg}
-                          authorName={card.authorName}
-                          authorJob={card.authorJob}
-                        />
-                      </SwiperSlide>
-                    ))}
-                  </Swiper>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            {reviewCard.map((card) => (
+              <SwiperSlide>
+                <ReviewCard
+                  image={card.image}
+                  text={card.text}
+                  authorImg={card.authorImg}
+                  authorName={card.authorName}
+                  authorJob={card.authorJob}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </SlideContainer>
+      </Wrapper>
+    </Container>
   );
 }
 
 export default Review;
+
+const Container = styled.div`
+  margin-top: 84px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  padding-top: 30px;
+`;
+const Wrapper=styled.div`
+ position: relative;
+    width: 100%;
+   
+    margin-left: auto;
+    margin-right: auto;
+
+`;
+const GridCard = styled.div`
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 1fr 1fr 1fr;
+`;
+
+const CardColumn = styled.div`
+  &:nth-child(2) {
+    margin-top: 40px;
+  }
+`;
+
+const ReviewWrapper = styled.div`
+  display: none;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 83.3333333333%;
+  max-width: 1200px;
+  z-index: 1;
+  @media (min-width: 992px) {
+    display: block;
+  }
+`;
+
+const SlideContainer = styled.div`
+  opacity: 1;
+  height: 389px;
+  display: block;
+  @media (min-width: 992px) {
+    display: none;
+  }
+`;

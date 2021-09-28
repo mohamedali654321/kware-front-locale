@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FormattedMessage } from "react-intl";
 import Tetris from "./Tetris";
-export default function MainProductHeader() {
+export default function MainProductHeader(props) {
   return (
     <Container>
       <Wrapper>
@@ -14,7 +14,7 @@ export default function MainProductHeader() {
             data-aos-once="true"
             data-aos="zoom-in"
           >
-            <FormattedMessage id="home.steps" />
+            {props.label}
           </Label>
 
           <Title
@@ -24,7 +24,7 @@ export default function MainProductHeader() {
             data-aos-once="true"
             data-aos="zoom-in"
           >
-            <FormattedMessage id="home.steps.title" />
+            {props.title}
           </Title>
 
           <Text
@@ -34,7 +34,7 @@ export default function MainProductHeader() {
             data-aos-once="true"
             data-aos="zoom-in"
           >
-            <FormattedMessage id="home.steps.description" />
+            {props.text}
           </Text>
         </TextWrapper>
       </Wrapper>

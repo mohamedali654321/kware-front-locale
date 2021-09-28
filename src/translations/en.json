@@ -99,7 +99,22 @@
     "comming.soon":"Coming Soon!",
     "comming.message":"We are currently working on developing our new website.",
     "comming.message.rest":"Few days are left.",
-    "all.categories":"All Categories"
+    "all.categories":"All Categories",
+
+    "products.main.label":"Our Products",
+    "products.main.title":"main Products",
+    "products.main.text":"We offer you a set of open source programs Folio Strapi Koha DSpace",
+    
+    "products.related.label":"Our Products",
+    "products.related.title":"related Products",
+    "products.related.text":"Related products is products integrated with main products and customize to serve support bilingual , support arabic language",
+
+
+    "button.details":"More Details"
+
+
+
+
     
 
 

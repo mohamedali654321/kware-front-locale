@@ -37,7 +37,12 @@ function Steps() {
 
   return (
     <Container>
-      <MainProductHeader />
+      <MainProductHeader 
+      label={intl.formatMessage({id:"products.main.label"})}
+      title={intl.formatMessage({id:"products.main.title"})}
+      text={intl.formatMessage({id:"products.main.text"})}
+
+      />
 
       <Wrapper>
         <div className="step_stepsAnimatedBackground">

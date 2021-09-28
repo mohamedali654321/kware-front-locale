@@ -107,7 +107,17 @@
     "comming.soon":"قريبا!",
     "comming.message":"نحن نعمل حاليا على تطوير موقعنا الجديد.",
     "comming.message.rest":"بقيت أيام قليلة.",
-    "all.categories":"كافة التصنيفات"
+    "all.categories":"كافة التصنيفات",
+    "products.main.label":"منتجاتنا",
+    "products.main.title":"المنتجات الرئيسية",
+    "products.main.text":"نقدم لكم مجموعة من برامج مفتوحة المصدر فوليو سترابي كوها دي سبيس  ",
+
+
+    "products.related.label":"منتجاتنا",
+    "products.related.title":"المنتجات ذات صلة",
+    "products.related.text":"المنتجات ذات الصلة هي منتجات متكاملة مع المنتجات الرئيسية وتخصيصها لخدمة دعم ثنائي اللغة ، ودعم اللغة العربية",
+
+    "button.details":"التفاصيل"
     
 
     

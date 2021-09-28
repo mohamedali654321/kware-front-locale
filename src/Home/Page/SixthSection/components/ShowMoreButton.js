@@ -59,7 +59,7 @@ display: inline-flex;
   position: relative;
     display: inline-block;
     background-color: transparent;
-    width: 100%;
+    width: 90%;
     transform: translateZ(900px);
     transition: .4s cubic-bezier(0.2, 0.82, 0.2, 1);
 

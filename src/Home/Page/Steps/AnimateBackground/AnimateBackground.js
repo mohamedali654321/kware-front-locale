@@ -13,6 +13,7 @@ const AnimatedWrapper = styled.div`
   -webkit-transform: rotateY(15deg) rotateX(10deg);
   -moz-transform: rotateY(15deg) rotateX(10deg);
   transform: rotateY(15deg) rotateX(10deg);
+  
   transition: .5s cubic-bezier(0.2, 0.82, 0.2, 1);
   transform: ${(props) =>
     (props.page > 2050 && props.page < 3315) ||  (props.page > 4218)
@@ -21,7 +22,7 @@ const AnimatedWrapper = styled.div`
 `;
 
 const AnimatedBackground = styled.div`
-  z-index: 0;
+  z-index: 1;
   position: relative;
   width: 115%;
 `;
@@ -34,20 +35,21 @@ const AnimatedImg = styled.img`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   object-fit: cover;
   object-position: center;
   opacity: 1;
   visibility: inherit;
+  
 `;
 const SecondaryAssetsWrapper = styled.div`
   z-index: 1;
   position: absolute;
-  bottom: -30%;
+  bottom: -15%;
   left: 30%;
   width: 80%;
-  height: 100%;
+  height: 90%;
   will-change: transform;
   -webkit-perspective: 800px;
   perspective: 800px;
@@ -55,7 +57,7 @@ const SecondaryAssetsWrapper = styled.div`
 `;
 const SecondaryBackground = styled.div`
   position: absolute;
-  width: 100%;
+  width: 90%;
   height: auto;
   opacity: 0;
   will-change: transform;
@@ -80,6 +82,7 @@ function AnimateBackground() {
             <AnimatedImg
               src="./images/hero/hp-primary-desktop_e0dab1f509.svg"
               alt="Illustration of desktop "
+             
             />
           </ImageRatio>
         </AnimatedBackground>

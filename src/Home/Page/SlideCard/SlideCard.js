@@ -1,48 +1,26 @@
-import React,{useEffect} from "react";
-import './SlideCard.css'
-
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import React, { useEffect } from "react";
+import "./SlideCard.css";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 function SlideCard(props) {
-
-  useEffect(()=>{
-    AOS.init()
-  })
+  useEffect(() => {
+    AOS.init();
+  });
   return (
-    <div
-      class="reviewCardContainer"
+    <CardContainer
       data-aos-delay="200"
-         data-aos-duration="1000"
-          data-aos-once="true"
-          data-aos="zoom-in-right"
-      style={{
-        
-        opacity: 1,
-        transform: "translate(0px, 0px)",
-      }}
+      data-aos-duration="1000"
+      data-aos-once="true"
+      data-aos="zoom-in-right"
     >
-      <a
-        class=" reviewCardWithArrowLink reviewCardWrapper reviewCardWrapperLink"
-        
-        href="/"
-        // style={{ touchAction: "pan-y" }}
-      >
-        <div
-          class="reviewCard_backgroundContainer"
-        //   style={{ touchAction: "pan-y" }}
-        >
-          <div
-            class=" reviewCard_background reviewCard_type1"
-            style={{ touchAction: "pan-y" }}
-          ></div>
-        </div>
-        <div class="reviewCard_innerWrapper" style={{ touchAction: "pan-y" }}>
-          <div class="reviewCard_content" style={{ touchAction: "pan-y" }}>
-            <div
-              class="reviewCard_customerContent"
-              style={{ touchAction: "pan-y" }}
-            >
-              <div class="reviewCard_picture" style={{ touchAction: "pan-y" }}>
+      <Link to="/">
+      
+       
+          <Wrapper>
+           
+              <div class="reviewCard_picture" >
                 <div
                   class=" reviewCardImg_ratio reviewCardImg_fluid"
                   style={{ touchAction: "pan-y" }}
@@ -50,7 +28,6 @@ function SlideCard(props) {
                   <img
                     class=" styles_Img__2JZ2e reviewCardImage reviewCardImage_contain reviewCardImage_left"
                     src={props.image}
-                    
                     style={{
                       opacity: 1,
                       visibility: "inherit",
@@ -88,7 +65,6 @@ function SlideCard(props) {
                         <img
                           class=" styles_Img__2JZ2e reviewCardImage reviewCard_authorPictureCover reviewCard_authorPictureCenter"
                           src={props.authorImg}
-                          
                           style={{
                             opacity: 1,
                             visibility: "inherit",
@@ -122,15 +98,75 @@ function SlideCard(props) {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <br/>
-      <br/>
-      
-    </div>
+            
+            </Wrapper>
+         
+      </Link>
+      <br />
+      <br />
+    </CardContainer>
   );
 }
 
 export default SlideCard;
+
+const CardContainer = styled.div`
+  flex-shrink: 0;
+  -moz-box-flex: 0;
+  flex-grow: 0;
+  max-width: 100vw;
+  opacity: 1;
+  transform: translate(0px, 0px);
+  @media (min-width: 992px) {
+    width: 100%;
+    max-width: inherit;
+    margin: 0 0 24px;
+  }
+
+  a {
+    display: block;
+    position: relative;
+    /* width: 100%; */
+    text-decoration: none;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    list-style: none;
+    cursor: pointer;
+    outline: none;
+
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+
+    @media (min-width: 992px) {
+      width: 100%;
+      max-width: none;
+    }
+  }
+`;
+
+const Wrapper=styled.div`
+ display: -moz-box;
+    display: flex;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: relative;
+    -moz-box-flex: 1;
+    flex: 1 1;
+    width: 100%;
+    position: relative;
+    display: -moz-box;
+    display: flex;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    flex-direction: column;
+    -moz-box-align: start;
+    align-items: flex-start;
+    padding: 38px 35px;
+`;
+
