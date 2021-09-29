@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 
 import { useIntl } from "react-intl";
@@ -25,6 +26,7 @@ const AnimatedBackground = styled.div`
   z-index: 1;
   position: relative;
   width: 115%;
+  
 `;
 
 const ImageRatio = styled.div`
@@ -35,32 +37,36 @@ const AnimatedImg = styled.img`
   position: absolute;
   top: 0;
   left: 0;
-  width: 90%;
-  height: 90%;
+  width: 75%;
+  height: 75%;
   object-fit: cover;
   object-position: center;
   opacity: 1;
   visibility: inherit;
+  border-radius: 20px;
+ 
   
 `;
 const SecondaryAssetsWrapper = styled.div`
   z-index: 1;
   position: absolute;
-  bottom: -15%;
-  left: 30%;
-  width: 80%;
+  bottom: -12%;
+  left: 18%;
+  width: 90%;
   height: 90%;
   will-change: transform;
   -webkit-perspective: 800px;
   perspective: 800px;
+  transition: .5s cubic-bezier(0.2, 0.82, 0.2, 1);
   transform: translate(0%, 0px);
 `;
 const SecondaryBackground = styled.div`
   position: absolute;
-  width: 90%;
+  width: 75%;
   height: auto;
   opacity: 0;
   will-change: transform;
+  transition: .5s cubic-bezier(0.2, 0.82, 0.2, 1);
   img {
     display: block;
     width: 100%;
@@ -70,18 +76,36 @@ const SecondaryBackground = styled.div`
 function AnimateBackground() {
   const intl = useIntl();
   const [page, setPage] = useState();
+  const [src,setSrc]=useState();
 
   window.addEventListener("scroll", () => {
     setPage(window.pageYOffset);
   });
+
+const renderSwitch=()=>{
+  switch(true){
+    case (page < 2050 && intl.locale === 'en') : return './images/hero/corners/Folio6.png'; 
+    case (page < 2050 && intl.locale === 'ar') : return './images/hero/corners/Folio2 Arabic.png'; 
+    case (page > 2050 && page < 3315 && intl.locale === 'en') : return './images/hero/corners/Dspace green.png'; 
+    case (page > 2050 && page < 3315 && intl.locale === 'ar') : return './images/hero/corners/دي سبيس عربي.png'; 
+    case (page > 3315 && page < 4218) : return './images/hero/corners/str.png'; 
+    case (page > 4218) : return './images/hero/corners/Koha green.png'; 
+  }
+
+}
+
+
+
   return (
     <>
       <AnimatedWrapper page={page} locale={intl.locale}>
         <AnimatedBackground>
           <ImageRatio style={{ paddingBottom: "77.40112994350282%" }}>
+          
             <AnimatedImg
-              src="./images/hero/hp-primary-desktop_e0dab1f509.svg"
+              src={renderSwitch()}
               alt="Illustration of desktop "
+              style={{ boxShadow:"3px 3px 3px 3px rgba(0,0,0,0.1)" }}
              
             />
           </ImageRatio>
@@ -110,8 +134,8 @@ function AnimateBackground() {
               <AnimatedImg
                 style={
                   intl.locale === "en"
-                    ? { transform: "translate(-220px, 0%)" }
-                    : { transform: "translate(220px, 0%)" }
+                    ? { transform: "translate(-170px, 0%)" }
+                    : { transform: "translate(170px, 0%)" }
                 }
                 src="./images/hero/hp-step2-2D_6729998af1.svg"
                 alt="Illustration of the Strapi Content Manager"
@@ -138,8 +162,8 @@ function AnimateBackground() {
               <AnimatedImg
                 style={
                   intl.locale === "en"
-                    ? { transform: "translate(-220px, 0%)" }
-                    : { transform: "translate(220px, 0%)" }
+                    ? { transform: "translate(-170px, 0%)" }
+                    : { transform: "translate(170px, 0%)" }
                 }
                 src="./images/hero/hp-step4-2D_9ab379c7f5.svg"
                 alt="Illustration of a GraphQL request"
