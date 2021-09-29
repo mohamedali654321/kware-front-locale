@@ -88,8 +88,10 @@ const renderSwitch=()=>{
     case (page < 2050 && intl.locale === 'ar') : return './images/hero/corners/Folio2 Arabic.png'; 
     case (page > 2050 && page < 3315 && intl.locale === 'en') : return './images/hero/corners/Dspace green.png'; 
     case (page > 2050 && page < 3315 && intl.locale === 'ar') : return './images/hero/corners/دي سبيس عربي.png'; 
-    case (page > 3315 && page < 4218) : return './images/hero/corners/str.png'; 
-    case (page > 4218) : return './images/hero/corners/Koha green.png'; 
+    case (page > 3315 && page < 4218 && intl.locale === 'en') : return './images/hero/corners/ds.png'; 
+    case (page > 3315 && page < 4218 && intl.locale === 'ar') : return './images/hero/corners/str_AR.png';
+    case (page > 4218 && intl.locale === 'en') : return './images/hero/corners/Koha green.png'; 
+    case (page > 4218 && intl.locale === 'ar' ) : return './images/hero/corners/Koha_green_AR.png'; 
   }
 
 }
