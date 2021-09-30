@@ -6,6 +6,8 @@ import Feature from "./Page/Feature/Feature";
 import SixthSection from "./Page/SixthSection/SixthSection";
 import Review from "./Page/Review/Review";
 import Steps from "./Page/Steps/Steps";
+import Clients from "./Page/Clients/Clients";
+import ClientPage from "./Page/Clients/ClientPage";
 
 function HomePage() {
   // console.log(window.sessionStorage.getItem('jwt'))
@@ -23,6 +25,7 @@ function HomePage() {
               <Steps />
 
               <SixthSection />
+            <ClientPage/>
 
               <Review />
             </div>

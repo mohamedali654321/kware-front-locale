@@ -1,7 +1,7 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
 import styled from "styled-components";
-function PartnersHeader() {
+function PartnersHeader(props) {
   return (
     
     <Container>
@@ -9,7 +9,7 @@ function PartnersHeader() {
         <TextWrapper>
           <Title>
             {" "}
-            <FormattedMessage id="navbar.links.ourPartners" />
+            {props.title}
           </Title>
         </TextWrapper>
       </Wrapper>
@@ -40,7 +40,7 @@ const Container = styled.div`
     padding: 135px 0 105px;
   }
 
-  border-top: 1px solid #e1edf6;
+  /* border-top: 1px solid #e1edf6; */
   background: -webkit-linear-gradient(268.4deg, #f7fbfe 0.74%, #fff 76.68%);
   background: -moz-linear-gradient(268.4deg, #f7fbfe 0.74%, #fff 76.68%);
   background: linear-gradient(181.6deg, #f7fbfe 0.74%, #fff 76.68%);

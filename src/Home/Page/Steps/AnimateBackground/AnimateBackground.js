@@ -14,7 +14,6 @@ const AnimatedWrapper = styled.div`
   -webkit-transform: rotateY(15deg) rotateX(10deg);
   -moz-transform: rotateY(15deg) rotateX(10deg);
   transform: rotateY(15deg) rotateX(10deg);
-  
   transition: .5s cubic-bezier(0.2, 0.82, 0.2, 1);
   transform: ${(props) =>
     (props.page > 2050 && props.page < 3315) ||  (props.page > 4218)
@@ -57,7 +56,7 @@ const SecondaryAssetsWrapper = styled.div`
   will-change: transform;
   -webkit-perspective: 800px;
   perspective: 800px;
-  transition: .5s cubic-bezier(0.2, 0.82, 0.2, 1);
+
   transform: translate(0%, 0px);
 `;
 const SecondaryBackground = styled.div`
@@ -66,7 +65,7 @@ const SecondaryBackground = styled.div`
   height: auto;
   opacity: 0;
   will-change: transform;
-  transition: .5s cubic-bezier(0.2, 0.82, 0.2, 1);
+
   img {
     display: block;
     width: 100%;
@@ -76,7 +75,7 @@ const SecondaryBackground = styled.div`
 function AnimateBackground() {
   const intl = useIntl();
   const [page, setPage] = useState();
-  const [src,setSrc]=useState();
+  
 
   window.addEventListener("scroll", () => {
     setPage(window.pageYOffset);
@@ -85,7 +84,7 @@ function AnimateBackground() {
 const renderSwitch=()=>{
   switch(true){
     case (page < 2050 && intl.locale === 'en') : return './images/hero/corners/Folio6.png'; 
-    case (page < 2050 && intl.locale === 'ar') : return './images/hero/corners/Folio2 Arabic.png'; 
+    case (page < 2050 && intl.locale === 'ar') : return './images/hero/corners/folio.png'; 
     case (page > 2050 && page < 3315 && intl.locale === 'en') : return './images/hero/corners/Dspace green.png'; 
     case (page > 2050 && page < 3315 && intl.locale === 'ar') : return './images/hero/corners/دي سبيس عربي.png'; 
     case (page > 3315 && page < 4218 && intl.locale === 'en') : return './images/hero/corners/ds.png'; 
@@ -107,7 +106,7 @@ const renderSwitch=()=>{
             <AnimatedImg
               src={renderSwitch()}
               alt="Illustration of desktop "
-              style={{ boxShadow:"3px 3px 3px 3px rgba(0,0,0,0.1)" }}
+              style={{ boxShadow:"5px 5px 5px 5px rgba(0,0,0,0.1)" }}
              
             />
           </ImageRatio>

@@ -7,15 +7,17 @@ import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css";
 import "swiper/components/navigation/navigation.min.css";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper/core";
-
+import { FormattedMessage, useIntl } from "react-intl";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import PartnersHeader from "./components/PartnersHeader";
+
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 function Review() {
   const [visible, setVisible] = useState(3);
+  const intl = useIntl();
   useEffect(() => {
     setVisible((prevValue) => prevValue + 3);
   }, []);
@@ -86,7 +88,10 @@ function Review() {
   return (
     <Container>
       <Wrapper>
-        <PartnersHeader />
+        <PartnersHeader title={intl.formatMessage({id:"navbar.links.ourPartners"})} />
+
+
+        
 
         <ReviewWrapper>
           <GridCard>
