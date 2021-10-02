@@ -16,7 +16,7 @@ const AnimatedWrapper = styled.div`
   transform: rotateY(15deg) rotateX(10deg);
   transition: .5s cubic-bezier(0.2, 0.82, 0.2, 1);
   transform: ${(props) =>
-    (props.page > 2050 && props.page < 3315) ||  (props.page > 4218)
+    (props.page > 2050 && props.page < 3315) ||  (props.page > 4218 && props.page < 5464) || (props.page > 6554)
       ? "translate(90%, 0px) rotate(-4e-5deg) rotateY(-15deg) rotateX(9.99994deg) "
       : "rotateY(15deg) rotateX(10deg) "};
 `;
@@ -83,14 +83,19 @@ function AnimateBackground() {
 
 const renderSwitch=()=>{
   switch(true){
-    case (page < 2050 && intl.locale === 'en') : return './images/hero/corners/Folio6.png'; 
-    case (page < 2050 && intl.locale === 'ar') : return './images/hero/corners/folio.png'; 
+    case (page < 2050 && intl.locale === 'en') : return './images/hero/corners/Folioicons.png'; 
+    case (page < 2050 && intl.locale === 'ar') : return './images/hero/corners/Folioicons_Arabic.png'; 
     case (page > 2050 && page < 3315 && intl.locale === 'en') : return './images/hero/corners/Dspace green.png'; 
     case (page > 2050 && page < 3315 && intl.locale === 'ar') : return './images/hero/corners/دي سبيس عربي.png'; 
     case (page > 3315 && page < 4218 && intl.locale === 'en') : return './images/hero/corners/ds.png'; 
     case (page > 3315 && page < 4218 && intl.locale === 'ar') : return './images/hero/corners/str_AR.png';
-    case (page > 4218 && intl.locale === 'en') : return './images/hero/corners/Koha green.png'; 
-    case (page > 4218 && intl.locale === 'ar' ) : return './images/hero/corners/Koha_green_AR.png'; 
+    case (page > 4218 && page < 5464 && intl.locale === 'en') : return './images/hero/corners/Koha green.png'; 
+    case (page > 4218 && page < 5464 && intl.locale === 'ar' ) : return './images/hero/corners/Koha_green_AR.png'; 
+
+    case (page > 5464  && page < 6554 && intl.locale === 'en') : return './images/hero/corners/Vufind.png'; 
+    case (page > 5464  && page < 6554 && intl.locale === 'ar' ) : return './images/hero/corners/Vufind_Arabic.png'; 
+    case (page > 6554 && intl.locale === 'en') : return './images/hero/corners/Aspen.png'; 
+    case (page > 6554 && intl.locale === 'ar') : return './images/hero/corners/Aspen_Arabic.png'; 
   }
 
 }

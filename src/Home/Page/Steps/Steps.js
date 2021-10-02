@@ -13,6 +13,7 @@ import styled from "styled-components";
 function Steps() {
   const [page, setPage] = useState();
   const [products, setProducts] = useState([]);
+  
   const intl = useIntl();
   window.addEventListener("scroll", () => {
     setPage(window.pageYOffset);
@@ -24,7 +25,7 @@ function Steps() {
 
   useEffect(() => {
     axios
-      .get(`http://54.220.211.123:1335/products?_locale=${intl.locale}`)
+      .get(`http://54.220.211.123:1335/products?_locale=${intl.locale}&_type=mainProduct`)
       .then((res) => {
         if (!isEqual(res.data, products)) {
           setProducts(res.data);
@@ -33,7 +34,9 @@ function Steps() {
       })
       .catch((err) => console.log(err));
   }, [products, intl.locale]);
-  console.log(products)
+
+
+
 
   return (
     <Container>
@@ -51,7 +54,7 @@ function Steps() {
           </div>
         </div>
 
-        {products.slice(0,4).map((product, index) => (
+        {products.map((product, index) => (
           <Product
             title={product.name}
             slogan={product.slogan}

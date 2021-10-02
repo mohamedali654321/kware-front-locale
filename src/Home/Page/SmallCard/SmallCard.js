@@ -29,7 +29,9 @@ function SmallCard(props) {
               </ImgWrapper>
 
               <Title>{props.title} </Title>
-              <Description>{props.text}</Description>
+              <Description>
+                <FormattedMessage id="six-text"/>
+              </Description>
             </Inner>
           </CardContent>
 

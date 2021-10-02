@@ -85,7 +85,7 @@ margin: 0 auto 100px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  margin: 0 auto 100px;
+  /* margin: 0 auto 100px; */
 `;
 const Content = styled.div`
   opacity: 1;
