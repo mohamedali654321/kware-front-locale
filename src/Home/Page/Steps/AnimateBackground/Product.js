@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { FormattedMessage } from "react-intl";
+import React, { useRef ,useEffect } from "react";
 import styled, { css } from "styled-components";
-
+import gsap from "gsap";
+import {ScrollTrigger} from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 const isOdd = (number) => {
   let reminder = number % 2;
   if (reminder == 0) return false;
@@ -10,16 +11,39 @@ const isOdd = (number) => {
 
 function Product(props) {
   const { index } = props;
+  const revealRefs=useRef([]);
+  revealRefs.current=[];
+  const addToRef=(el)=>{
+    if(el && !revealRefs.current.includes(el)){
+            revealRefs.current.push(el)
   
+    }
+  console.log(revealRefs.current)
+  
+  };
+  
+useEffect(()=>{
+revealRefs.current.forEach((el,index)=>{
+gsap.fromTo(el,{autoAlpha:0},{autoAlpha:1,duration:1,ease:'none',scrollTrigger:{
+  id:index,
+  trigger:el,
+  start:"top center",
+  toggleActions:"play none none reverse",
+  markers:true
+}});
 
+
+})
+
+},[])
   return (
-    <Container>
-      <Wrapper index={index}>
-        <Content>
+    <Container >
+      <Wrapper  index={index}>
+        <Content ref={addToRef}  >
           <Label>{props.title}</Label>
           <Title>{props.slogan}</Title>
 
-          <Description>
+          <Description  >
             <div dangerouslySetInnerHTML={{ __html: props.description }} />
           </Description>
         </Content>
@@ -107,6 +131,8 @@ const Content = styled.div`
 const Label = styled.p`
   font-family: Effra-ar;
   font-size: 17px;
+
+  
 
   @media (min-width: 992px) {
     font-size: 17px;

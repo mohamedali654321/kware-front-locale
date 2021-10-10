@@ -13,38 +13,36 @@ import styled from "styled-components";
 function Steps() {
   const [page, setPage] = useState();
   const [products, setProducts] = useState([]);
-  
+
   const intl = useIntl();
+
   window.addEventListener("scroll", () => {
     setPage(window.pageYOffset);
   });
-  console.log(page);
+
   useEffect(() => {
     AOS.init();
   });
 
   useEffect(() => {
     axios
-      .get(`http://54.220.211.123:1335/products?_locale=${intl.locale}&_type=mainProduct`)
+      .get(
+        `http://54.220.211.123:1335/products?_locale=${intl.locale}&_type=mainProduct`
+      )
       .then((res) => {
         if (!isEqual(res.data, products)) {
           setProducts(res.data);
         }
-        console.log(res.data);
       })
       .catch((err) => console.log(err));
   }, [products, intl.locale]);
 
-
-
-
   return (
     <Container>
-      <MainProductHeader 
-      label={intl.formatMessage({id:"products.main.label"})}
-      title={intl.formatMessage({id:"products.main.title"})}
-      text={intl.formatMessage({id:"products.main.text"})}
-
+      <MainProductHeader
+        label={intl.formatMessage({ id: "products.main.label" })}
+        title={intl.formatMessage({ id: "products.main.title" })}
+        text={intl.formatMessage({ id: "products.main.text" })}
       />
 
       <Wrapper>

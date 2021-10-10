@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-
+import gsap from "gsap"
 import { useIntl } from "react-intl";
 import styled from "styled-components";
 
@@ -36,8 +36,8 @@ const AnimatedImg = styled.img`
   position: absolute;
   top: 0;
   left: 0;
-  width: 75%;
-  height: 75%;
+  width: 80%;
+  height: 80%;
   object-fit: cover;
   object-position: center;
   opacity: 1;
@@ -49,10 +49,10 @@ const AnimatedImg = styled.img`
 const SecondaryAssetsWrapper = styled.div`
   z-index: 1;
   position: absolute;
-  bottom: -12%;
-  left: 18%;
-  width: 90%;
-  height: 90%;
+  bottom: -15%;
+  left: 20%;
+  width: 95%;
+  height: 95%;
   will-change: transform;
   -webkit-perspective: 800px;
   perspective: 800px;
@@ -61,7 +61,7 @@ const SecondaryAssetsWrapper = styled.div`
 `;
 const SecondaryBackground = styled.div`
   position: absolute;
-  width: 75%;
+  width: 80%;
   height: auto;
   opacity: 0;
   will-change: transform;
@@ -75,6 +75,8 @@ const SecondaryBackground = styled.div`
 function AnimateBackground() {
   const intl = useIntl();
   const [page, setPage] = useState();
+
+
   
 
   window.addEventListener("scroll", () => {
@@ -91,7 +93,6 @@ const renderSwitch=()=>{
     case (page > 3315 && page < 4218 && intl.locale === 'ar') : return './images/hero/corners/str_AR.png';
     case (page > 4218 && page < 5464 && intl.locale === 'en') : return './images/hero/corners/Koha green.png'; 
     case (page > 4218 && page < 5464 && intl.locale === 'ar' ) : return './images/hero/corners/Koha_green_AR.png'; 
-
     case (page > 5464  && page < 6554 && intl.locale === 'en') : return './images/hero/corners/Vufind.png'; 
     case (page > 5464  && page < 6554 && intl.locale === 'ar' ) : return './images/hero/corners/Vufind_Arabic.png'; 
     case (page > 6554 && intl.locale === 'en') : return './images/hero/corners/Aspen.png'; 

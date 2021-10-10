@@ -1,6 +1,7 @@
 import React from "react";
 import "./client.css";
 import styled from "styled-components";
+
 function Clients() {
   return (
     <Container>
@@ -93,6 +94,8 @@ function Clients() {
             alt=""
           />
         </ImgSlide>
+
+       
       </Wrapper>
     </Container>
   );

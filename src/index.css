@@ -47,18 +47,18 @@ button{
     color: #7255a3;
   font-weight: 600;
 }
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
   width: 10px;
-}
+} */
 
-::-webkit-scrollbar-thumb{
+/* ::-webkit-scrollbar-thumb{
   background:  rgba(190, 190, 190, 0.8);
     border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb:hover{
   background:  rgba(155, 153, 153, 0.8);
-}
+} */
 
 ul{
   text-decoration: none !important;
