@@ -1,45 +1,53 @@
 import React from "react";
-import FlipCard from "./components/FlipCard";
+
 import Slice from "./components/Slice";
 import styled from "styled-components";
 import TimeLine from "./components/TimeLine";
+import Cont from "./components/Cont";
+import FlipBook from "./components/FlipBook";
+import Header from "./components/Header";
+import { Link } from "react-router-dom";
+import MainProductHeader from "../../Home/Page/Steps/AnimateBackground/MainProductHeader";
 
+import Slider from "./components/ImgSlider/Slider";
+
+import { FormattedMessage, useIntl } from "react-intl";
+import FlipCard from "./components/FlipCard";
 function Folio() {
-  const Apps=["translation","users","inventory","inventory ES" , "check in ","check out", "agreements","circulation log" ,"courses","data import","data export","dashboard"
-  ,"codex search","eHoldings"]
+  const intl = useIntl();
+  const Apps = [
+    "Users",
+    "Inventory",
+    "Check in",
+    "Check out",
+    "Circulation log",
+    "Courses",
+    "Request",
+  ];
   return (
     <Container>
+      <h1>ILS Apps</h1>
+
       <Wrapper>
         <FlipCard />
         <Inner>
-        <SliceWrapper>
-        {
-          Apps.map(app =>(
+          <SliceWrapper>
+          {
+            Apps.map(app=>(
+              <Header title={app} />
+            ))
+          }
             
-            <Slice title={app} />
-           
-            
-          ))
-        }
-          
-       
-        </SliceWrapper>
-       
-        <Second>
-        
-            <p>Okapi</p>
-        </Second>
-          <Content>
-           <Text> sdasfsadfsdfsdfsdf </Text>
+          </SliceWrapper>
 
-          </Content>
-        <Footer>
-      
-        <i class="fas fa-database"></i>
-        <i class="fas fa-database"></i>
-        <i class="fas fa-database"></i>
-        <i class="fas fa-database"></i>
-        </Footer>
+          <Second>
+            <Slider />
+          </Second>
+          <Footer>
+            {Apps.map((app) => (
+              <Link>{app}</Link>
+            ))}
+          </Footer>
         </Inner>
       </Wrapper>
     </Container>
@@ -52,10 +60,23 @@ const Container = styled.div`
   position: relative;
   margin-top: 170px;
   width: 100%;
+  padding-bottom: 90px;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    align-items: center;
+    justify-content: center;
+    font-family: "Effra-ar";
+    font-size: 43px;
+    font-weight: 700px;
+    color: #5c2d91;
+    text-transform: uppercase;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -64,116 +85,98 @@ const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   height: 100%;
- padding: 10px;
+  padding: 10px;
+  overflow: hidden;
   gap: 30px;
   @media (min-width: 992px) {
     margin-top: 96px;
     flex-direction: row-reverse;
-   
   }
-  
 `;
 
 const SliceWrapper = styled.div`
-display: flex;
-flex-direction: row;
-gap: 10px;
-
-overflow-x: auto;
-&::-webkit-scrollbar{
-  width: 0;
-}
-
-@media (min-width: 992px) {
-  overflow-x: hidden;
-
-  
-  }
-
-`;
-
-
-const Inner=styled.div`
-position: relative;
-display: flex;
-flex-direction: column;
+  display: flex;
+  justify-content: center;
 width: 100%;
 margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  @media (min-width: 992px) {
-  overflow: inherit;
-
+margin-right: auto;
   
+`;
+
+const Inner = styled.div`
+  position: relative;
+  display: flex;
+  gap: 60px;
+  flex-direction: column;
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+  /* overflow: hidden; */
+`;
+const Second = styled.div`
+  position: relative;
+  margin-top: 50px;
+ 
+  width: 100%;
+
+  text-align: center;
+  align-items: center;
+
+  color: #fff;
+`;
+
+const Footer = styled.div`
+  font-family: "Effra-ar";
+  position: relative;
+  margin-top: 50px;
+  max-width: 780px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* display: flex;  */
+  gap: 10px;
+  flex-direction: row;
+  /* background-color: tomato;  */
+
+  margin-top: 50px;
+  font-size: 17px;
+  font-weight: 500;
+  height: auto;
+  justify-content: flex-start;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  color: #fff;
+  border-radius: 20px;
+  a {
+    background-color: tomato;
+    padding: 7px;
+    border-radius: 10px;
+    color: #fff;
+
+    &:hover {
+      color: #5c2d91;
+    }
   }
 `;
-const Second=styled.div`
-overflow: hidden;
-font-family: 'Effra-ar';
-position: relative;
-max-width: 980px;
-width: 100%;
-display: flex;
-flex-direction: row;
-background-color: tomato;
-margin-top: 30px;
-font-size: 30px;
-height: 50px;
-justify-content: center;
-text-align: center;
-align-items: center;
-padding: 5px;
-color: #fff;
 
+const Content = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  gap: 10px;
+  width: 100%;
+  padding: 20px;
+  position: relative;
 `;
 
-
-const Footer=styled.div`
-
-position: relative;
-max-width: 980px;
-width: 100%;
-display: flex;
-flex-direction: row;
-gap: 30px;
-margin-top: 120px;
-font-size: 30px;
-height: 50px;
-justify-content: center;
-text-align: center;
-align-items: center;
-border: 1px solid rgba(0,0,0.1);
-padding: 5px;
-color: tomato;
-@media (min-width: 992px) {
- 
+const Text = styled.p`
+  width: 100%;
+  position: relative;
+  font-size: 17px;
+  font-weight: 600;
+  color: #000;
 
   justify-content: flex-start;
-  }
-
-`;
-
-
-const Content =styled.div`
-display: flex;
-flex-direction: row;
-
-gap: 38px;
-width: 100%;
-padding: 20px;
-position: relative;
-
-`;
-
-
-
-const Text=styled.p`
-width: 100%;
-position: relative;
-font-size: 17px;
-font-weight: 600;
-color: #000;
-
-
-
 `;

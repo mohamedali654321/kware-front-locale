@@ -3,69 +3,113 @@ import styled from 'styled-components'
 function FlipCard() {
     return (
         <Container>
-       <Card>
-           <Front>FRONT</Front>
-           <Back>BACK</Back>
-       </Card>
-   </Container>
-
+        <Cover>
+       
+        <Front>
+             <Details>
+            <h2>Juan Velasquez</h2>
+            <h4>Cheat day</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi vero animi perferendis dignissimos veniam praesentium corrupti tenetur, amet nam expedita.  Consequuntur?</p>
+            
+        </Details>
+        </Front>
+        <Back></Back>
+        </Cover>
+            
+        </Container>
     )
 }
 
 export default FlipCard
 
 
-
 const Container=styled.div`
-margin: 0  ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- 
-    perspective: 1000px;
+width: 320px;
+height: 400px;
+background: tomato;
+position: relative;
+margin-top: 100px;
+perspective: 1000px;
+/* border-radius: 20px; */
+
+
 `;
 
-
-const Card=styled.div`
- height: 450px;
-    width: 350px;
-    position: relative;
-    justify-content: center;
-    transition: all .5s linear;
-    transform-style: preserve-3d;
-    &:hover{
-    transform: rotateY(180deg);
-    cursor: pointer;
-}
-`;
-
-const Front=styled.div`
+const Cover=styled.div`
+width: 280px;
 height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3em;
-    font-family: 'Lobster', cursive;
-    border-radius: 10px;
-    position: absolute;
-    background: #5c2d91;
-    z-index: 2;
-    backface-visibility: hidden;
+position: absolute;
+left: 20px;
+background-color:#5c2d91 ;
+transform: rotateY(-20deg);
+transform-style: preserve-3d;
+/* border-radius: 20px; */
+transform-origin: left;
+border: none;
+outline: none;
+transition: all .5s ease-in;
+&:hover{
+    transform: rotateY(-180deg);
+}
+
 `;
 
 
-const Back=styled.div`
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3em;
-    font-family: 'Lobster', cursive;
-    border-radius: 10px;
-    position: absolute;
-    background: #552a86;
-    z-index: 1;
-    transform: rotateY(180deg);
+const Front=styled.figure`
+margin: 0;
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+display: block;
+background-color: #000;
+/* border-radius: 20px; */
+border: none;
+
+`;
+
+
+const Back=styled.figure`
+
+margin: 0;
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+display: block;
+/* border-radius: 20px; */
+background-color: green;
+transform: rotateY(180deg);
+border: none;
+
+
+`;
+
+
+
+const Details=styled.div`
+font-family: 'Effra-ar';
+font-size: 17px;
+font-weight: 400;
+ position: absolute;
+ color: #fff;
+    top: 10%;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    
+    h2{
+    text-align: center;
+    font-weight: 500;
+   
+}
+
+h4{
+    text-align: center;
+    font-weight: bold;
+}
+ p{
+    text-align: center;
+}
+
 `;

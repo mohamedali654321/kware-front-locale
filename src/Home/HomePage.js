@@ -28,6 +28,8 @@ function HomePage() {
             <ClientPage/>
 
               <Review />
+              
+              <Feature />
             </div>
           </section>
         </div>

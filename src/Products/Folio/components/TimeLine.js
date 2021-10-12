@@ -24,7 +24,7 @@ const Container=styled.div`
 
 const Wrapper=styled.div`
 width: 2px;
-    height: calc(100% + 2px);
+    /* height: calc(100% + 2px); */
     margin-top: -1px;
     background-color: tomato;
     position: relative;

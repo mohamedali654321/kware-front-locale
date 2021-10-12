@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import TimeLine from './TimeLine';
-export default function Slice(props) {
+function Cont(props) {
     return (
         <Container>
        
@@ -13,54 +12,45 @@ export default function Slice(props) {
     )
 }
 
+export default Cont
+
+
+
 const Container=styled.div`
 
 
 
 font-family: 'Effra-ar';
 position: relative;
-max-width: 980px;
-width: 120px;
-
-display: flex;
-flex-direction: row;
-background-color: tomato;
-
+/* max-width: 980px;
+width: 100%; */
+background-color: inherit;
+top: 24px;
 font-size: 30px;
-height: 50px;
+padding: 20px;
 justify-content: center;
 text-align: center;
 align-items: center;
-padding: 5px;
-border-radius: 10px;
+padding: 3px;
 color: #fff;
 transition: .5s cubic-bezier(0.2, 0.82, 0.2, 1);
 cursor: pointer;
-&:hover{
-    transform: scale(1.1) translateY(-20px);
-    background-color: #5c2d91;
-    border: 1px solid tomato;
-}
+
 
 `;
 
 const Text =styled.p`
 font-family: 'Effra-ar';
-font-size: 17px;
+font-size: 21px;
 font-weight: 600;
-
+transform: rotate(90deg);
 justify-content: center;
 text-align: center;
-color: #fff;
+color: #000;
 position: relative;
-margin: 20px 10px 10px 20px;
+letter-spacing: 2px;
+
 
 
 
 `
-
-const Wrapper=styled.div`
-position: absolute;
-display: flex;
-flex-direction: column;
-`;
